@@ -1,2 +1,6 @@
 * text=auto eol=lf
+.devad/ROUTER.md binary
+.devad/features/x9-loop-v7-3/** binary
+.devad/memory/** binary
+archives/** binary
 *.zip binary

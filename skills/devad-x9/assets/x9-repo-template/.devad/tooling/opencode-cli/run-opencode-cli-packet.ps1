@@ -1,5 +1,5 @@
 param(
-    [string] $RepoRoot = (Get-Location).Path,
+    [string] $RepoRoot = 'D:\CDX-3\core-aio\core',
     [Parameter(Mandatory = $true)]
     [string] $Packet,
     [ValidateSet('opencode-go/glm-5.2', 'opencode-go/kimi-k2.7-code', 'opencode/deepseek-v4-flash-free', 'opencode/mimo-v2.5-free')]

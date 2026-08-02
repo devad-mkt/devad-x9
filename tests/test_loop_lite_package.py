@@ -36,7 +36,9 @@ class LoopLitePackageTests(unittest.TestCase):
         shutil.copytree(
             ROOT,
             destination,
-            ignore=shutil.ignore_patterns(".git", "archives", "__pycache__", "*.pyc"),
+            ignore=shutil.ignore_patterns(
+                ".git", ".temp", "archives", "__pycache__", "*.pyc"
+            ),
         )
         return destination
 
@@ -72,6 +74,38 @@ class LoopLitePackageTests(unittest.TestCase):
             )
         self.assertNotEqual(0, result.returncode)
         self.assertIn("manifest includes Git metadata", result.stdout)
+
+    def test_manifest_excludes_linked_worktree_git_pointer(self):
+        with tempfile.TemporaryDirectory() as directory:
+            package = self.make_package_copy(directory)
+            (package / ".git").write_text(
+                "gitdir: C:/example/repo/.git/worktrees/kit\n",
+                encoding="utf-8",
+            )
+            self.rebuild_manifest(package)
+            lines = (package / "SOURCE_MANIFEST.sha256").read_text(
+                encoding="utf-8-sig"
+            ).splitlines()
+        self.assertFalse(any(line.endswith("  .git") for line in lines))
+
+    def test_manifest_excludes_host_agents_runtime_state(self):
+        with tempfile.TemporaryDirectory() as directory:
+            package = self.make_package_copy(directory)
+            host_skill = package / ".agents" / "skills" / "local-only" / "SKILL.md"
+            host_skill.parent.mkdir(parents=True)
+            host_skill.write_bytes(b"---\r\nname: local-only\r\n---\r\n")
+            self.rebuild_manifest(package)
+            lines = (package / "SOURCE_MANIFEST.sha256").read_text(
+                encoding="utf-8-sig"
+            ).splitlines()
+            result = subprocess.run(
+                [sys.executable, str(package / "scripts" / "validate_suite.py")],
+                cwd=package,
+                capture_output=True,
+                text=True,
+            )
+        self.assertFalse(any("  .agents/" in line for line in lines))
+        self.assertEqual(0, result.returncode, result.stdout)
 
     def test_manifest_rejects_crlf_utf8_text(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -117,7 +151,7 @@ class LoopLitePackageTests(unittest.TestCase):
         self.assertNotEqual(0, result.returncode)
         self.assertIn("missing loop-lite recovery snapshot", result.stdout)
 
-    def test_validator_reports_v6_with_historical_v5_loop(self):
+    def test_validator_reports_v7_with_historical_v5_loop(self):
         with tempfile.TemporaryDirectory() as directory:
             package = self.make_package_copy(directory)
             self.rebuild_manifest(package)
@@ -128,16 +162,19 @@ class LoopLitePackageTests(unittest.TestCase):
                 text=True,
             )
         self.assertEqual(0, result.returncode, result.stdout)
-        self.assertIn("PASS: X9 Loop Lite v6", result.stdout)
+        self.assertIn("PASS: X9 Loop V7", result.stdout)
 
-    def test_skill_routes_linx_through_one_action_file(self):
+    def test_quarantined_v7_contract_retains_one_action_route(self):
         text = (SKILL / "SKILL.md").read_text(encoding="utf-8")
-        self.assertIn("Devad X9 Loop Lite v6", text)
-        self.assertIn("scripts/loopctl.py reconcile", text)
+        self.assertIn("X9 Loop V7 Compatibility Redirect", text)
+        self.assertIn("$x9-loop-style", text)
+        self.assertIn("Archived V7 contract", text)
+        self.assertIn("scripts/loopctl.py", text)
+        self.assertIn("--repo <repo> reconcile", text)
         self.assertIn("runtime/ACTION.json", text)
-        self.assertIn("never reviews code", text.lower())
+        self.assertIn("linker never selects", text.lower())
         self.assertIn("No recurring heartbeat", text)
-        self.assertIn("gpt-5.6-sol high", text)
+        self.assertIn("gpt-5.6-sol ultra", text)
 
     def test_template_has_small_recovery_truth_and_contracts(self):
         expected = {
@@ -148,6 +185,7 @@ class LoopLitePackageTests(unittest.TestCase):
         }
         self.assertTrue(expected.issubset({path.name for path in LOOP_LITE.iterdir()}))
         snapshot = json.loads((LOOP_LITE / "SNAPSHOT.json").read_text(encoding="utf-8"))
+        self.assertEqual("x9-loop-lite-snapshot-v3", snapshot["schema"])
         self.assertEqual(
             {
                 "actors",
@@ -160,7 +198,12 @@ class LoopLitePackageTests(unittest.TestCase):
                 "events",
                 "gates",
                 "outbox",
+                "inbox",
                 "metrics",
+                "programs",
+                "work_orders",
+                "worktree_classifications",
+                "call_reservations",
             },
             set(snapshot["tables"]),
         )
@@ -170,7 +213,18 @@ class LoopLitePackageTests(unittest.TestCase):
             self.assertIn(item, ignore)
         contracts = {path.name for path in (LOOP_LITE / "contracts").glob("*.json")}
         self.assertEqual(
-            {"OWNER_PACKET.json", "TASK.json", "ACTION.json", "RESULT.json"},
+            {
+                "ACTION.json",
+                "CALL_RECEIPT.json",
+                "FEATURE_PACKET.json",
+                "OWNER_PACKET.json",
+                "PROGRAM_PACKET.json",
+                "RESULT.json",
+                "STOP_CONTRACT.json",
+                "TASK.json",
+                "WORKER_CHECKPOINT.json",
+                "WORK_ORDER.json",
+            },
             contracts,
         )
         for path in (LOOP_LITE / "contracts").glob("*.json"):
@@ -180,37 +234,48 @@ class LoopLitePackageTests(unittest.TestCase):
                 {
                     "x9-owner-packet-v1",
                     "x9-loop-lite-task-v1",
-                    "x9-loop-lite-action-v1",
-                    "x9-loop-lite-result-v1",
+                    "x9-loop-action-v2",
+                    "x9-loop-result-v2",
+                    "x9-loop-call-receipt-v1",
+                    "x9-loop-feature-v1",
+                    "x9-loop-program-v1",
+                    "x9-loop-stop-contract-v1",
+                    "x9-loop-worker-checkpoint-v1",
+                    "x9-loop-work-order-v1",
                 },
             )
         action = json.loads((LOOP_LITE / "contracts" / "ACTION.json").read_text(encoding="utf-8"))
-        self.assertIn("packet", action)
-        self.assertNotIn("packet_path", action)
-        for key in (
-            "worktree_id",
-            "worktree_path",
-            "base_sha",
-            "owner_packet_path",
-            "owner_packet_sha256",
-            "local_work",
-            "dependencies",
-            "claims",
-            "resources",
-            "gates",
-            "finish_line",
-        ):
-            self.assertIn(key, action["packet"])
+        self.assertEqual("x9-loop-action-v2", action["schema"])
+        self.assertEqual("SEND_WORK_ORDER", action["action"])
+        self.assertEqual(
+            {
+                "action",
+                "action_id",
+                "attempt",
+                "dispatch_id",
+                "must_record_transport",
+                "project_profile_id",
+                "schema",
+                "target_actor_id",
+                "target_role",
+                "task_id",
+                "work_order_id",
+                "work_order_path",
+                "work_order_sha256",
+            },
+            set(action),
+        )
+        self.assertNotIn("packet", action)
         task = json.loads((LOOP_LITE / "contracts" / "TASK.json").read_text(encoding="utf-8"))
         self.assertEqual(".devad/manager/owner-packets/<packet_sha256>.json", task["owner_packet_path"])
-        self.assertEqual(task["owner_packet_path"], action["packet"]["owner_packet_path"])
+        self.assertEqual("task", task["kind"])
         self.assertIn("owner_packet_sha256", task)
         owner = json.loads((LOOP_LITE / "contracts" / "OWNER_PACKET.json").read_text(encoding="utf-8"))
         self.assertEqual("x9-owner-packet-v1", owner["schema"])
         self.assertEqual(".devad/manager/owner-packets/artifacts/<attachment_sha256>.txt", owner["attachments"][0]["path"])
         self.assertNotIn("packet_sha256", owner)
         result = json.loads((LOOP_LITE / "contracts" / "RESULT.json").read_text(encoding="utf-8"))
-        self.assertEqual("COMPLETE", result["outcome"])
+        self.assertEqual("SUCCESS", result["outcome"])
         self.assertIsInstance(result["proof"], list)
         self.assertTrue(all({"kind", "path", "sha256"}.issubset(item) for item in result["proof"]))
         self.assertEqual({"security", "tests"}, {item["kind"] for item in result["proof"]})
@@ -219,6 +284,8 @@ class LoopLitePackageTests(unittest.TestCase):
         self.assertEqual(".devad/workers/<worker_id>/proof/<event_id>/tests.json", proof_paths["tests"])
         self.assertIsInstance(result["c1"], str)
         self.assertIsInstance(result["c2"], str)
+        self.assertEqual({"changed_surface", "proof_refs", "reason", "remaining_risk", "rollback"}, set(result["change_map"]))
+        self.assertEqual("x9-loop-result-v2", result["schema"])
         self.assertLess((LOOP_LITE / "contracts" / "ACTION.json").stat().st_size, 4096)
         owner_store = LOOP_LITE.parent / "owner-packets"
         self.assertTrue((owner_store / ".gitignore").is_file())
@@ -246,18 +313,23 @@ class LoopLitePackageTests(unittest.TestCase):
         self.assertIn("historical", router.lower())
         self.assertNotIn("Acquire `.devad/manager/MANAGER_PASS_LOCK.md`", router)
 
-    def test_markdown_status_and_handoffs_are_not_parser_authority(self):
-        contract = (SKILL / "references" / "loop-lite-v6-contract.md").read_text(
+    def test_v7_contract_preserves_machine_authority_and_hard_gates(self):
+        contract = (SKILL / "references" / "loop-lite-v7-contract.md").read_text(
             encoding="utf-8"
         )
-        self.assertIn("generated human views", contract.lower())
-        self.assertIn("never parser authority", contract.lower())
-        self.assertIn("BEGIN IMMEDIATE", contract)
-        self.assertIn("one state transaction per event", contract.lower())
-        self.assertIn("CALLBACK_FAILED", contract)
-        self.assertIn("owner_packet_path", contract)
-        self.assertIn("receipts/<event_id>.json", contract)
-        self.assertIn("THINX_REVIEW_REQUIRED", contract)
+        for phrase in (
+            "controller is the sole writer",
+            "linx reads only",
+            "deterministic acceptance",
+            "any staged-byte change invalidates the review",
+            "before every call",
+            "no model call occurs after exhaustion",
+            "cache_prefix_changed",
+            "approved_jobs.json",
+            "complete v6 database",
+            "no polling",
+        ):
+            self.assertIn(phrase, contract.lower())
 
     def test_orca_boundary_is_explicit(self):
         text = (ROOT / "docs" / "ORCA_LESSONS.md").read_text(encoding="utf-8")
@@ -291,14 +363,31 @@ class LoopLitePackageTests(unittest.TestCase):
         }
         self.assertTrue(required.issubset(ids), required - ids)
 
-    def test_readme_has_v6_fast_path_and_performance_gates(self):
+    def test_readme_has_v7_fast_path_and_performance_gates(self):
         text = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertIn("X9 Loop Lite v6", text)
+        self.assertIn("X9 Loop V7", text)
         self.assertIn("under five seconds", text)
         self.assertIn("median under 60 seconds", text)
         self.assertIn("p95 under two minutes", text)
         self.assertIn("Unknown", text)
         self.assertIn("Three coding Workers", text)
+
+
+    def test_v7_package_metadata_and_skill_interface(self):
+        kit = json.loads((ROOT / "kit.manifest.json").read_text(encoding="utf-8"))
+        index = json.loads((ROOT / "skills.index.json").read_text(encoding="utf-8"))
+        interface = (SKILL / "agents" / "openai.yaml").read_text(encoding="utf-8")
+        style = (ROOT / "skills" / "x9-loop-style" / "agents" / "openai.yaml").read_text(encoding="utf-8")
+        self.assertEqual("7.3-lite", kit["version"])
+        self.assertEqual("devad-x9-loop-codex-kit-v7.3-lite", kit["schema"])
+        self.assertEqual("devad-x9-loop-kit-v7.3-lite", index["schema"])
+        self.assertEqual("2026-07-30", index["date"])
+        self.assertEqual(16, kit["packaged_skills"])
+        self.assertEqual("x9-loop-style", kit["manager_skill"])
+        self.assertEqual("x9-loop-code", kit["experimental_engine_skill"])
+        self.assertIn('display_name: "X9 Loop (Style redirect)"', interface)
+        self.assertIn("$x9-loop-style", interface)
+        self.assertIn('display_name: "X9 Loop Style"', style)
 
 
 class OpenCodeDoctorTests(unittest.TestCase):

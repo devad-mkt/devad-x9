@@ -17,7 +17,7 @@ Do not use ACP. Do not use OpenRouter model IDs. Do not use PI as an execution d
 
 ```powershell
 .\.devad\tooling\opencode-cli\run-opencode-cli-packet.ps1 `
-  -RepoRoot <source-root> `
+  -RepoRoot D:\CDX-3\core-aio\core `
   -Packet .devad\features\<feature>\prompts\<packet>.md `
   -Model opencode-go/glm-5.2 `
   -Output .devad\features\<feature>\sidecar\<packet>-glm.md

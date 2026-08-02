@@ -20,7 +20,7 @@ Preferred wrapper:
 
 ```powershell
 .\.devad\tooling\opencode-cli\run-opencode-cli-packet.ps1 `
-  -RepoRoot <source-root> `
+  -RepoRoot D:\CDX-3\core-aio\core `
   -Packet .devad\features\<feature>\prompts\<packet>.md `
   -Model opencode-go/kimi-k2.7-code `
   -Output .devad\features\<feature>\sidecar\<packet>-kimi.md
@@ -31,7 +31,7 @@ Direct command:
 ```powershell
 opencode run `
   --model opencode-go/glm-5.2 `
-  --dir <source-root> `
+  --dir D:\CDX-3\core-aio\core `
   --file .devad\features\<feature>\prompts\<packet>.md `
   --title "Devad sidecar review" `
   "Read the attached packet. Return concise markdown only. PLAN/REVIEW ONLY. Do not run commands. Do not edit files."

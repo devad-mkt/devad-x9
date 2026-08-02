@@ -3,13 +3,14 @@ param(
     [string]$Mode = 'DryRun',
     [switch]$Push,
     [string]$RepoPath,
-    [string]$RepoUrl = $env:CODEX_X9_BACKUP_REMOTE,
     [string]$ProfileRoot = $env:USERPROFILE,
-    [string]$Python = ''
+    [string]$Python = 'python'
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+
+$RepoUrl = 'https://github.com/devadio/codex-x9-backup.git'
 
 if (-not $RepoPath -or $RepoPath.Trim().Length -eq 0) {
     $RepoPath = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
@@ -43,9 +44,6 @@ function Invoke-RepoGit {
 
 function Ensure-Repo {
     if (-not (Test-Path -LiteralPath $RepoPath)) {
-        if (-not $RepoUrl -or $RepoUrl.Trim().Length -eq 0) {
-            throw 'Backup clone is missing. Pass -RepoUrl or set CODEX_X9_BACKUP_REMOTE.'
-        }
         $parent = Split-Path -Parent $RepoPath
         if ($parent -and -not (Test-Path -LiteralPath $parent)) {
             New-Item -ItemType Directory -Path $parent -Force | Out-Null

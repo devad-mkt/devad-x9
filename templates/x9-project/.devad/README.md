@@ -2,9 +2,9 @@
 
 X9 is the active repo-local router for this checkout.
 
-Use `<project-root>` for new X9 work. Paths containing `deploy`,
+Use `D:\CDX-3\core-aio\core-x9` for new X9 work. Paths containing `deploy`,
 `bridge`, `v105`, or `x9w\v105`, detached HEAD checkouts, and the
-`<deployment-branch>` branch are deploy bridges only:
+`feature/post-v105-native-migration-2026-06-18` branch are deploy bridges only:
 inspect, export diff, verify deploy, or apply a committed X9 change. Do not
 resume feature/debug/docs work there.
 

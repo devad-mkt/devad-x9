@@ -9,10 +9,10 @@ old proof trees, reports, old chats, or other worker folders. Do not work on
 other lanes.
 
 If your worktree path contains `deploy`, `bridge`, `v105`, or `x9w\v105`, or
-Git reports detached HEAD or branch `<deployment-branch>`,
+Git reports detached HEAD or branch `feature/post-v105-native-migration-2026-06-18`,
 stop before coding. Report `DEPLOY_BRIDGE_ACTIVE`, `DEPLOY_BRIDGE_LOCKED`, or
 `ORPHAN_PATCH` and tell the user to restart new work in
-`<project-root>`. In a bridge, you may only inspect, export a diff,
+`D:\CDX-3\core-aio\core-x9`. In a bridge, you may only inspect, export a diff,
 verify deploy, or apply a previously committed X9 commit.
 
 Worktree:

@@ -6,7 +6,7 @@ recovery work here.
 Use this source folder for new X9 work:
 
 ```text
-<project-root>
+D:\CDX-3\core-aio\core-x9
 ```
 
 Allowed actions in this checkout:
@@ -17,4 +17,4 @@ Allowed actions in this checkout:
 - apply a previously committed X9 commit into a clean v105 bridge
 
 If this checkout is dirty, classify it as `ORPHAN_PATCH`: export/report the
-diff, port relevant changes to `<project-root>`, or discard it.
+diff, port relevant changes to `D:\CDX-3\core-aio\core-x9`, or discard it.

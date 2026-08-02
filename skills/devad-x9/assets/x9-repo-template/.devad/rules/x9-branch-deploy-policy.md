@@ -5,9 +5,9 @@ task where GitHub/Dokploy freshness affects the correct source branch.
 
 ## Hard Rules
 
-- `<project-root>` on `<implementation-branch>`
+- `D:\CDX-3\core-aio\core-x9` on `feature/post-mcp-cli-api-proof-runner-2026-06-22`
   is the X9 feature source.
-- `<deployment-branch>` is live/Dokploy deploy-only
+- `feature/post-v105-native-migration-2026-06-18` is live/Dokploy deploy-only
   unless the user explicitly asks for a live hotfix.
 - Never start new X9 feature work from the v105 branch.
 - Any live hotfix made on v105 must be cherry-picked, merged, or recorded as a
@@ -30,7 +30,7 @@ git fetch origin --prune
 git status --short --branch
 git rev-parse HEAD
 git rev-parse --abbrev-ref HEAD
-git ls-remote --heads origin <implementation-branch> <deployment-branch>
+git ls-remote --heads origin feature/post-mcp-cli-api-proof-runner-2026-06-22 feature/post-v105-native-migration-2026-06-18
 ```
 
 For deploy/live-proof work, also read `.devad/rules/devad-deploy-dokploy.md`
@@ -51,7 +51,7 @@ Before coding, classify the current checkout:
 
 | State | Test | Action |
 | --- | --- | --- |
-| `X9_SOURCE` | path is `<project-root>`, branch is `<implementation-branch>`, not detached | normal X9 work |
+| `X9_SOURCE` | path is `D:\CDX-3\core-aio\core-x9`, branch is `feature/post-mcp-cli-api-proof-runner-2026-06-22`, not detached | normal X9 work |
 | `DEPLOY_BRIDGE_ACTIVE` | clean v105 bridge created for a named X9 commit, before push/deploy | apply only that committed X9 change and verify |
 | `DEPLOY_BRIDGE_LOCKED` | bridge after push/deploy/proof, or old bridge behind current v105 | inspect/verify only, no edits |
 | `ORPHAN_PATCH` | dirty v105/deploy/bridge/detached checkout with uncommitted work | export diff/report, port to X9 or discard |
@@ -64,7 +64,7 @@ or recovery coding. The only allowed bridge actions are:
 - verify deploy/health/proof
 - cherry-pick or reapply a previously committed X9 commit into a clean bridge
 
-If a bug is found after deploy, return to `<project-root>`, make and
+If a bug is found after deploy, return to `D:\CDX-3\core-aio\core-x9`, make and
 push a new X9 commit, then create a fresh bridge from the current v105 remote
 tip. Never continue editing the already-deployed bridge.
 
@@ -86,7 +86,7 @@ When the user requested deploy, live proof, or production verification and
 Dokploy is pinned to v105 while implementation is on X9, choose exactly one:
 
 1. Controlled deploy bridge: commit/push the X9 implementation, create a clean
-   temporary deploy worktree from `origin/<deployment-branch>`,
+   temporary deploy worktree from `origin/feature/post-v105-native-migration-2026-06-18`,
    cherry-pick or reapply only the implementation commits, run focused tests,
    push v105, trigger Dokploy, verify `/health` and required browser/API proof,
    record exact X9 commit -> v105 bridge commit mapping, then mark the bridge
@@ -108,7 +108,7 @@ When a bridge is `ORPHAN_PATCH`:
 2. Export `git diff --binary` plus `git status --short --branch` to a patch
    report outside the bridge, or summarize exact files if the user only asked
    for analysis.
-3. Restart in `<project-root>`.
+3. Restart in `D:\CDX-3\core-aio\core-x9`.
 4. Apply-check or manually port only relevant changes.
 5. Verify on X9, commit/push X9, then use a fresh v105 bridge only if deploy is
    required.

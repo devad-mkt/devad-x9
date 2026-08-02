@@ -1,21 +1,42 @@
-# X9 Loop Lite State
+# X9 Loop V7.3 Lite State
 
-`SNAPSHOT.json` is tracked recovery truth. `loop.db` is an ignored disposable
-SQLite cache. `runtime/ACTION.json` is generated and contains the one action
-Linx may perform.
+`PROJECT_PROFILE.json` binds every action and inbox event to this project.
+`SNAPSHOT.json` is the canonical V3 recovery root; every referenced immutable
+shard is required. The root stays below 8 KB and each shard stays within its
+64 KB cap.
 
-Owner input is immutable, content-addressed local sensitive state. Write the
-packet once at .devad/manager/owner-packets/<packet_sha256>.json and copy each
-attachment under .devad/manager/owner-packets/artifacts/. Project Git ignores
-raw packets and attachments. SNAPSHOT.json stores only hashes and local paths.
-Back up raw content only through the owner-approved private backup flow.
+`loop.db` is the fixed disposable working cache. During V7-to-Lite migration,
+the exact source database/WAL/SHM set remains preserved only as rollback input.
+`runtime/ACTION.json` is generated, stays below 4 KB, and is the only action
+surface LINKER reads.
 
-The filename stem is its SHA-256 in both locations. Task `owner_packet_path` and
-`owner_packet_sha256` identify the packet; the controller verifies it and every
-copied artifact before dispatch, then includes bounded `local_work` in the
-generated action packet. Worker and Thinx receipts are immutable event-scoped
-files at `.devad/workers/<actor>/receipts/<event_id>.json`; the callback carries
-the SHA-256 of those exact bytes.
+Controller is the sole selector and writer of immutable `WORK_ORDER.json`.
+LINKER transports exact hashed action bytes and records acknowledgement; it
+never selects, combines, edits, reviews, or schedules work. WORKER reads its
+Work Order, Program summary, and selected Feature Packets. THINKER is called
+only for a predeclared high-risk judgment.
+
+Owner input remains immutable, content-addressed local sensitive state under
+`.devad/manager/owner-packets/`. Project Git ignores raw packets and
+attachments. Tracked state stores only hashes and local paths. Back up raw
+content only through an owner-approved private backup flow.
+
+`WORKER_CHECKPOINT.json` is local, disposable, non-authoritative, tamper
+checked, and expires with its Work Order. WORKER and THINKER results are
+immutable, event-scoped files under `.devad/workers/<actor>/`; call receipts
+record real usage or exactly `Unknown` plus prompt-prefix and tool-schema
+hashes.
+
+Migration builds V3 state side-by-side as `.next` artifacts, validates the
+complete candidate, records a durable journal, and only then atomically
+replaces fixed paths. Preserve the returned recovery identity until temporary
+install, replay, doctor, and exact `rollback-v7` proof pass.
+
+Use `loopctl.py doctor` before activation. `APPROVED_JOBS.json` is empty by
+default. Scheduled-job drift is a typed activation gate, not automatic
+authority for LINKER and not a blanket routine-dispatch rule. Doctor never
+mutates schedules or exposes raw commands.
 
 Use `loopctl.py rebuild` when the cache is missing or corrupt. Do not parse
-`STATUS.md`, `HANDOFFS.md`, or old `manager/loop/` files as current authority.
+`STATUS.md`, `HANDOFFS.md`, historical `manager/loop/` files, Obsidian, or chat
+history as current authority.

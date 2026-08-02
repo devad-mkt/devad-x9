@@ -16,6 +16,13 @@ other task-class choices remain pilots until the promotion gate passes.
 Use this before creating, continuing, waking, or correcting any X9 Codex
 manager/worker thread.
 
+Visible Codex tasks and hidden internal subagents have distinct capability
+surfaces. For a visible role, trust the visible task-creation tool's advertised
+model identifiers; never infer that Luna is unavailable from a hidden-subagent
+API. Decide visible task versus hidden bounded helper first, then apply only
+that surface's model policy. A hidden helper never substitutes for an enrolled
+visible role.
+
 ## Inactive v2 Strict Matrix
 
 | Thread title | Compatibility role | Required profile | Thinking |

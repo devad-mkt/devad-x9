@@ -111,15 +111,18 @@ class LoopLiteMigrationTests(unittest.TestCase):
         self.assertEqual({}, files(outside))
         self.assertFalse((self.repo / ".devad" / "ROUTER.md").exists())
 
-    def test_activation_packet_reuses_thinx_and_does_not_message_old_linx(self):
+    def test_activation_packet_uses_v73_roles_and_preserves_legacy_aliases(self):
         result = self.invoke("--apply")
         self.assertEqual(0, result.returncode, result.stderr)
-        packet = self.repo / ".devad" / "manager" / "passes" / "2026-07-13-x9-loop-lite-v6-activation.md"
+        packet = (
+            self.repo / ".devad" / "manager" / "passes"
+            / "2026-07-16-x9-loop-v7.3-lite-activation.md"
+        )
         text = packet.read_text(encoding="utf-8")
-        self.assertIn("fresh Linx v6", text)
-        self.assertIn("reuse the existing Thinx", text)
-        self.assertIn("do not message the current linx", text.lower())
-        self.assertIn("shadow reconciliation", text.lower())
+        self.assertIn("Reuse registered WORKER and THINKER identities", text)
+        self.assertIn("LINKER is deterministic", text)
+        self.assertIn("legacy LINX/THINX role values", text)
+        self.assertIn("rollback-v7", text)
 
 
 if __name__ == "__main__":

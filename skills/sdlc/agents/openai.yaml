@@ -1,0 +1,4 @@
+interface:
+  display_name: "SDLC"
+  short_description: "Risk-scaled delivery with a strict process budget"
+  default_prompt: "Use $sdlc to choose the lightest safe mode, keep process proportional to changed risk, and deliver the smallest correct result with focused evidence."

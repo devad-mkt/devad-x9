@@ -2,23 +2,26 @@
 
 Read this file first. Then read only the smallest linked file needed.
 
-## Loop Lite v6 Fast Route
+## X9 Loop V7.3 Lite Fast Route
 
 | Need | Read | Writer |
 | --- | --- | --- |
+| Project identity | manager/loop-lite/PROJECT_PROFILE.json | `loopctl.py` |
 | Current recovery truth | manager/loop-lite/SNAPSHOT.json | `loopctl.py` |
-| One permitted Linx action | manager/loop-lite/runtime/ACTION.json | `loopctl.py` |
-| Owner message and attachments | manager/loop-lite/contracts/OWNER_PACKET.json | Linx once |
-| Exact Worker task | manager/loop-lite/contracts/TASK.json | `loopctl.py` |
-| Worker completion | manager/loop-lite/contracts/RESULT.json | Worker |
+| One permitted LINKER action | manager/loop-lite/runtime/ACTION.json | `loopctl.py` |
+| Immutable Work Order | manager/loop-lite/runtime/work-orders/<id>/WORK_ORDER.json | Controller |
+| Owner message schema | manager/loop-lite/contracts/OWNER_PACKET.json | Controller intake |
+| WORKER result schema | manager/loop-lite/contracts/RESULT.json | Package template |
+| WORKER result and proof | workers/<worker-id>/ | WORKER/finalizer |
 | Feature lookup | features/features.index.json | Catalog builder |
-| One Worker lane | manager/workers/<lane>/ROUTER.md | Worker/generated |
+| One WORKER view | manager/workers/<lane>/ROUTER.md | generated view |
 | One feature | features/<feature-id>/TASK.md | Feature owner |
 
-Linx runs `loopctl.py reconcile`, reads only `runtime/ACTION.json`, performs
-that exact transport action, and records its real result. Role comes from task
-ID, never title. SQLite is ignored cache; `SNAPSHOT.json` is tracked recovery
-truth.
+Controller consumes one canonical inbox event with `loopctl.py run-once`.
+LINKER reads only `runtime/ACTION.json`, transports those exact bytes once,
+and returns the exact acknowledgement envelope. Role comes from registered
+actor ID, never title. SQLite is ignored cache; `SNAPSHOT.json` plus all
+referenced shards are tracked recovery truth.
 
 ## Stable Project Truth
 
@@ -34,11 +37,11 @@ These files remain useful when the exact task or shared X9 gate links them:
 | Exact owner packet index | manager/owner-input/INDEX.md |
 | Old project context | memory/CHAT-CATALOG.md |
 
-## Historical v5 Evidence
+## Historical Evidence
 
 Existing `manager/loop/`, `MANAGER_PASS_LOCK.md`, `LINX_HANDOVER_STATE.md`,
-and large manager Markdown remain historical evidence. Do not delete, rewrite,
-or parse them as current v6 authority.
+and large manager Markdown remain historical V5/V6/V7 evidence. Do not delete,
+rewrite, or parse them as V7.3 Lite authority.
 
 ## Rules
 
