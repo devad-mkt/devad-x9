@@ -16,9 +16,18 @@ on remembered chat context.
 
 - One blocked dependency pauses only that lane. Select a disjoint safe local
   action immediately when the packet already authorizes it.
-- Looper owns the compact lane ledger and next-action routing. Thinker is not
-  a routine approval service.
-- Linker transports only an exact signal. Workers own implementation and proof.
+- Thinker is decision-only: one stable material-diff review, a real
+  architecture/security boundary, or two distinct proof-bound failures. It
+  neither runs the queue nor supplies routine approvals.
+- Looper is the single owner of the ordered packet/lane queue. It continues
+  dependency-ready safe work and leads bounded repair/routing, without becoming
+  a second project manager or taking product-coding claims.
+- Linker sends only exact canonical path/hash/result-pointer signals; it never
+  chooses, transforms, approves, retries, or executes work. Workers implement
+  only their claimed packet paths and return proof.
+- A `Worker Loop Fix` is a narrow STYLE skill/package/install/host-integration
+  implementation Worker, not a Looper or manager; it stops after its bounded
+  result. Task creation leaves `thinking` unset.
 - A result is acknowledged once by rereading the durable receipt. Duplicate
   signals are zero-delta. If a signal is lost, resend the same pointer once;
   do not create a new manager, work order, or polling loop.

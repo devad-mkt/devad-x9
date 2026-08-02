@@ -89,8 +89,36 @@ class SupportingSkillV6Tests(unittest.TestCase):
         self.assertIn("WAITING_CAPABILITY", autonomy)
         self.assertIn("same-project successor task", style)
         self.assertIn("replacement worktree or copy a", autonomy)
-        self.assertIn("Canonical manager queue", autonomy)
+        self.assertIn("Canonical lane queue", autonomy)
         self.assertIn("one durable ordered checklist", style)
+
+    def test_style_roles_keep_one_queue_owner_and_creation_compatible(self):
+        style = self.read("x9-loop-style")
+        operating = self.read("x9-loop-style", "references/v6-style-operating.md")
+        autonomy = self.read(
+            "devad-x9", "references/worker-autonomy-and-escalation.md"
+        )
+        policy = "\n".join((style, operating, autonomy))
+
+        for text in (style, operating, autonomy):
+            for role in ("Thinker", "Looper", "Linker", "Worker"):
+                self.assertIn(role, text)
+        for marker in (
+            "two distinct proof-bound failures",
+            "does not own routine approvals or the queue",
+            "single owner of the ordered packet/lane queue",
+            "not a second project manager",
+            "product-coding claims",
+            "exact canonical path/hash/result-pointer signals",
+            "never chooses, transforms, approves, retries, or executes work",
+            "only its claimed packet paths",
+            "Worker Loop Fix",
+            "STYLE skill/package/install/host-integration defects",
+            "stops after its bounded result",
+        ):
+            self.assertIn(marker, policy)
+        self.assertIn("Task creation leaves `thinking` unset.", policy)
+        self.assertNotIn("thinking=minimal", policy)
 
     def test_cached_plugin_worktree_override_is_hash_bound(self):
         policy = self.read(

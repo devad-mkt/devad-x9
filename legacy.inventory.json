@@ -1666,61 +1666,67 @@
       "anchor": "Worker Autonomy And Escalation"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-8705f511789a",
+      "id": "v3-heading-worker-autonomy-and-escalation-7332ec56fbaf",
+      "kind": "heading",
+      "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
+      "anchor": "STYLE_ONLY role boundary"
+    },
+    {
+      "id": "v3-heading-worker-autonomy-and-escalation-4671b1115520",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Action Classification"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-4198ff7b3c60",
+      "id": "v3-heading-worker-autonomy-and-escalation-6e0535e3dfe0",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Sticky Lane And Rebind"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-84f5dcfe41b3",
+      "id": "v3-heading-worker-autonomy-and-escalation-830665f956e2",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
-      "anchor": "Canonical manager queue"
+      "anchor": "Canonical lane queue"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-4d49625434f2",
+      "id": "v3-heading-worker-autonomy-and-escalation-1661c38fbeda",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Pre-Question Admission Gate"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-902cb419f165",
+      "id": "v3-heading-worker-autonomy-and-escalation-ebecfb919bb3",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Work Order Granularity"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-8a330134afc3",
+      "id": "v3-heading-worker-autonomy-and-escalation-7eebea1277bb",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Bounded Expert Help"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-d2f47325876c",
+      "id": "v3-heading-worker-autonomy-and-escalation-0b7bb1fe1da3",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Proof-Bound Escalation"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-7ed1a1828403",
+      "id": "v3-heading-worker-autonomy-and-escalation-dc65e5e5d3ab",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Review Is Quality Control, Not Coding Permission"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-476e26e527b2",
+      "id": "v3-heading-worker-autonomy-and-escalation-446ab63d7b45",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Compact Transfer"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-5e647da31960",
+      "id": "v3-heading-worker-autonomy-and-escalation-78de04b6598a",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Enforcement Status"
@@ -5306,19 +5312,19 @@
       "anchor": "Progress without a Controller"
     },
     {
-      "id": "v3-heading-v6-style-operating-646f70a753aa",
+      "id": "v3-heading-v6-style-operating-ba1fc7bb1157",
       "kind": "heading",
       "source": "skills/x9-loop-style/references/v6-style-operating.md",
       "anchor": "Sticky lane and task recovery"
     },
     {
-      "id": "v3-heading-v6-style-operating-bdbeece24a0a",
+      "id": "v3-heading-v6-style-operating-b33d01e2e645",
       "kind": "heading",
       "source": "skills/x9-loop-style/references/v6-style-operating.md",
       "anchor": "Question admission"
     },
     {
-      "id": "v3-heading-v6-style-operating-f26e439d0d97",
+      "id": "v3-heading-v6-style-operating-84863109229a",
       "kind": "heading",
       "source": "skills/x9-loop-style/references/v6-style-operating.md",
       "anchor": "Quarantined Controller trial"

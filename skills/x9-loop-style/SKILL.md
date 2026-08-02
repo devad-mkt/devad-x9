@@ -52,16 +52,16 @@ dispatch, claim, or routing authority.
 
 | Role | V6-style responsibility |
 | --- | --- |
-| Thinker | Review one stable material diff or real architecture/security boundary; concrete findings are defect evidence. |
-| Looper | Maintain one ordered packet checklist, identify dependency-ready safe work, and unblock or route one bounded fix at a time. It leads; it does not merely report. |
-| Linker | Relay one exact path/hash signal when asked; it never selects or transforms work. |
-| Worker | Implement inside the packet claims, run focused proof, record a durable receipt, and continue the next safe authorized action. |
+| Thinker | Decision-only: review one stable material diff, a real architecture/security boundary, or two distinct proof-bound failures. It does not own routine approvals or the queue. |
+| Looper | The single owner of the ordered packet/lane queue: continue dependency-ready safe work and lead bounded repair/routing. It does not merely report, become a second project manager, or take product-coding claims. |
+| Linker | Send only exact canonical path/hash/result-pointer signals. It never chooses, transforms, approves, retries, or executes work. |
+| Worker | Implement only its claimed packet paths, return focused proof, and record the bounded result. A `Worker Loop Fix` is a narrow Worker for STYLE skill/package/install/host-integration defects; it is not a second Looper or manager and stops after its bounded result. |
 
 Use short task titles: `Thinker`, `Looper`, `Linker`, or `Worker` plus a one-
-or two-word suffix. Creation defaults never overwrite an existing task's model
-or thinking; every follow-up omits both. If a task must be created with an
-explicit setting, use only a host-advertised model/reasoning pair; never send
-the unsupported `thinking=minimal` value to Terra.
+or two-word suffix; `Worker Loop Fix` is a valid narrow Worker title. Creation
+defaults never overwrite an existing task's model or reasoning; every follow-up
+omits both. Task creation leaves `thinking` unset. If an explicit setting is
+needed, use only a host-advertised model/reasoning pair.
 
 ## Autonomous flow
 

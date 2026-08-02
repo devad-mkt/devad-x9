@@ -3,6 +3,20 @@
 Use this before asking for authorization, creating a repair Work Order,
 consulting THINKER/LOOPER, adding a visible task, or reporting `BLOCKED`.
 
+## STYLE_ONLY role boundary
+
+Thinker is decision-only: it reviews one stable material diff, a real
+architecture/security boundary, or two distinct proof-bound failures; it does
+not run the task queue or provide routine approvals. Looper is the single owner
+of the ordered packet/lane queue: it continues dependency-ready safe work and
+leads bounded repair/routing, but is not a second project manager and takes no
+product-coding claims. Linker sends only exact canonical path/hash/result-
+pointer signals and never chooses, transforms, approves, retries, or executes
+work. A Worker implements only its claimed packet paths and returns proof. A
+`Worker Loop Fix` is a narrow implementation Worker for STYLE
+skill/package/install/host-integration defects, not a second Looper or manager,
+and stops after its bounded result. Task creation leaves `thinking` unset.
+
 ## Action Classification
 
 | Class | Rule | Action |
@@ -52,14 +66,14 @@ claim continues. Report an unchanged wait once, then resume only on the named
 event. Do not add recurring wakeups, polling, Controller state, or Work Orders
 to manage normal worker lanes.
 
-## Canonical manager queue
+## Canonical lane queue
 
-Looper/manager keeps one durable ordered checklist with at most one active
-unblock. A waiting owner or capability item does not stop disjoint
-dependency-ready items. New worker reports update their existing lane; they do
-not create competing plans, duplicate lanes, or a status-poll loop. A security
-incident may preempt the active item. Otherwise, finish its durable receipt and
-select the next ready item immediately.
+Looper keeps the one durable ordered checklist with at most one active unblock.
+A waiting owner or capability item does not stop disjoint dependency-ready
+items. New worker reports update their existing lane; they do not create
+competing plans, duplicate lanes, or a status-poll loop. A security incident may
+preempt the active item. Otherwise, finish its durable receipt and select the
+next ready item immediately.
 
 ## Pre-Question Admission Gate
 
