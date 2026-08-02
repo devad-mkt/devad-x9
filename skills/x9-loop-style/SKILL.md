@@ -53,7 +53,7 @@ dispatch, claim, or routing authority.
 | Role | V6-style responsibility |
 | --- | --- |
 | Thinker | Review one stable material diff or real architecture/security boundary; concrete findings are defect evidence. |
-| Looper | Maintain the packet ledger, identify dependency-ready safe work, and unblock or route a bounded fix. It leads; it does not merely report. |
+| Looper | Maintain one ordered packet checklist, identify dependency-ready safe work, and unblock or route one bounded fix at a time. It leads; it does not merely report. |
 | Linker | Relay one exact path/hash signal when asked; it never selects or transforms work. |
 | Worker | Implement inside the packet claims, run focused proof, record a durable receipt, and continue the next safe authorized action. |
 
@@ -75,6 +75,13 @@ the unsupported `thinking=minimal` value to Terra.
    `REBIND_DUE`, not a reason to stop, reattach, rebase, copy, or replace the
    Worker. Rebind only at an integration/release boundary or on an actual
    identity, shared-claim, resource, or assumption change.
+   If the host attaches the task to the wrong worktree, first keep the task if
+   its correct existing worktree is writable. Otherwise try one host-supported
+   move that preserves that worktree. If that is unavailable, create one
+   same-project successor task, give it the compact packet, and verify its
+   `cwd`, branch, HEAD, staged state, and candidate acknowledgement before
+   marking the old task superseded. Never create a replacement worktree, copy
+   dirty bytes, or retry attachment routes.
 4. Request one Thinker review only for a stable material diff, a real
    architecture/security boundary, or two distinct proof-bound failed routes.
 5. Write a compact durable result with base, changed paths, tests/security,
@@ -86,6 +93,12 @@ authorized inside the packet. Never call a lane `BLOCKED` because a reviewer
 has not approved routine work. After one difficult same-scope failure, use at
 most one bounded helper according to `$subagents`; do not create an escalation
 loop.
+
+Looper keeps one durable ordered checklist, not competing chat todos or a
+status-poll loop. When one item waits for a real owner or capability event,
+continue the next dependency-ready item; resume the waiting lane only on its
+named receipt. A security incident may preempt the checklist. Otherwise, a
+worker message updates its existing lane and never creates a duplicate lane.
 
 ## Safety and fallback
 

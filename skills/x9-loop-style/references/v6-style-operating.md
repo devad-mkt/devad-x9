@@ -23,6 +23,28 @@ on remembered chat context.
   signals are zero-delta. If a signal is lost, resend the same pointer once;
   do not create a new manager, work order, or polling loop.
 
+## Sticky lane and task recovery
+
+Keep a task, its native worktree, branch, base, and exclusive paths stable
+until the bounded candidate is frozen. Remote-main movement alone is
+`REBIND_DUE`, not a reason to stop local work, rebase, copy bytes, or replace a
+valid candidate. Rebind at integration/release, a changed shared claim or
+resource, a changed task/worktree identity, or new evidence that invalidates an
+accepted assumption.
+
+For a wrong task attachment, use this ladder once: continue in the correct
+existing worktree if the same task can reach it; otherwise try one host move
+that preserves it; otherwise create one successor task in the already
+registered correct project. The successor rereads the compact packet and proves
+`cwd`, branch, HEAD, staged state, and candidate acknowledgement before the old
+task is marked superseded. Never create a replacement worktree, copy dirty
+bytes, or retry attachment routes.
+
+Looper keeps one durable ordered checklist. A waiting dependency pauses only
+its lane; select the next dependency-ready item, and resume the waiting one on
+its named receipt. A new message updates its existing lane instead of creating
+another plan or queue. Only a security incident may preempt the active item.
+
 ## Question admission
 
 Before any external question, select exactly one:

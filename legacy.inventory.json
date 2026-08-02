@@ -1678,43 +1678,49 @@
       "anchor": "Sticky Lane And Rebind"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-9ef4ebfa5e0d",
+      "id": "v3-heading-worker-autonomy-and-escalation-84f5dcfe41b3",
+      "kind": "heading",
+      "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
+      "anchor": "Canonical manager queue"
+    },
+    {
+      "id": "v3-heading-worker-autonomy-and-escalation-4d49625434f2",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Pre-Question Admission Gate"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-5329cb161c12",
+      "id": "v3-heading-worker-autonomy-and-escalation-902cb419f165",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Work Order Granularity"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-2095120cacf6",
+      "id": "v3-heading-worker-autonomy-and-escalation-8a330134afc3",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Bounded Expert Help"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-d425009eae61",
+      "id": "v3-heading-worker-autonomy-and-escalation-d2f47325876c",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Proof-Bound Escalation"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-7d398618d11e",
+      "id": "v3-heading-worker-autonomy-and-escalation-7ed1a1828403",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Review Is Quality Control, Not Coding Permission"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-6c845ab563f8",
+      "id": "v3-heading-worker-autonomy-and-escalation-476e26e527b2",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Compact Transfer"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-dac74aad81ce",
+      "id": "v3-heading-worker-autonomy-and-escalation-5e647da31960",
       "kind": "heading",
       "source": "skills/devad-x9/references/worker-autonomy-and-escalation.md",
       "anchor": "Enforcement Status"
@@ -5300,13 +5306,19 @@
       "anchor": "Progress without a Controller"
     },
     {
-      "id": "v3-heading-v6-style-operating-165bfe810908",
+      "id": "v3-heading-v6-style-operating-646f70a753aa",
+      "kind": "heading",
+      "source": "skills/x9-loop-style/references/v6-style-operating.md",
+      "anchor": "Sticky lane and task recovery"
+    },
+    {
+      "id": "v3-heading-v6-style-operating-bdbeece24a0a",
       "kind": "heading",
       "source": "skills/x9-loop-style/references/v6-style-operating.md",
       "anchor": "Question admission"
     },
     {
-      "id": "v3-heading-v6-style-operating-9fdd5b04e571",
+      "id": "v3-heading-v6-style-operating-f26e439d0d97",
       "kind": "heading",
       "source": "skills/x9-loop-style/references/v6-style-operating.md",
       "anchor": "Quarantined Controller trial"
@@ -5353,13 +5365,13 @@
       "anchor": "Autonomous flow"
     },
     {
-      "id": "v3-heading-skill-4001d7151e3c",
+      "id": "v3-heading-skill-2de198462f5b",
       "kind": "heading",
       "source": "skills/x9-loop-style/SKILL.md",
       "anchor": "Safety and fallback"
     },
     {
-      "id": "v3-heading-skill-46cecaa5677b",
+      "id": "v3-heading-skill-3c675e3000af",
       "kind": "heading",
       "source": "skills/x9-loop-style/SKILL.md",
       "anchor": "Completion labels"

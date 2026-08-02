@@ -30,7 +30,11 @@ only at the next integration/release boundary. Rebind immediately only when
 the task/worktree identity changes, a claimed shared path or runtime resource
 changes, or new source/security/architecture evidence invalidates an accepted
 assumption. A host that cannot attach the existing worktree is one owner/host
-boundary; it is never authority to create a replacement writer.
+boundary; it is never authority to create a replacement worktree or copy a
+dirty candidate. After one failed preserving move, one successor task inside
+the already registered correct project may take over the existing candidate
+only after it verifies `cwd`, branch, HEAD, staged state, and the compact
+handoff acknowledgement. It must not create another worktree or replay bytes.
 
 At a real transition, record only:
 
@@ -47,6 +51,15 @@ blocked dependency pauses only its dependent claim; every disjoint authorized
 claim continues. Report an unchanged wait once, then resume only on the named
 event. Do not add recurring wakeups, polling, Controller state, or Work Orders
 to manage normal worker lanes.
+
+## Canonical manager queue
+
+Looper/manager keeps one durable ordered checklist with at most one active
+unblock. A waiting owner or capability item does not stop disjoint
+dependency-ready items. New worker reports update their existing lane; they do
+not create competing plans, duplicate lanes, or a status-poll loop. A security
+incident may preempt the active item. Otherwise, finish its durable receipt and
+select the next ready item immediately.
 
 ## Pre-Question Admission Gate
 

@@ -2957,8 +2957,18 @@
       "status": "RETAINED"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-9ef4ebfa5e0d",
-      "legacy_id": "v3-heading-worker-autonomy-and-escalation-9ef4ebfa5e0d",
+      "id": "v3-heading-worker-autonomy-and-escalation-84f5dcfe41b3",
+      "legacy_id": "v3-heading-worker-autonomy-and-escalation-84f5dcfe41b3",
+      "kind": "heading",
+      "owner": "devad-x9",
+      "source": "devad-skills-set/skills/devad-x9/references/worker-autonomy-and-escalation.md",
+      "purpose": "Preserve v3 heading: Canonical manager queue",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-worker-autonomy-and-escalation-4d49625434f2",
+      "legacy_id": "v3-heading-worker-autonomy-and-escalation-4d49625434f2",
       "kind": "heading",
       "owner": "devad-x9",
       "source": "devad-skills-set/skills/devad-x9/references/worker-autonomy-and-escalation.md",
@@ -2967,8 +2977,8 @@
       "status": "RETAINED"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-5329cb161c12",
-      "legacy_id": "v3-heading-worker-autonomy-and-escalation-5329cb161c12",
+      "id": "v3-heading-worker-autonomy-and-escalation-902cb419f165",
+      "legacy_id": "v3-heading-worker-autonomy-and-escalation-902cb419f165",
       "kind": "heading",
       "owner": "devad-x9",
       "source": "devad-skills-set/skills/devad-x9/references/worker-autonomy-and-escalation.md",
@@ -2977,8 +2987,8 @@
       "status": "RETAINED"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-2095120cacf6",
-      "legacy_id": "v3-heading-worker-autonomy-and-escalation-2095120cacf6",
+      "id": "v3-heading-worker-autonomy-and-escalation-8a330134afc3",
+      "legacy_id": "v3-heading-worker-autonomy-and-escalation-8a330134afc3",
       "kind": "heading",
       "owner": "devad-x9",
       "source": "devad-skills-set/skills/devad-x9/references/worker-autonomy-and-escalation.md",
@@ -2987,8 +2997,8 @@
       "status": "RETAINED"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-d425009eae61",
-      "legacy_id": "v3-heading-worker-autonomy-and-escalation-d425009eae61",
+      "id": "v3-heading-worker-autonomy-and-escalation-d2f47325876c",
+      "legacy_id": "v3-heading-worker-autonomy-and-escalation-d2f47325876c",
       "kind": "heading",
       "owner": "devad-x9",
       "source": "devad-skills-set/skills/devad-x9/references/worker-autonomy-and-escalation.md",
@@ -2997,8 +3007,8 @@
       "status": "RETAINED"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-7d398618d11e",
-      "legacy_id": "v3-heading-worker-autonomy-and-escalation-7d398618d11e",
+      "id": "v3-heading-worker-autonomy-and-escalation-7ed1a1828403",
+      "legacy_id": "v3-heading-worker-autonomy-and-escalation-7ed1a1828403",
       "kind": "heading",
       "owner": "devad-x9",
       "source": "devad-skills-set/skills/devad-x9/references/worker-autonomy-and-escalation.md",
@@ -3007,8 +3017,8 @@
       "status": "RETAINED"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-6c845ab563f8",
-      "legacy_id": "v3-heading-worker-autonomy-and-escalation-6c845ab563f8",
+      "id": "v3-heading-worker-autonomy-and-escalation-476e26e527b2",
+      "legacy_id": "v3-heading-worker-autonomy-and-escalation-476e26e527b2",
       "kind": "heading",
       "owner": "devad-x9",
       "source": "devad-skills-set/skills/devad-x9/references/worker-autonomy-and-escalation.md",
@@ -3017,8 +3027,8 @@
       "status": "RETAINED"
     },
     {
-      "id": "v3-heading-worker-autonomy-and-escalation-dac74aad81ce",
-      "legacy_id": "v3-heading-worker-autonomy-and-escalation-dac74aad81ce",
+      "id": "v3-heading-worker-autonomy-and-escalation-5e647da31960",
+      "legacy_id": "v3-heading-worker-autonomy-and-escalation-5e647da31960",
       "kind": "heading",
       "owner": "devad-x9",
       "source": "devad-skills-set/skills/devad-x9/references/worker-autonomy-and-escalation.md",
@@ -9229,8 +9239,18 @@
       "status": "RETAINED"
     },
     {
-      "id": "v3-heading-v6-style-operating-165bfe810908",
-      "legacy_id": "v3-heading-v6-style-operating-165bfe810908",
+      "id": "v3-heading-v6-style-operating-646f70a753aa",
+      "legacy_id": "v3-heading-v6-style-operating-646f70a753aa",
+      "kind": "heading",
+      "owner": "x9-loop-style",
+      "source": "devad-skills-set/skills/x9-loop-style/references/v6-style-operating.md",
+      "purpose": "Preserve v3 heading: Sticky lane and task recovery",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-v6-style-operating-bdbeece24a0a",
+      "legacy_id": "v3-heading-v6-style-operating-bdbeece24a0a",
       "kind": "heading",
       "owner": "x9-loop-style",
       "source": "devad-skills-set/skills/x9-loop-style/references/v6-style-operating.md",
@@ -9239,8 +9259,8 @@
       "status": "RETAINED"
     },
     {
-      "id": "v3-heading-v6-style-operating-9fdd5b04e571",
-      "legacy_id": "v3-heading-v6-style-operating-9fdd5b04e571",
+      "id": "v3-heading-v6-style-operating-f26e439d0d97",
+      "legacy_id": "v3-heading-v6-style-operating-f26e439d0d97",
       "kind": "heading",
       "owner": "x9-loop-style",
       "source": "devad-skills-set/skills/x9-loop-style/references/v6-style-operating.md",
@@ -9319,8 +9339,8 @@
       "status": "RETAINED"
     },
     {
-      "id": "v3-heading-skill-4001d7151e3c",
-      "legacy_id": "v3-heading-skill-4001d7151e3c",
+      "id": "v3-heading-skill-2de198462f5b",
+      "legacy_id": "v3-heading-skill-2de198462f5b",
       "kind": "heading",
       "owner": "x9-loop-style",
       "source": "devad-skills-set/skills/x9-loop-style/SKILL.md",
@@ -9329,8 +9349,8 @@
       "status": "RETAINED"
     },
     {
-      "id": "v3-heading-skill-46cecaa5677b",
-      "legacy_id": "v3-heading-skill-46cecaa5677b",
+      "id": "v3-heading-skill-3c675e3000af",
+      "legacy_id": "v3-heading-skill-3c675e3000af",
       "kind": "heading",
       "owner": "x9-loop-style",
       "source": "devad-skills-set/skills/x9-loop-style/SKILL.md",

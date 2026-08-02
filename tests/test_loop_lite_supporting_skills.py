@@ -87,7 +87,10 @@ class SupportingSkillV6Tests(unittest.TestCase):
         self.assertIn("Remote-main movement alone", combined)
         self.assertIn("not a reason to stop, reattach, rebase, copy, or replace", style)
         self.assertIn("WAITING_CAPABILITY", autonomy)
-        self.assertIn("never authority to create a replacement writer", autonomy)
+        self.assertIn("same-project successor task", style)
+        self.assertIn("replacement worktree or copy a", autonomy)
+        self.assertIn("Canonical manager queue", autonomy)
+        self.assertIn("one durable ordered checklist", style)
 
     def test_cached_plugin_worktree_override_is_hash_bound(self):
         policy = self.read(
