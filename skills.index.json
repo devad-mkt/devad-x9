@@ -1,14 +1,22 @@
 {
-    "schema":  "devad-x9-loop-kit-v6",
-    "date":  "2026-07-13",
+    "schema":  "devad-x9-loop-public-style-g-v1",
+    "date":  "2026-08-03",
     "skills":  [
                    {
                        "name":  "devad-x9",
                        "role":  "repository safety and Worker execution"
                    },
                    {
+                       "name":  "x9-loop-style",
+                       "role":  "stable default: authority envelopes, autonomous local repair, and receipt-driven resume"
+                   },
+                   {
+                       "name":  "x9-loop-code",
+                       "role":  "fresh-project legacy-controller trial only; not production-ready"
+                   },
+                   {
                        "name":  "devad-x9-loop",
-                       "role":  "Linx, Thinx and deterministic task loop"
+                       "role":  "compatibility redirect to X9 Loop Style; bundled controller retained for trials"
                    },
                    {
                        "name":  "devad-x9-manager",
@@ -25,6 +33,58 @@
                    {
                        "name":  "devad-memory",
                        "role":  "durable historical memory"
+                   },
+                   {
+                       "name":  "x9-project-docs",
+                       "role":  "optional source-bound sitemap from accepted Style receipts"
+                   },
+                   {
+                       "name":  "dokploy",
+                       "role":  "secret-safe Dokploy diagnosis and deploy boundary"
+                   },
+                   {
+                       "name":  "devad-docs",
+                       "role":  "portable public documentation routing"
+                   },
+                   {
+                       "name":  "tldr",
+                       "role":  "compact evidence-bounded summaries"
+                   },
+                   {
+                       "name":  "smooth-coding",
+                       "role":  "autonomous proof-first implementation"
+                   },
+                   {
+                       "name":  "sdlc",
+                       "role":  "risk-scaled lifecycle guidance"
+                   },
+                   {
+                       "name":  "xplan",
+                       "role":  "read-by-need durable delivery plans"
+                   },
+                   {
+                       "name":  "devad-adoptions",
+                       "role":  "source-bound adoption evidence gates"
+                   },
+                   {
+                       "name":  "evidence-to-implementation",
+                       "role":  "privacy-safe evidence and implementation contracts"
+                   },
+                   {
+                       "name":  "x-subagent",
+                       "role":  "bounded worker routing and cost-aware verification"
+                   },
+                   {
+                       "name":  "ultra-reasoning-protocol",
+                       "role":  "risk-scaled reasoning and delivery reset"
+                   },
+                   {
+                       "name":  "chrome-control",
+                       "role":  "browser evidence routing with authentication safeguards"
+                   },
+                   {
+                       "name":  "semantic-adoption",
+                       "role":  "source-bound native behavior adoption"
                    }
                ],
     "project_template":  "templates/x9-project/.devad",

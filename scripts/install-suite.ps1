@@ -3,6 +3,7 @@ param(
     [string]$ProjectRoot = "",
     [string]$Python = "python",
     [string]$SkillValidator = "",
+    [switch]$CodeTrial,
     [switch]$Apply
 )
 
@@ -10,15 +11,22 @@ $ErrorActionPreference = "Stop"
 $PackageRoot = Split-Path -Parent $PSScriptRoot
 $Skills = @(
     "devad-x9",
+    "x9-loop-style",
+    "x9-loop-code",
     "devad-x9-loop",
     "devad-x9-manager",
     "codex-x9-backup",
     "codex-token-budget",
-    "devad-memory"
+    "devad-memory",
+    "x9-project-docs"
 )
 
-Write-Host "X9 Loop Lite v6 source: $PackageRoot"
+Write-Host "X9 Loop Style source (with archived Code trial): $PackageRoot"
 Write-Host "Codex home: $CodexHome"
+
+if ($ProjectRoot -and -not $CodeTrial) {
+    throw "STYLE_PROJECT_OVERLAY_DISABLED: normal Style work never initializes controller state. Use -CodeTrial only for an owner-approved fresh disposable canary."
+}
 
 if (-not $Apply) {
     Write-Host "DRY RUN: no files changed."
@@ -26,7 +34,7 @@ if (-not $Apply) {
         Write-Host "Would stage, validate, back up, and install: $Skill"
     }
     if ($ProjectRoot) {
-        Write-Host "Would create .devad only if absent: $ProjectRoot"
+        Write-Host "Would create a legacy controller-trial .devad only if absent: $ProjectRoot"
     }
     exit 0
 }
@@ -134,5 +142,5 @@ catch {
     throw
 }
 
-Write-Host "PASS: installed six skills"
+Write-Host "PASS: installed nine Style/default and Code-trial skills"
 Write-Host "Rollback backup: $BackupRoot"

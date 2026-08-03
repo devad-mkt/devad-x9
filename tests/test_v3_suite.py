@@ -11,11 +11,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = (
     "devad-x9",
+    "x9-loop-style",
+    "x9-loop-code",
     "devad-x9-loop",
     "devad-x9-manager",
     "codex-x9-backup",
     "codex-token-budget",
     "devad-memory",
+    "x9-project-docs",
 )
 
 
@@ -175,7 +178,7 @@ class X9SuiteTests(unittest.TestCase):
 
         digest_a = "a" * 64
         digest_b = "b" * 64
-        thread_id = "019f5b09-ec4f-7a43-a417-e2a01c4ea398"
+        thread_id = "00000000-0000-4000-8000-000000000001"
         valid = f"""# Linx Handover State
 **Status:** ACTIVATED
 **Old Linx thread:** old

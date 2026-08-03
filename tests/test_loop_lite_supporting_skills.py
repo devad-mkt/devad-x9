@@ -48,7 +48,7 @@ class SupportingSkillV6Tests(unittest.TestCase):
         self.assertIn("Unknown", text)
         self.assertNotIn("top thread lifetime/fallback totals", text.lower())
 
-    def test_backup_and_installer_still_cover_all_six_skills(self):
+    def test_backup_and_installer_cover_the_style_default_package(self):
         backup = self.read("codex-x9-backup")
         installer = (ROOT / "scripts" / "install-suite.ps1").read_text(
             encoding="utf-8-sig"
@@ -60,6 +60,9 @@ class SupportingSkillV6Tests(unittest.TestCase):
             "codex-x9-backup",
             "codex-token-budget",
             "devad-memory",
+            "x9-loop-style",
+            "x9-loop-code",
+            "x9-project-docs",
         ):
             self.assertIn(name, backup + installer)
         self.assertIn("rollback", installer.lower())

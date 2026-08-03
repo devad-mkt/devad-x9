@@ -1,0 +1,4 @@
+interface:
+  display_name: "xSubAgent"
+  short_description: "Evidence-based SOL and Terra worker routing"
+  default_prompt: "Use $x-subagent to route an attested SOL or Terra worker, enforce Luna exclusion, and verify compact proof."

@@ -128,11 +128,12 @@ class LoopLitePackageTests(unittest.TestCase):
                 text=True,
             )
         self.assertEqual(0, result.returncode, result.stdout)
-        self.assertIn("PASS: X9 Loop Lite v6", result.stdout)
+        self.assertIn("PASS: X9 Loop Style public kit", result.stdout)
 
     def test_skill_routes_linx_through_one_action_file(self):
         text = (SKILL / "SKILL.md").read_text(encoding="utf-8")
         self.assertIn("Devad X9 Loop Lite v6", text)
+        self.assertIn("COMPAT_REDIRECT:devad-x9-loop:x9-loop-style", text)
         self.assertIn("scripts/loopctl.py reconcile", text)
         self.assertIn("runtime/ACTION.json", text)
         self.assertIn("never reviews code", text.lower())
@@ -291,14 +292,12 @@ class LoopLitePackageTests(unittest.TestCase):
         }
         self.assertTrue(required.issubset(ids), required - ids)
 
-    def test_readme_has_v6_fast_path_and_performance_gates(self):
+    def test_readme_sets_style_default_and_retains_trial_boundary(self):
         text = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertIn("X9 Loop Lite v6", text)
-        self.assertIn("under five seconds", text)
-        self.assertIn("median under 60 seconds", text)
-        self.assertIn("p95 under two minutes", text)
-        self.assertIn("Unknown", text)
-        self.assertIn("Three coding Workers", text)
+        self.assertIn("X9 Loop — Style G", text)
+        self.assertIn("x9-loop-style", text)
+        self.assertIn("x9-loop-code", text)
+        self.assertIn("archived trial code", text)
 
 
 class OpenCodeDoctorTests(unittest.TestCase):

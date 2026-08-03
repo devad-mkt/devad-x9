@@ -1,9 +1,24 @@
 ---
 name: devad-x9-loop
-description: Use when coordinating long Devad X9 work across Linx, Thinx, Worker, Reader, CHUNK, or SIDE roles; when deterministic task identity, dispatch, callbacks, local work, ownership, gates, concurrency, recovery, or model cost must remain correct without heartbeat polling or chat-history routing.
+description: Deprecated compatibility name for the bundled experimental X9 Loop Lite controller. Redirect normal work to x9-loop-style; use the retained controller only for an explicit fresh-project trial.
 ---
 
-# Devad X9 Loop Lite v6
+# Devad X9 Loop Lite v6 — Archived Code Trial
+
+## Normal project redirect
+
+For normal or existing work, load `$x9-loop-style` and record
+`COMPAT_REDIRECT:devad-x9-loop:x9-loop-style`. Do not initialize or repair the
+bundled controller, create an ACTION/Work Order flow, register roles, or add a
+heartbeat/monitor for normal work.
+
+The retained Lite v6 material below is public experimental code-trial reference
+only. It may be used only through an explicit `$x9-loop-code` fresh-project
+canary with rollback proof. It cannot take over an existing project or bypass a
+Style packet's security, provider, deployment, destructive, or production
+boundaries.
+
+## Archived trial reference
 
 ## Load First
 

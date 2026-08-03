@@ -1,20 +1,18 @@
 ---
 name: devad-x9-manager
-description: Use when an older Devad X9 prompt invokes devad-x9-manager, Top Manager, Sub Manager, Linx, Thinx, or Worker coordination and needs temporary v6 compatibility.
+description: Compatibility name for older Devad X9 manager prompts. Redirect normal coordination to x9-loop-style without creating a second manager or controller flow.
 ---
 
 # Devad X9 Manager Compatibility
 
-This name is a temporary v6 redirect.
+Immediately load `$x9-loop-style`. Keep the requested role's meaning, but use
+one compact envelope, current Git evidence, focused proof, a durable receipt,
+and one signal-only handoff.
 
-Immediately load and follow `$devad-x9-loop`. Keep the requested role and old
-prompt meaning, but use loop-lite task identity, exact claims, dispatch IDs,
-direct callbacks, recovery snapshot, and all shared X9 safety gates.
+Do not run a second manager flow, Controller Work Order, ACTION transport,
+recovery route, role registry, or periodic monitor from this shim.
 
-Do not run a second manager flow from this shim.
+The archived `devad-x9-loop` Lite v6 code and `.devad/manager/loop-lite/`
+state are for a separately admitted `x9-loop-code` trial only.
 
-Report once in durable state:
-`COMPAT_REDIRECT:devad-x9-manager:devad-x9-loop`.
-
-The old `.devad/manager/loop/` files are historical only. Removal of this shim
-requires explicit owner approval in a later major version.
+Report once: `COMPAT_REDIRECT:devad-x9-manager:x9-loop-style`.

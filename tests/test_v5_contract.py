@@ -23,11 +23,26 @@ class PackageContractTests(unittest.TestCase):
     def test_required_skills_exist(self):
         expected = {
             "devad-x9",
+            "x9-loop-style",
+            "x9-loop-code",
             "devad-x9-loop",
             "devad-x9-manager",
             "codex-x9-backup",
             "codex-token-budget",
             "devad-memory",
+            "x9-project-docs",
+            "dokploy",
+            "devad-docs",
+            "tldr",
+            "smooth-coding",
+            "sdlc",
+            "xplan",
+            "devad-adoptions",
+            "evidence-to-implementation",
+            "x-subagent",
+            "ultra-reasoning-protocol",
+            "chrome-control",
+            "semantic-adoption",
         }
         actual = {p.name for p in SKILLS.iterdir() if p.is_dir()}
         self.assertEqual(expected, actual)

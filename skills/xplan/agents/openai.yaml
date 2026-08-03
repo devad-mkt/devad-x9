@@ -1,0 +1,4 @@
+interface:
+  display_name: "xPlan"
+  short_description: "Build compact read-by-need delivery packets"
+  default_prompt: "Use $xplan to create one compact PLAN.md and route each material chunk from verified evidence through a frozen contract, PRE_CODE rebind, mission-sized Work Order, proof, and delivery."

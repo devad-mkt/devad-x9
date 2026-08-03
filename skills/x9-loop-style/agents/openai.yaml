@@ -1,0 +1,4 @@
+interface:
+  display_name: "X9 Loop Style"
+  short_description: "Default autonomous X9 coordination without a Controller"
+  default_prompt: "Use $x9-loop-style for one bounded task: verify current Git and a compact authority envelope, let the accountable Worker correct routine problems locally, write a durable receipt, and send one signal-only handoff. Do not start a Controller, Work Order, ACTION transport, recovery, or recurring monitor."

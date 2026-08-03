@@ -5,6 +5,14 @@ description: "Use for Devad X9 durable memory work: searching or updating `.deva
 
 # Devad Memory
 
+## Style default boundary
+
+For normal `x9-loop-style` work, memory is derived historical context. It may
+help a later task find a plan, receipt, source span, or docs sitemap, but it
+cannot select work, approve code, wake a task, reserve a claim, or replace the
+current Git and accepted receipt. The loop-lite snapshot below applies only to
+the separately admitted archived code trial.
+
 ## Authority
 
 Default memory root:
@@ -100,7 +108,7 @@ After memory edits:
 4. Run or adapt the verification script from `X9-SESSION-EXTRACTION-SKILL.md`.
 5. Report only the extracted TLDR, session folders, topics, copied markdown, known gaps, and verification result.
 
-## X9 Loop Lite v6 Boundary
+## Archived X9 Loop Lite v6 Boundary
 
 `.devad/manager/loop-lite/SNAPSHOT.json` is active routing recovery truth and
 outranks memory. Files under `.devad/manager/loop/` are historical evidence in

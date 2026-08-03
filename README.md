@@ -1,4 +1,81 @@
-# Devad X9 Loop Lite v6 Codex Kit
+# Devad X9 Loop — Style G
+
+**A small Codex coordination kit that helps work finish without turning your
+project into an orchestration experiment.**
+
+## Start here
+
+Use **`x9-loop-style`** for normal work. It gives each task a compact Authority
+Envelope, source-backed context, focused proof, and one durable result receipt.
+Routine code and test repairs stay with the accountable Worker instead of
+waiting for a manager to approve every command.
+
+| Need | Use | What it does |
+| --- | --- | --- |
+| Normal coding in a new or existing project | `x9-loop-style` | Stable default: autonomous lanes, compact receipts, no Controller. |
+| Old manager prompt | `devad-x9-loop` or `devad-x9-manager` | Compatibility redirect to Style. |
+| Disposable Controller experiment | `x9-loop-code` | Trial only; never use it for an existing or production project. |
+| Compact docs after accepted work | `x9-project-docs` | Creates a source-bound feature sitemap from an accepted receipt. |
+| Historical context | `devad-memory` | Makes history easier to find; it never selects, approves, or wakes work. |
+| Plans and evidence | `xplan`, `evidence-to-implementation`, `semantic-adoption`, `devad-adoptions` | Keep delivery plans, evidence contracts, and native adoption decisions source-bound. |
+| Implementation | `smooth-coding`, `sdlc`, `ultra-reasoning-protocol` | Use proof-first coding and risk-scaled review; they do not create a scheduler. |
+| Worker routing | `x-subagent` | Routes bounded workers with explicit scope and cost gates; it is not a second manager. |
+| Browser or Dokploy work | `chrome-control`, `dokploy` | Selects safe evidence and API routes without exposing sessions or credentials. |
+| Project docs and summaries | `devad-docs`, `tldr` | Produce compact durable docs and evidence-bounded owner summaries. |
+
+> **Default: Style.** `x9-loop-code` is an experimental fresh-project trial,
+> not production infrastructure. The bundled Loop Lite controller below is
+> retained solely as its archived trial code.
+
+### Style in one picture
+
+```text
+current Git + one Authority Envelope
+              |
+Worker: diagnose -> smallest correction -> focused proof
+              |
+accepted Style receipt -> one direct pointer -> next owner
+              |
+optional docs + memory sitemap (derived, never authority)
+```
+
+Style does **not** start a Controller, create Work Orders, dispatch ACTION
+files, schedule a heartbeat, poll tasks, or create a second manager.
+
+### What waits — and what does not
+
+Routine parser, quoting, fixture, test harness, command, and local-tool
+failures remain local through three bounded same-root correction cycles. An
+external prerequisite is `DEPENDENCY_WAIT:<EVENT>` for one chunk only. A
+matching fresh receipt resumes that chunk without another approval; stale or
+duplicate receipts are zero-delta. If no claimed local slice remains, record
+`NO_CLAIMED_DISJOINT_SLICE` once and wait for the exact event.
+
+### Role boundary
+
+Workers own their code/proof; Thinker reviews one frozen material diff or a
+real security/architecture boundary; Looper keeps one lane queue and sends one
+receipt pointer; the infrastructure helper executes one exact capability
+packet; Linker transports path/hash/result pointers only.
+
+### Docs and memory
+
+After an accepted `x9-loop-style-result-v1`, `x9-project-docs` may write a
+compact sitemap below `.devad/features/<feature>/`. `devad-memory` may index
+that context. Both are derived aids: current Git, the accepted receipt, and
+runtime proof remain authority. Neither can approve, dispatch, deploy, or wake
+work.
+
+### Public distribution boundary
+
+This repository contains portable skills, tests, and package metadata. It
+intentionally excludes project state, `.devad` runtime evidence, private
+worktree paths, task IDs, credentials, backup archives, and user data. Public
+PR branches are visible while they exist; keep them minimal and non-secret.
+
+---
+
+## Archived Loop Lite v6 Code Trial
 
 Production-oriented orchestration for long Codex work. A standard-library
 controller owns identity, claims, dispatches, callbacks, and recovery. Models
@@ -12,7 +89,7 @@ history on every pass.
 .\scripts\install-suite.ps1 -CodexHome "$HOME\.codex" -Apply
 ```
 
-The first command is a dry run. Apply stages and validates all six skills,
+The first command is a dry run. Apply stages and validates all bundled skills,
 backs up current folders, swaps them, and rolls back on failure.
 
 ## Roles

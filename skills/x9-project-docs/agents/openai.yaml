@@ -1,0 +1,4 @@
+interface:
+  display_name: "X9 Project Docs"
+  short_description: "Create compact source-bound docs from an accepted receipt"
+  default_prompt: "Use $x9-project-docs after one accepted Style result to create and validate a compact feature sitemap."

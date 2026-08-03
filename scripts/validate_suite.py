@@ -10,11 +10,26 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = (
     "devad-x9",
+    "x9-loop-style",
+    "x9-loop-code",
     "devad-x9-loop",
     "devad-x9-manager",
     "codex-x9-backup",
     "codex-token-budget",
     "devad-memory",
+    "x9-project-docs",
+    "dokploy",
+    "devad-docs",
+    "tldr",
+    "smooth-coding",
+    "sdlc",
+    "xplan",
+    "devad-adoptions",
+    "evidence-to-implementation",
+    "x-subagent",
+    "ultra-reasoning-protocol",
+    "chrome-control",
+    "semantic-adoption",
 )
 CAP_NAMES = {"STATUS.md", "HANDOFFS.md"}
 LOOP_FILES = {
@@ -91,6 +106,56 @@ def validate_skills(errors: list[str]) -> None:
         text = shim.read_text(encoding="utf-8-sig")
         if "devad-x9-loop" not in text or len(text.splitlines()) > 40:
             errors.append("compatibility shim is not a small redirect")
+
+
+def validate_style(errors: list[str]) -> None:
+    style = ROOT / "skills" / "x9-loop-style"
+    required = {
+        "SKILL.md",
+        "agents/openai.yaml",
+        "references/v6-style-operating.md",
+        "references/project-intelligence-v1.md",
+        "references/style-result-receipt.md",
+        "scripts/style_autonomy_gate.py",
+    }
+    actual = {
+        path.relative_to(style).as_posix()
+        for path in style.rglob("*")
+        if path.is_file()
+    }
+    missing = sorted(required - actual)
+    if missing:
+        errors.append(f"Style files missing: {missing}")
+        return
+    entry = (style / "SKILL.md").read_text(encoding="utf-8-sig")
+    for phrase in (
+        "Authority Envelope",
+        "CONTINUE_LOCAL",
+        "LOCAL_FALLBACK",
+        "DEPENDENCY_WAIT",
+        "RESUME_ON",
+        "no Controller",
+    ):
+        if phrase not in entry:
+            errors.append(f"Style entrypoint missing: {phrase}")
+    gate = (style / "scripts" / "style_autonomy_gate.py").read_text(
+        encoding="utf-8-sig"
+    )
+    for phrase in ("def classify(", "def classify_receipt(", "casefold()"):
+        if phrase not in gate:
+            errors.append(f"Style gate missing: {phrase}")
+    if "subprocess" in gate or "Path(" in gate:
+        errors.append("Style gate is not stateless")
+    code = (ROOT / "skills" / "x9-loop-code" / "SKILL.md").read_text(
+        encoding="utf-8-sig"
+    )
+    if "experimental" not in code.lower() or "x9-loop-style" not in code:
+        errors.append("Code trial boundary is missing")
+    docs = (ROOT / "skills" / "x9-project-docs" / "SKILL.md").read_text(
+        encoding="utf-8-sig"
+    )
+    if "x9-loop-style-result-v1" not in docs or "never routing authority" not in docs:
+        errors.append("Style docs result boundary is missing")
 
 
 def validate_registry(errors: list[str]) -> None:
@@ -254,10 +319,12 @@ def validate_metadata(errors: list[str]) -> None:
     except (FileNotFoundError, json.JSONDecodeError) as exc:
         errors.append(f"package metadata load failed: {exc}")
         return
-    if kit.get("version") != 6 or kit.get("runtime_truth_root") != ".devad/manager/loop-lite":
-        errors.append("kit manifest does not name Loop Lite v6 runtime truth")
-    if kit.get("schema") != "devad-x9-loop-codex-kit-v6" or index.get("schema") != "devad-x9-loop-kit-v6":
-        errors.append("package metadata schema is not v6")
+    if kit.get("version") != 7 or kit.get("runtime_truth_root") != ".devad/manager/loop-lite (code trial only)":
+        errors.append("kit manifest does not bound the archived controller trial")
+    if kit.get("default_skill") != "x9-loop-style" or kit.get("code_trial_skill") != "x9-loop-code":
+        errors.append("kit manifest does not select Style as the default")
+    if kit.get("schema") != "devad-x9-loop-public-style-g-v1" or index.get("schema") != "devad-x9-loop-public-style-g-v1":
+        errors.append("package metadata schema is not Style G")
 
 
 def validate_no_generated_cache(errors: list[str]) -> None:
@@ -273,6 +340,7 @@ def main() -> int:
     errors: list[str] = []
     validate_manifest(errors)
     validate_skills(errors)
+    validate_style(errors)
     validate_registry(errors)
     validate_template(errors)
     validate_loop_lite(errors)
@@ -281,7 +349,7 @@ def main() -> int:
     if errors:
         print("\n".join(f"ERROR: {error}" for error in errors))
         return 1
-    print("PASS: X9 Loop Lite v6 skills, registry, manifest, compact template, JSON, and links")
+    print("PASS: X9 Loop Style public kit, archived Code trial, registry, manifest, compact template, JSON, and links")
     return 0
 
 

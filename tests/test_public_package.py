@@ -8,11 +8,26 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_SKILLS = {
     "devad-x9",
+    "x9-loop-style",
+    "x9-loop-code",
     "devad-x9-loop",
     "devad-x9-manager",
     "codex-x9-backup",
     "codex-token-budget",
     "devad-memory",
+    "x9-project-docs",
+    "dokploy",
+    "devad-docs",
+    "tldr",
+    "smooth-coding",
+    "sdlc",
+    "xplan",
+    "devad-adoptions",
+    "evidence-to-implementation",
+    "x-subagent",
+    "ultra-reasoning-protocol",
+    "chrome-control",
+    "semantic-adoption",
 }
 PRIVATE_MARKERS = (
     "A-" + "haj",
@@ -23,7 +38,7 @@ PRIVATE_MARKERS = (
 
 
 class PublicPackageTests(unittest.TestCase):
-    def test_public_package_has_six_skills(self) -> None:
+    def test_public_package_has_style_and_trial_skills(self) -> None:
         actual = {path.name for path in (ROOT / "skills").iterdir() if path.is_dir()}
         self.assertEqual(actual, REQUIRED_SKILLS)
 
@@ -53,14 +68,14 @@ class PublicPackageTests(unittest.TestCase):
             for marker in PRIVATE_MARKERS:
                 self.assertNotIn(marker, text, f"private marker in {path.relative_to(ROOT)}")
 
-    def test_readme_defines_direct_linx_callback(self) -> None:
+    def test_readme_sets_style_as_default_and_keeps_trial_honest(self) -> None:
         text = (ROOT / "README.md").read_text(encoding="utf-8-sig")
         for phrase in (
-            "Files do not wake Linx",
-            "same Linx task ID",
-            "EVENT_READY",
-            "Recurring 15/19-minute pickup is forbidden",
-            "owner-requested one-shot fallback",
+            "X9 Loop — Style G",
+            "x9-loop-style",
+            "Style does **not** start a Controller",
+            "x9-loop-code",
+            "Public distribution boundary",
         ):
             self.assertIn(phrase, text)
 

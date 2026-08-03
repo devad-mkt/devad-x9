@@ -1,11 +1,13 @@
 {
-    "schema":  "devad-x9-loop-codex-kit-v6",
-    "version":  6,
+    "schema":  "devad-x9-loop-public-style-g-v1",
+    "version":  7,
     "distribution":  "public",
     "baseline":  "devad-skills-set-v3",
+    "default_skill":  "x9-loop-style",
+    "code_trial_skill":  "x9-loop-code",
     "manager_skill":  "devad-x9-loop",
     "compatibility_skill":  "devad-x9-manager",
-    "runtime_truth_root":  ".devad/manager/loop-lite",
+    "runtime_truth_root":  ".devad/manager/loop-lite (code trial only)",
     "orca_runtime_integration":  false,
     "project_overlay":  "scripts/migrate_project.py",
     "omitted_private_evidence":  [

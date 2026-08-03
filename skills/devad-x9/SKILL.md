@@ -3,15 +3,16 @@ name: devad-x9
 description: Use for Devad X9 repository work that changes or reviews code, tests, implementation-guiding docs, Git commits, security gates, proof, source pushes, deployment, local work, feature catalogs, worktrees, or Worker execution. Also use as the repository router paired with devad-x9-loop.
 ---
 
-# Devad X9 v6
+# Devad X9 v6 — Style Default
 
 ## Load First
 
 Read `references/x9-shared-contract.md`. Before mutation also read
-`references/destructive-action-guard.md`. The shared contract owns truth,
-local work, Git safety, security, commits, proof, release gates, and durable
-docs. `$devad-x9-loop` owns deterministic identity, dispatch, callbacks,
-claims, dependencies, and recovery.
+`references/destructive-action-guard.md`. For normal work also read
+`references/worker-autonomy-and-escalation.md` and load `$x9-loop-style`.
+The shared contract owns truth, local work, Git safety, security, commits,
+proof, release gates, and durable docs. The legacy `$devad-x9-loop` controller
+is a fresh-project code-trial artifact, not normal coordination.
 
 Current repository evidence wins over durable narration. Never perform the
 final destructive action.
@@ -26,16 +27,16 @@ Linx and Thinx never code or rescue a Worker by taking its scope.
 
 1. Resolve repo root, branch, HEAD, remotes, every worktree, and staged,
    unstaged, untracked, and committed paths from current Git.
-2. Read `.devad/ROUTER.md` and
-   `.devad/manager/loop-lite/SNAPSHOT.json`.
-3. Read the exact `TASK.json`; verify task, Worker, dispatch, packet, worktree,
-   base SHA, claims, resources, dependencies, gates, and finish line.
+2. Read `.devad/ROUTER.md` and the exact Style envelope/receipt. Read
+   `.devad/manager/loop-lite/SNAPSHOT.json` only inside an admitted code trial.
+3. Verify task, Worker, worktree, base SHA, claims, resources, dependencies,
+   gates, and finish line from the applicable bounded packet.
 4. Read only linked central facts, mission lock, local-work truth, feature
    contract, and applicable project/security rules.
 5. Keep manager-state, implementation, integration, deployment, and live-proof
    branches/HEADs separate.
-6. If durable facts conflict with Git/runtime, stop the stale route and run
-   deterministic reconciliation. Never patch orchestration state manually.
+6. If durable facts conflict with Git/runtime, preserve the stale route and
+   rebind the smallest affected chunk. Never patch controller state manually.
 
 No push, deploy, integration, cleanup, or next-action decision is valid while
 active local-only work is unclassified.
@@ -48,7 +49,8 @@ owner explicitly asks.
 1. Verify identity and exact claims before editing.
 2. Inspect the narrow implementation surface and active rules.
 3. Make the smallest coherent change inside owned files.
-4. If a new file is required, request `CLAIM_EXPANSION_REQUEST` first.
+4. If a new file is required outside the envelope, request a narrow claim
+   expansion; otherwise make the smallest coherent owned change.
 5. Run focused tests, formatting, and the full repository security gate.
 6. Reconcile actual staged, unstaged, untracked, and committed paths. Any path
    outside claims is `SCOPE_BREACH` and cannot integrate.
@@ -82,23 +84,20 @@ Use stable feature folders. Subfeatures exist only for independent acceptance
 or lifecycle. Local-only artifact links are forbidden; large proof uses
 private storage or LFS with path, hash, and meaning recorded.
 
-## Sidecars And Blockers
+## Style Autonomy And Blockers
 
-Before a nontrivial plan or final blocker, use one bounded, secret-safe Reader
-packet containing owner requirement, claims, relevant diff/proof, failure, and
-one question. Run `opencode_doctor.py`. Ask configured GLM 5.2 and Kimi 2.7
-Code at most once each when available. The Worker verifies all advice.
-
-`TOOL_UNAVAILABLE` is nonblocking and never triggers a retry loop. Three
-failed Worker attempts pause that task for Thinx review; they do not
-automatically block the feature.
+`TOOL_UNAVAILABLE` is nonblocking. Classify the next action with the Worker
+autonomy reference: routine tool, parser, fixture, harness, command, and
+claimed-path repairs stay local through three same-root cycles. Two distinct
+failures need a Thinker only when judgment is needed. An external receipt
+pauses only its dependent chunk; continue disjoint claimed work.
 
 ## Manager Shortcut
 
 ```text
-Use $devad-x9-loop as Thinx. Also use $devad-x9 as repo router.
-Use $devad-x9-loop as Linx. Also use $devad-x9 as repo router.
-Use $devad-x9-loop as Worker. Also use $devad-x9 as repo router.
+Use $x9-loop-style for normal Thinker, Looper, Linker, and Worker coordination.
+Use $devad-x9 as the repository router.
+Use $x9-loop-code only for a separately admitted disposable controller trial.
 ```
 
 Old `$devad-x9-manager` prompts use the temporary compatibility redirect.
