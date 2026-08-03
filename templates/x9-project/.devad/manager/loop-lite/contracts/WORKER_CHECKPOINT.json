@@ -1,0 +1,1 @@
+{"attempt":0,"authoritative":false,"expires_with_work_order":true,"local_only":true,"proof_refs":[],"schema":"x9-loop-worker-checkpoint-v1","state":"LOCAL_ONLY","work_order_id":"<work_order_id>","work_order_sha256":"<work_order_sha256>","worker_id":"<worker_id>"}

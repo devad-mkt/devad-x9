@@ -1,0 +1,4 @@
+interface:
+  display_name: "Devad Docs"
+  short_description: "Route public docs and private feature records"
+  default_prompt: "Use $devad-docs to place public docs under docs or private development records under the current worktree's .devad/features folder."

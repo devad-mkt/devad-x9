@@ -8,9 +8,9 @@ Do not run an always-on observe/control loop. Do not read broad .devad history,
 .devad-dont-read, old chats, reports, or proof trees unless the current task
 requires a narrow file.
 
-Repo root: <project-root>
-Worker root: <worktree-root>
-X9 source folder: <project-root>
+Repo root: D:\CDX-3\core-aio\core-x9
+Worker root: D:\CDX-3\core-aio\x9w
+X9 source folder: D:\CDX-3\core-aio\core-x9
 
 First report:
 - repo root
@@ -22,10 +22,10 @@ First report:
 - current task/handoff state if needed
 
 If the current path contains deploy, bridge, v105, or x9w\v105, or Git reports
-detached HEAD or branch <deployment-branch>, do not
+detached HEAD or branch feature/post-v105-native-migration-2026-06-18, do not
 plan new coding in that checkout. Use it only for inspection, diff export,
 deploy proof, or applying a committed X9 commit. New work starts in
-<project-root>.
+D:\CDX-3\core-aio\core-x9.
 
 Then help me split tasks into worker lanes only when paths do not conflict.
 For every worker, give me one paste-ready prompt with allowed files, denied

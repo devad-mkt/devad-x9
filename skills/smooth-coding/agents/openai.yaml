@@ -1,0 +1,4 @@
+interface:
+  display_name: "Smooth Coding"
+  short_description: "Fast plan implementation without process bloat"
+  default_prompt: "Use $smooth-coding to verify existing owners, freeze or rebind one lightweight chunk contract, implement the smallest maintainable native change, and continue through focused proof and one frozen-diff review."

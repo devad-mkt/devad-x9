@@ -271,7 +271,7 @@ class DatabaseAndSnapshotTests(LoopLiteCase):
         self.assertTrue((root / "SNAPSHOT.json").is_file())
         self.assertLess((root / "SNAPSHOT.json").stat().st_size, 8192)
         snapshot = json.loads((root / "SNAPSHOT.json").read_text(encoding="utf-8"))
-        self.assertEqual("x9-loop-lite-snapshot-v1", snapshot["schema"])
+        self.assertEqual("x9-loop-lite-snapshot-v3", snapshot["schema"])
         self.assertEqual(0, snapshot["generation"])
 
         connection = self.controller._connect()
@@ -324,19 +324,24 @@ class DatabaseAndSnapshotTests(LoopLiteCase):
 
     def test_snapshot_failure_blocks_dispatch_until_reconciled(self):
         self.register_base()
-        original = self.controller._write_snapshot
+        original = self.controller._write_snapshot_bundle
 
-        def fail_snapshot():
+        def fail_snapshot(*_args, **_kwargs):
             raise OSError("simulated snapshot export failure")
 
-        self.controller._write_snapshot = fail_snapshot
-        with self.assertRaisesRegex(self.loopctl.SnapshotExportError, "SNAPSHOT_EXPORT_FAILED"):
-            self.controller.register_actor(
-                actor_id="reader", role="READER", title="Reader", model="cheap"
-            )
-        self.controller._write_snapshot = original
+        self.controller._write_snapshot_bundle = fail_snapshot
+        try:
+            with self.assertRaisesRegex(
+                self.loopctl.SnapshotExportError, "SNAPSHOT_EXPORT_FAILED"
+            ):
+                self.controller.register_actor(
+                    actor_id="reader", role="READER", title="Reader", model="cheap"
+                )
+        finally:
+            self.controller._write_snapshot_bundle = original
         with self.assertRaisesRegex(self.loopctl.StateNotDurableError, "SNAPSHOT_STALE"):
             self.controller.prepare_dispatch("task-a", sender_id="linx-task")
+        self.assertEqual("PASS", self.controller.rebuild()["status"])
         result = self.controller.reconcile()
         self.assertEqual("PASS", result["snapshot"])
 
@@ -363,6 +368,104 @@ class DatabaseAndSnapshotTests(LoopLiteCase):
 class IdentityAndDispatchTests(LoopLiteCase):
     def test_module_does_not_monkey_patch_sqlite_connect(self):
         self.assertIs(ORIGINAL_SQLITE_CONNECT, sqlite3.connect)
+
+    def test_actor_registration_rejects_unsafe_identity_role_and_metadata_without_state_change(self):
+        before_snapshot = self.controller.snapshot_path.read_bytes()
+        before_action = self.controller.action_path.read_bytes()
+        connection = self.controller._connect()
+        try:
+            before_generation = self.controller._generation(connection)
+            before_actors = connection.execute(
+                "SELECT actor_id, role, title, model FROM actors ORDER BY actor_id"
+            ).fetchall()
+        finally:
+            connection.close()
+
+        invalid = (
+            (
+                {"actor_id": "../impersonated-task", "role": "WORKER", "title": "Worker", "model": "Unknown"},
+                "ACTOR_ID_INVALID",
+            ),
+            (
+                {"actor_id": "CON", "role": "WORKER", "title": "Worker", "model": "Unknown"},
+                "ACTOR_ID_INVALID",
+            ),
+            (
+                {"actor_id": "con.txt", "role": "WORKER", "title": "Worker", "model": "Unknown"},
+                "ACTOR_ID_INVALID",
+            ),
+            (
+                {"actor_id": "worker.", "role": "WORKER", "title": "Worker", "model": "Unknown"},
+                "ACTOR_ID_INVALID",
+            ),
+            (
+                {"actor_id": "Worker-A", "role": "WORKER", "title": "Worker", "model": "Unknown"},
+                "ACTOR_ID_INVALID",
+            ),
+            (
+                {"actor_id": "safe-task", "role": "CONTROLLER", "title": "Controller", "model": "Unknown"},
+                "ACTOR_ROLE_INVALID",
+            ),
+            (
+                {"actor_id": "safe-task", "role": "WORKER", "title": "Worker\nspoof", "model": "Unknown"},
+                "ACTOR_TITLE_INVALID",
+            ),
+            (
+                {"actor_id": "safe-task", "role": "WORKER", "title": "Worker", "model": None},
+                "ACTOR_MODEL_INVALID",
+            ),
+        )
+        for payload, error in invalid:
+            with self.subTest(error=error):
+                with self.assertRaisesRegex(self.loopctl.IdentityError, error):
+                    self.controller.register_actor(**payload)
+
+        connection = self.controller._connect()
+        try:
+            after_generation = self.controller._generation(connection)
+            after_actors = connection.execute(
+                "SELECT actor_id, role, title, model FROM actors ORDER BY actor_id"
+            ).fetchall()
+        finally:
+            connection.close()
+        self.assertEqual(before_generation, after_generation)
+        self.assertEqual(before_actors, after_actors)
+        self.assertEqual(before_snapshot, self.controller.snapshot_path.read_bytes())
+        self.assertEqual(before_action, self.controller.action_path.read_bytes())
+
+    def test_actor_registration_rejects_legacy_casefold_collision_without_state_change(self):
+        self.controller._mutate(
+            lambda connection: connection.execute(
+                "INSERT INTO actors(actor_id,role,title,model) VALUES(?,?,?,?)",
+                ("Legacy-Worker", "WORKER", "Legacy Worker", "Unknown"),
+            )
+        )
+
+        def state():
+            connection = self.controller._connect()
+            try:
+                return (
+                    self.controller._generation(connection),
+                    [
+                        tuple(row)
+                        for row in connection.execute(
+                            "SELECT actor_id, role, title, model FROM actors ORDER BY actor_id"
+                        )
+                    ],
+                    self.controller.snapshot_path.read_bytes(),
+                    self.controller.action_path.read_bytes(),
+                )
+            finally:
+                connection.close()
+
+        before = state()
+        with self.assertRaisesRegex(
+            self.loopctl.IdentityError, "^ACTOR_ID_COLLISION$"
+        ):
+            self.controller.register_actor(
+                "legacy-worker", "WORKER", "Legacy Worker", "Unknown"
+            )
+        self.assertEqual(before, state())
 
     def test_role_title_detection_uses_token_boundaries(self):
         result = self.controller.register_actor(
@@ -401,11 +504,17 @@ class IdentityAndDispatchTests(LoopLiteCase):
             self.repo / ".devad" / "manager" / "loop-lite" / "runtime" / "ACTION.json",
             self.controller.action_path,
         )
-        original = self.controller._write_snapshot
-        self.controller._write_snapshot = lambda: (_ for _ in ()).throw(OSError("snapshot"))
-        with self.assertRaisesRegex(self.loopctl.SnapshotExportError, "SNAPSHOT_EXPORT_FAILED"):
-            self.controller.prepare_dispatch("task-a", sender_id="linx-task")
-        self.controller._write_snapshot = original
+        original = self.controller._write_snapshot_bundle
+        self.controller._write_snapshot_bundle = lambda *_args, **_kwargs: (
+            (_ for _ in ()).throw(OSError("snapshot"))
+        )
+        try:
+            with self.assertRaisesRegex(
+                self.loopctl.SnapshotExportError, "SNAPSHOT_EXPORT_FAILED"
+            ):
+                self.controller.prepare_dispatch("task-a", sender_id="linx-task")
+        finally:
+            self.controller._write_snapshot_bundle = original
         self.assertFalse(self.controller.action_path.exists())
 
     def test_pending_and_blocked_gates_block_dispatch(self):
@@ -653,6 +762,110 @@ class ProductionRegressionTests(LoopLiteCase):
             "done",
         )
 
+    def enable_parallel_dispatches(self):
+        def operation(connection):
+            connection.execute(
+                "INSERT INTO metrics(key,value) VALUES('completed_clean_dispatches','10') "
+                "ON CONFLICT(key) DO UPDATE SET value='10'"
+            )
+
+        self.controller._mutate(operation)
+
+    def prepare_ack_then_next(self):
+        self.register_base()
+        self.add_task("task-b", "worker-b", "src/b.py")
+        self.enable_parallel_dispatches()
+        self.clock_value = "2026-07-13T12:00:00Z"
+        first = self.controller.prepare_dispatch("task-a", "linx-task")
+        self.controller.record_delivery(
+            first["dispatch_id"], "DISPATCH", "test", "ack"
+        )
+        self.clock_value = "2026-07-13T12:01:00Z"
+        second = self.controller.prepare_dispatch("task-b", "linx-task")
+        return first, second, self.controller.action_path.read_bytes()
+
+    def test_delivery_ack_publishes_next_worker_action(self):
+        self.register_base()
+        self.add_task("task-b", "worker-b", "src/b.py")
+        self.enable_parallel_dispatches()
+        self.clock_value = "2026-07-13T12:00:00Z"
+        first = self.controller.prepare_dispatch("task-a", "linx-task")
+        self.clock_value = "2026-07-13T12:01:00Z"
+        second = self.controller.prepare_dispatch("task-b", "linx-task")
+
+        self.controller.record_delivery(
+            first["dispatch_id"], "DISPATCH", "test", "ack"
+        )
+
+        action = json.loads(self.controller.action_path.read_bytes())
+        self.assertEqual(second["dispatch_id"], action["dispatch_id"])
+        self.assertEqual(self.controller._current_action(), action)
+
+    def test_replayed_ack_preserves_next_worker_action(self):
+        first, second, expected_action = self.prepare_ack_then_next()
+        generation = json.loads(self.controller.snapshot_path.read_bytes())["generation"]
+
+        replayed = self.controller.prepare_dispatch("task-a", "linx-task")
+
+        self.assertEqual("ALREADY_ACKNOWLEDGED", replayed["status"])
+        self.assertEqual(second["dispatch_id"], json.loads(expected_action)["dispatch_id"])
+        self.assertEqual(expected_action, self.controller.action_path.read_bytes())
+        self.assertEqual(
+            generation,
+            json.loads(self.controller.snapshot_path.read_bytes())["generation"],
+        )
+        self.assertEqual(first["dispatch_id"], replayed["dispatch_id"])
+
+    def test_delayed_duplicate_ack_republishes_current_action(self):
+        first, _second, expected_action = self.prepare_ack_then_next()
+        generation = json.loads(self.controller.snapshot_path.read_bytes())["generation"]
+
+        for _ in range(2):
+            replayed = self.controller.prepare_dispatch("task-a", "linx-task")
+            self.assertEqual("ALREADY_ACKNOWLEDGED", replayed["status"])
+            self.assertEqual(expected_action, self.controller.action_path.read_bytes())
+        self.assertEqual(
+            generation,
+            json.loads(self.controller.snapshot_path.read_bytes())["generation"],
+        )
+        self.assertEqual(first["dispatch_id"], replayed["dispatch_id"])
+
+    def test_replayed_ack_after_restart_preserves_current_action(self):
+        _first, second, expected_action = self.prepare_ack_then_next()
+        restarted = self.loopctl.Controller(
+            self.repo, now_fn=lambda: "2026-07-13T12:02:00Z"
+        )
+
+        replayed = restarted.prepare_dispatch("task-a", "linx-task")
+
+        self.assertEqual("ALREADY_ACKNOWLEDGED", replayed["status"])
+        self.assertEqual(second["dispatch_id"], json.loads(expected_action)["dispatch_id"])
+        self.assertEqual(expected_action, restarted.action_path.read_bytes())
+
+    def test_out_of_order_transport_replay_preserves_queue_head(self):
+        first, _second, _action = self.prepare_ack_then_next()
+        self.add_task("task-c", "worker-c", "tests/test_a.py")
+        self.clock_value = "2026-07-13T12:02:00Z"
+        self.controller.prepare_dispatch("task-c", "linx-task")
+        self.controller._write_action(self.controller._current_action())
+        expected_action = self.controller.action_path.read_bytes()
+
+        replayed = self.controller.prepare_dispatch("task-a", "linx-task")
+
+        self.assertEqual("ALREADY_ACKNOWLEDGED", replayed["status"])
+        self.assertEqual(expected_action, self.controller.action_path.read_bytes())
+        connection = self.controller._connect()
+        try:
+            self.assertEqual(
+                2,
+                connection.execute(
+                    "SELECT COUNT(*) FROM dispatches WHERE status='PREPARED'"
+                ).fetchone()[0],
+            )
+        finally:
+            connection.close()
+        self.assertEqual(first["dispatch_id"], replayed["dispatch_id"])
+
     def complete_task(self, task_id, worker_id):
         dispatch = self.controller.prepare_dispatch(task_id, "linx-task")
         event = self.build_result_event(
@@ -734,7 +947,9 @@ class ProductionRegressionTests(LoopLiteCase):
         self.register_base()
         snapshot = json.loads(self.controller.snapshot_path.read_text(encoding="utf-8"))
         snapshot["tables"]["sqlite_master"] = []
-        self.controller.snapshot_path.write_text(json.dumps(snapshot), encoding="utf-8")
+        self.controller.snapshot_path.write_bytes(
+            self.loopctl._load_v7_contract().canonical_json_bytes(snapshot)
+        )
         self.controller.db_path.write_bytes(b"not sqlite")
         with self.assertRaisesRegex(self.loopctl.SnapshotExportError, "SNAPSHOT_TABLE_UNKNOWN"):
             self.controller.rebuild()
@@ -754,8 +969,18 @@ class SecondProductionReviewTests(LoopLiteCase):
     def test_tampered_snapshot_is_not_hidden_as_controller_runtime(self):
         self.register_base()
         self.controller.snapshot_path.write_text("{}", encoding="utf-8")
-        result = self.controller.reconcile("task-a")
-        self.assertIn(".devad/manager/loop-lite/snapshot.json", result["scope_breach"])
+        db_before = self.controller.db_path.read_bytes()
+        snapshot_before = self.controller.snapshot_path.read_bytes()
+        self.assertIn(
+            ".devad/manager/loop-lite/snapshot.json",
+            self.controller._controller_snapshot_tamper(self.repo),
+        )
+        with self.assertRaisesRegex(
+            self.loopctl.StateNotDurableError, "SNAPSHOT_STALE"
+        ):
+            self.controller.reconcile("task-a")
+        self.assertEqual(db_before, self.controller.db_path.read_bytes())
+        self.assertEqual(snapshot_before, self.controller.snapshot_path.read_bytes())
 
     def test_duplicate_event_returns_before_git_read(self):
         self.register_base()
@@ -937,10 +1162,14 @@ class FinalProductionSafetyTests(LoopLiteCase):
     def test_rebuild_validates_before_preserving_old_db_and_snapshot_history_stays_bounded(self):
         self.register_base()
         snapshot = json.loads(self.controller.snapshot_path.read_text(encoding="utf-8"))
-        snapshot["tables"]["tasks"][0]["unexpected_column"] = "unsafe"
-        self.controller.snapshot_path.write_text(json.dumps(snapshot), encoding="utf-8")
+        snapshot["active_detail_summaries"]["tasks"][0].append("unsafe")
+        self.controller.snapshot_path.write_bytes(
+            self.loopctl._load_v7_contract().canonical_json_bytes(snapshot)
+        )
         self.controller.db_path.write_bytes(b"corrupt-but-preserved")
-        with self.assertRaisesRegex(self.loopctl.SnapshotExportError, "SNAPSHOT_COLUMN_UNKNOWN"):
+        with self.assertRaisesRegex(
+            self.loopctl.SnapshotExportError, "SNAPSHOT_ACTIVE_DETAIL_INVALID"
+        ):
             self.controller.rebuild()
         self.assertEqual(b"corrupt-but-preserved", self.controller.db_path.read_bytes())
 
@@ -958,9 +1187,11 @@ class FinalProductionSafetyTests(LoopLiteCase):
             bounded.register_task(task, worker, f"bounded-wt-{index}", bounded_base, [{"path": f"src/bounded-{index}.py", "kind": "file"}], [], [], "done", bounded_owner_path, bounded_owner_sha)
             bounded._transition_task_state(task, "COMPLETE")
         self.assertLess(bounded.snapshot_path.stat().st_size, 8192)
-        compact = json.loads(bounded.snapshot_path.read_text(encoding="utf-8"))
+        compact_raw = bounded.snapshot_path.read_bytes()
+        compact = json.loads(compact_raw)
+        decoded = bounded._decode_snapshot(compact_raw)
         self.assertLessEqual(len(compact["tables"]["tasks"]), 1)
-        self.assertLessEqual(len(compact["completed_task_ids"]), 16)
+        self.assertLessEqual(len(decoded["completed_task_ids"]), 16)
 
     def test_strict_worker_and_thinx_receipts(self):
         self.register_base()
@@ -1032,6 +1263,10 @@ class FinalProductionSafetyTests(LoopLiteCase):
         finally:
             connection.close()
         cli = run(sys.executable, str(LOOPCTL_PATH), "doctor", "--repo", str(self.repo), "--json", cwd=self.repo)
+        self.assertFalse(
+            (LOOPCTL_PATH.parent / "__pycache__").exists(),
+            "loopctl CLI left bytecode in immutable package",
+        )
         self.assertIn("status", json.loads(cli.stdout))
 
 class RecoveryAndProofEdgesTests(LoopLiteCase):
@@ -1040,8 +1275,13 @@ class RecoveryAndProofEdgesTests(LoopLiteCase):
         dispatch = self.controller.prepare_dispatch("task-a", "linx-task")
         event = self.build_result_event("task-a", dispatch["dispatch_id"], "worker-a", dispatch["packet_sha256"], [], "evt-recovery")
         self.assertEqual("CONSUMED", self.controller.consume_event(event)["status"])
-        snapshot = json.loads(self.controller.snapshot_path.read_text(encoding="utf-8"))
-        self.assertIn({"worktree_id": "wt-a", "path": str(self.repo.resolve())}, snapshot["recovery_worktrees"])
+        snapshot = self.controller._decode_snapshot(
+            self.controller.snapshot_path.read_bytes()
+        )
+        self.assertIn(
+            {"worktree_id": "wt-a", "path": str(self.repo.resolve())},
+            snapshot["recovery_worktrees"],
+        )
         self.controller.db_path.write_bytes(b"corrupt")
         rebuilt = self.controller.rebuild()
         self.assertEqual(1, rebuilt["recovery"]["receipts"])
@@ -1255,8 +1495,8 @@ class SecurityBoundaryRegressionTests(LoopLiteCase):
             self.controller.snapshot_path.read_text(encoding="utf-8")
         )
         del snapshot["tables"]["metrics"]
-        self.controller.snapshot_path.write_text(
-            json.dumps(snapshot), encoding="utf-8"
+        self.controller.snapshot_path.write_bytes(
+            self.loopctl._load_v7_contract().canonical_json_bytes(snapshot)
         )
         self.controller.db_path.write_bytes(b"not sqlite")
         with self.assertRaisesRegex(
@@ -1501,18 +1741,34 @@ class IndependentReviewRegressionTests(LoopLiteCase):
     def test_oversize_snapshot_rolls_back_before_database_commit(self):
         self.register_base()
         before = json.loads(self.controller.snapshot_path.read_text(encoding="utf-8"))
-        with self.assertRaisesRegex(self.loopctl.SnapshotExportError, "SNAPSHOT_TOO_LARGE"):
-            self.controller.set_gate("task-a", "oversize", "PASS", "x" * 9000)
+        connection = self.controller._connect()
+        try:
+            original_title = connection.execute(
+                "SELECT title FROM actors WHERE actor_id=?", ("worker-a",)
+            ).fetchone()[0]
+        finally:
+            connection.close()
+
+        def oversize_active_registry(connection):
+            connection.execute(
+                "UPDATE actors SET title=? WHERE actor_id=?",
+                ("x" * 9000, "worker-a"),
+            )
+
+        with self.assertRaisesRegex(
+            self.loopctl.SnapshotExportError, "SNAPSHOT_TOO_LARGE"
+        ):
+            self.controller._mutate(oversize_active_registry)
         connection = self.controller._connect()
         try:
             generation = self.controller._generation(connection)
-            gate = connection.execute(
-                "SELECT 1 FROM gates WHERE task_id=? AND name=?", ("task-a", "oversize")
-            ).fetchone()
+            title = connection.execute(
+                "SELECT title FROM actors WHERE actor_id=?", ("worker-a",)
+            ).fetchone()[0]
         finally:
             connection.close()
         self.assertEqual(before["generation"], generation)
-        self.assertIsNone(gate)
+        self.assertEqual(original_title, title)
 
 
 if __name__ == "__main__":

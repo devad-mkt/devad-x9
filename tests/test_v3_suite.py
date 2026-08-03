@@ -11,16 +11,26 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = (
     "devad-x9",
+    "x9-loop-style",
+    "x9-loop-code",
     "devad-x9-loop",
     "devad-x9-manager",
     "codex-x9-backup",
     "codex-token-budget",
     "devad-memory",
+    "x9-project-docs",
+    "dokploy",
+    "devad-docs",
+    "tldr",
+    "smooth-coding",
+    "sdlc",
+    "xplan",
+    "devad-adoptions",
 )
 
 
 class X9SuiteTests(unittest.TestCase):
-    def test_all_five_skills_exist(self) -> None:
+    def test_all_packaged_skills_exist(self) -> None:
         for name in SKILLS:
             skill = ROOT / "skills" / name / "SKILL.md"
             self.assertTrue(skill.is_file(), name)
@@ -112,7 +122,8 @@ class X9SuiteTests(unittest.TestCase):
 
         manager = (ROOT / "skills/devad-x9-loop/SKILL.md").read_text(encoding="utf-8")
         self.assertIn("runtime/ACTION.json", manager)
-        self.assertIn("Linx never reviews code", manager)
+        self.assertIn("LINKER never selects", manager)
+        self.assertIn("or reviews work", manager)
 
     def test_manager_pass_mutex_and_handover_gates_exist(self) -> None:
         contract = (

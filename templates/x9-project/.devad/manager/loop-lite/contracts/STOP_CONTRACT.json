@@ -1,0 +1,1 @@
+{"max_attempts":3,"max_model_calls":10,"max_tokens":null,"max_wall_seconds":3600,"schema":"x9-loop-stop-contract-v1","success_predicate":"<objective_success_predicate>"}

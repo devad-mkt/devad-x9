@@ -1,34 +1,27 @@
 {
-    "schema":  "devad-x9-loop-kit-v6",
-    "date":  "2026-07-13",
-    "skills":  [
-                   {
-                       "name":  "devad-x9",
-                       "role":  "repository safety and Worker execution"
-                   },
-                   {
-                       "name":  "devad-x9-loop",
-                       "role":  "Linx, Thinx and deterministic task loop"
-                   },
-                   {
-                       "name":  "devad-x9-manager",
-                       "role":  "temporary v3 compatibility redirect"
-                   },
-                   {
-                       "name":  "codex-x9-backup",
-                       "role":  "profile backup and restore"
-                   },
-                   {
-                       "name":  "codex-token-budget",
-                       "role":  "usage audit and model benchmark"
-                   },
-                   {
-                       "name":  "devad-memory",
-                       "role":  "durable historical memory"
-                   }
-               ],
-    "project_template":  "templates/x9-project/.devad",
-    "feature_registry":  "features.registry.json",
-    "benchmark":  "benchmarks/model-routing",
-    "source_manifest":  "SOURCE_MANIFEST.sha256"
+  "schema": "devad-x9-loop-kit-v7.3-lite",
+  "date": "2026-07-30",
+  "skills": [
+    {"name": "devad-x9", "role": "repository safety and Worker execution"},
+    {"name": "x9-loop-style", "role": "default V6-style packet, receipt, and autonomous role coordination"},
+    {"name": "x9-loop-code", "role": "experimental fresh-project Controller trial; not production-ready"},
+    {"name": "devad-x9-loop", "role": "compatibility redirect to Style; retained V7 Controller trial code"},
+    {"name": "devad-x9-manager", "role": "temporary compatibility redirect to X9 Loop Style"},
+    {"name": "codex-x9-backup", "role": "profile backup and restore"},
+    {"name": "codex-token-budget", "role": "usage audit and model benchmark"},
+    {"name": "devad-memory", "role": "durable historical memory"},
+    {"name": "x9-project-docs", "role": "Style-receipt and Controller-trial documentation add-on"},
+    {"name": "dokploy", "role": "secret-safe Dokploy diagnosis and deploy boundary"},
+    {"name": "devad-docs", "role": "public docs and private feature-document routing"},
+    {"name": "tldr", "role": "compact owner-facing evidence summaries"},
+    {"name": "smooth-coding", "role": "default autonomous Worker and Looper delivery"},
+    {"name": "sdlc", "role": "risk-scaled THINKER lifecycle review"},
+    {"name": "xplan", "role": "read-by-need durable delivery plans"},
+    {"name": "devad-adoptions", "role": "source-to-Core adoption evidence gates"}
+  ],
+  "project_template": "templates/x9-project/.devad",
+  "feature_registry": "features.registry.json",
+  "benchmark": "benchmarks/model-routing",
+  "rollback_snapshot": "archives/pre-v6-2026-07-13",
+  "source_manifest": "SOURCE_MANIFEST.sha256"
 }

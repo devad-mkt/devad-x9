@@ -16,7 +16,16 @@ RULES = [
     ("private_key", re.compile(r"-----BEGIN (?:RSA |DSA |EC |OPENSSH |PGP )?PRIVATE KEY-----")),
 ]
 
-SKIP_DIRS = {".git", "node_modules", ".cache", "cache", "tmp", ".tmp", "__pycache__"}
+SKIP_DIRS = {
+    ".git",
+    ".temp",
+    "node_modules",
+    ".cache",
+    "cache",
+    "tmp",
+    ".tmp",
+    "__pycache__",
+}
 
 
 def hash_match(value: str) -> str:

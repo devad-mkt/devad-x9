@@ -1,8 +1,14 @@
 # X9 Shared Contract
 
 This is the normative safety contract shared by `devad-x9` and
-`devad-x9-loop`. The temporary `devad-x9-manager` name redirects here. Read it
-before code, routing, commit, push, deploy, or completion claims.
+`x9-loop-style`. The temporary `devad-x9-manager` and `devad-x9-loop` names
+redirect to Style for normal work. Read it before code, routing, commit, push,
+deploy, or completion claims.
+
+For normal or existing projects, use the Style packet/receipt path and skip
+the Controller-only sections below. `$x9-loop-code` may use those sections
+only for an owner-approved, fresh, disposable Controller trial; it is
+experimental and not production-ready.
 
 ## Authority
 

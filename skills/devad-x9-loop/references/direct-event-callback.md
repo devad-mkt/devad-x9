@@ -1,63 +1,92 @@
 # Direct Event Callback
 
-Use this for normal unattended continuation after Linx dispatches a Worker or
-Thinx. Durable files carry truth; one direct task message carries only the wake
-signal.
+Use the callback as a bounded wake signal. Durable Controller files and the
+Worker receipt carry authority; a task message or transport envelope never
+copies the result or an ACTION.
 
-## Required Flow
+## V7.3.1 P0 flow
 
-1. Linx records the target task ID, immutable role, `DISPATCH_ID`, packet
-   SHA-256, and expected receipt in durable loop state.
-2. Linx releases `MANAGER_PASS_LOCK` before the target begins. The lock protects
-   manager passes; it must not block Worker or Thinx execution.
-3. The target writes `STATUS.md`, `HANDOFFS.md`, its immutable event, and the
-   owned receipt before sending any callback.
-4. The target sends one `EVENT_READY` message to the same registered Linx task.
-5. Linx validates identity, receipt hash, unseen event, current lock, and current
-   owner scope before starting one new manager pass.
-6. Linx acknowledges the exact callback and processes at most one bounded next
-   action. A new callback starts a new pass.
+1. Controller binds `return_to_task_id` to the registered requester and stores
+   the complete expected result identity: task, Worker, Work Order, dispatch,
+   event, packet hash, result path, and result hash.
+2. After the Worker receipt is durable, emit exactly one canonical,
+   signal-only `RESULT_READY.json` for that identity.
+3. The requester validates the signal and re-reads the durable `RESULT.json`
+   by path and hash. It does not trust bytes supplied by the callback.
+4. If the signal is lost, Controller permits one deterministic idempotent
+   `reconcile_result_ready` redelivery. A duplicate signal or acknowledgement
+   is a zero-delta replay.
+5. If that repair is unavailable a second time, open the callback circuit and
+   write one deduplicated `LOOP_INCIDENT.json`. Runtime roles report the
+   incident to the Loop coder; they never patch Loop source.
 
-`One bounded action` means one action per manager pass. It does not mean stop
-the project after dispatch.
+There is no polling, scheduler, recurring wake, generic continuation, or
+owner rescue in this path. Wrong requester, role, task, Work Order, dispatch,
+event, packet hash, result hash, or path fails closed before any state write.
 
-## Callback Envelope
+## RESULT_READY envelope
 
-```text
-EVENT_READY
-LINX_TASK_ID: <registered Linx task id>
-SOURCE_TASK_ID: <registered Worker or Thinx task id>
-SOURCE_ROLE: WORKER | THINX
-DISPATCH_ID: dsp-<uuid>
-PACKET_SHA256: <64 hex>
-EVENT_TYPE: PLAN_READY | HANDOFF_READY | DECISION_READY | BLOCKED | FAILED
-RECEIPT_PATH: <repository-relative durable path>
-RECEIPT_SHA256: <64 hex>
+```json
+{
+  "callback_id": "rr-<deterministic-id>",
+  "expected_result_identity": {
+    "dispatch_id": "dsp-<id>",
+    "event_id": "<id>",
+    "packet_sha256": "<64 hex>",
+    "result_path": ".devad/workers/<worker>/receipts/<event>.json",
+    "result_sha256": "<64 hex>",
+    "task_id": "<worker-task-id>",
+    "work_order_id": "wo-<id>",
+    "work_order_sha256": "<64 hex>",
+    "worker_id": "<registered-worker-task-id>"
+  },
+  "expires_at": "<bounded-UTC-time>",
+  "project_profile_id": "<profile>",
+  "return_to_task_id": "<registered-requester-id>",
+  "schema": "x9-loop-result-ready-v1",
+  "source_role": "WORKER",
+  "status": "READY"
+}
 ```
 
-The message is a signal, not authority. Linx reads the exact durable receipt and
-event before acting. Wrong role, task, dispatch, packet, receipt, or reused event
-is rejected.
+The envelope contains no result bytes, prompt, command, provider, model, or
+thinking override. `linker_once.py` may validate the exact signal, but it does
+not wake a task, select work, or make a model call.
 
-## Delivery Rules
+## Delivery and recovery rules
 
-- Send to the same registered Linx task; never create a replacement Linx.
-- Use the same dispatch ID and packet hash when retrying an unchanged callback.
-- Record every callback attempt and acknowledgement in the delivery ledger.
-- Make at most three direct delivery attempts.
-- Exact acknowledgement stops retries.
-- Transport accepted without acknowledgement: check the receipt once before
-  retrying; never resend blindly.
-- Changed payload creates a superseding event/dispatch identity.
-- After bounded failure, write `MANAGER_WAKE_FAILED` with attempts and durable
-  receipt details, then tell the owner manual pickup is needed.
+- Send only to the bound requester and preserve the exact callback identity.
+- Re-read the canonical result before acknowledging or repairing a callback.
+- A successful repair writes the same signal bytes once; it does not create a
+  new dispatch or mutate claims, STOP bounds, security gates, or external
+  effect gates.
+- A conflicting signal, state marker, or incident is an identity/hash error
+  with zero state delta.
+- `LOOP_INCIDENT.json` records task, Work Order, dispatch, result identity,
+  claims hash, evidence hashes, expected/actual transition, repair outcome,
+  reproducer, worktree, and host model-enforcement status.
 
-## Timer Rule
+The older `EVENT_READY` prose is not a second protocol. Existing inbox events
+remain durable ingress; `RESULT_READY` is the one P0 completion wake layered on
+that authority.
 
-Recurring 15/19-minute pickup is forbidden. Do not create or renew recurring
-pickup after dispatch, handoff, Thinx review, or Linx activation.
+## Preserved worktree evidence
 
-An owner-requested one-shot fallback is allowed only for an explicit delayed
-owner decision or an external condition that cannot send a callback. It must
-have one target, one deadline, one run, and no renewal. A direct callback remains
-the default.
+A canonical Worker `RESULT_READY.json` may remain beside its `INBOX_EVENT.json`
+without becoming product dirt. Controller admits it only after full
+requester/result/task/order/dispatch/packet/profile/Worker validation and only
+while it is an ordinary untracked file. Previously consumed outboxes are
+reusable for terminal `COMPLETE` or `SUPERSEDED` tasks only when the Work Order
+has the same state and the dispatch is `COMPLETE`. See
+[Lesson 52](lessons/52-callback-evidence-deadlock.md) for the failure and exact
+rollback boundary.
+
+## Legacy receipt vocabulary
+
+Older V5 receipts remain readable as historical evidence and retain the exact
+identity fields `LINX_TASK_ID`, `SOURCE_TASK_ID`, `SOURCE_ROLE`, `DISPATCH_ID`,
+`PACKET_SHA256`, `EVENT_TYPE`, `RECEIPT_PATH`, and `RECEIPT_SHA256`. The legacy
+manager wake boundary remains bounded to at most three attempts; a failed wake
+is recorded as `MANAGER_WAKE_FAILED` under the existing release and
+`MANAGER_PASS_LOCK` evidence. These names do not create a second callback
+protocol or permit recurring pickup.

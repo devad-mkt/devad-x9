@@ -14,8 +14,8 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "templates" / "x9-project" / ".devad"
-ACTIVATION_NAME = "2026-07-13-x9-loop-lite-v6-activation.md"
-OLD_REPORT_NAME = "2026-07-13-x9-loop-lite-v6-old-migration-report.md"
+ACTIVATION_NAME = "2026-07-16-x9-loop-v7.3-lite-activation.md"
+OLD_REPORT_NAME = "2026-07-16-x9-loop-v7.3-lite-historical-migration-report.md"
 TASK_ID_RE = re.compile(
     r"\b[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-"
     r"[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\b"
@@ -163,24 +163,25 @@ def template_files() -> list[tuple[Path, Path]]:
 
 
 def activation_packet(repo: Path) -> str:
-    return f"""# X9 Loop Lite v6 Activation Packet
+    return f"""# X9 Loop V7.3 Lite Activation Packet
 
 Generated: {now()}
 Repository: {repo}
 
-Do not send automatically. Do not message the current Linx during shadow
-validation.
+Do not send automatically. Validate this repository in isolation before
+activation.
 
-1. Run read-only shadow reconciliation and verify all existing local work is
-   preserved and classified.
-2. Always reuse the existing Thinx task; do not create a replacement merely to change
-   model effort.
-3. Create one fresh Linx v6 only after package, snapshot, identity, ownership,
-   callback, and recovery tests pass.
-4. Fresh Linx v6 runs `loopctl.py reconcile`, reads only
-   `manager/loop-lite/runtime/ACTION.json`, performs one transport action, and
-   records the real delivery result.
-5. Retire old Linx only after the new Linx acknowledges the exact snapshot.
+1. Preserve and classify every existing worktree and local byte; never infer
+   disposal from age.
+2. Run `loopctl.py init` for a new overlay or `loopctl.py migrate-v3` for an
+   existing V7/V2 state, then verify `PROJECT_PROFILE.json` and snapshot V3.
+3. Reuse registered WORKER and THINKER identities. LINKER is deterministic
+   zero-model code; legacy LINX/THINX role values remain compatibility aliases.
+4. LINKER reads only `manager/loop-lite/runtime/ACTION.json`, transports the
+   exact bytes, emits a canonical acknowledgement, and Controller consumes it
+   through `loopctl.py run-once`.
+5. Prove one WORKER cycle, three disjoint prepared WORKER lanes, doctor,
+   interrupted-migration recovery, and exact `rollback-v7` before activation.
 
 No product code, worktree move, cleanup, reset, stash, deploy, or recurring
 heartbeat is authorized by this packet.
@@ -194,7 +195,7 @@ def old_report(repositories: list[Path]) -> str:
         rows.append(
             f"| {item['path']} | {item['branch']} | {dirty} | UNKNOWN | PRESERVE |"
         )
-    return """# X9 Loop Lite v6 OLD Migration Report
+    return """# X9 Loop V7.3 Lite Historical Migration Report
 
 Planning evidence only. No checkout was moved, deleted, cleaned, reset, or
 stashed. Age was not used.
@@ -308,7 +309,7 @@ def apply_overlay(repo: Path, extra_repos: list[Path]) -> list[str]:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Non-destructive X9 Loop Lite v6 overlay")
+    parser = argparse.ArgumentParser(description="Non-destructive X9 Loop V7.3 Lite overlay")
     parser.add_argument("--repo", required=True, type=Path)
     parser.add_argument("--extra-repo", action="append", default=[], type=Path)
     parser.add_argument("--apply", action="store_true")
@@ -334,7 +335,7 @@ def main() -> int:
         return 2
     for result in results:
         print(result)
-    print("ACTIVATION_NOT_SENT")
+    print("V7.3_LITE_ACTIVATION_NOT_SENT")
     return 0
 
 

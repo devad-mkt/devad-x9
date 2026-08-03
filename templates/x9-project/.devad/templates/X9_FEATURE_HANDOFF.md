@@ -10,7 +10,7 @@ full deploy JSON.
 | --- | --- |
 | Feature |  |
 | Repo / branch / HEAD |  |
-| Next source folder | `<project-root>` |
+| Next source folder | `D:\CDX-3\core-aio\core-x9` |
 | Bridge folder status | `none` / `active` / `locked` / `dirty orphan patch` |
 | Result | `CODE_READY` / `DEPLOYED` / `LIVE_EXTERNAL_PASS` / `PARTIAL` / `BLOCKED` |
 | User-visible proof | pass/fail/partial/blocked |
@@ -59,7 +59,7 @@ full deploy JSON.
 - [ ] Acceptance matrix covers every user-named URL/surface/provider.
 - [ ] Visible UI proof is rendered evidence, not hidden props or route loads.
 - [ ] Deployed branch/commit contains the implementation when deploy is claimed.
-- [ ] New feature/debug/docs work happened in `<project-root>`, not in a deploy/v105/bridge checkout.
+- [ ] New feature/debug/docs work happened in `D:\CDX-3\core-aio\core-x9`, not in a deploy/v105/bridge checkout.
 - [ ] Any v105 bridge was marked `locked` after deploy; dirty bridges are recorded as `dirty orphan patch`, not continued.
 - [ ] Exact X9 source commit -> v105 bridge commit mapping is recorded when deploy is claimed.
 - [ ] Task-related `.devad` docs/proofs/handoffs/rules are committed and pushed.

@@ -1,4 +1,10 @@
-# Public Release Attestation - 2026-07-14
+# Historical Public Release Attestation - 2026-07-14
+
+> Historical V6 record only. The current public package is **X9 Loop Style**
+> (stable default) plus **X9 Loop Code** (fresh-project trial only), as defined
+> in the root README and `kit.manifest.json`. This old attestation is retained
+> for lineage; it is not an installation, activation, or production claim for
+> the current package.
 
 | Field | Value |
 | --- | --- |

@@ -1,0 +1,25 @@
+diff --git a/skills/using-git-worktrees/SKILL.md b/skills/using-git-worktrees/SKILL.md
+--- a/skills/using-git-worktrees/SKILL.md
++++ b/skills/using-git-worktrees/SKILL.md
+@@
+ **Announce at start:** "I'm using the using-git-worktrees skill to set up an isolated workspace."
++
++## Devad X9 Override
++
++For Devad work or any path under `D:\CDx9`, first read
++`C:\Users\A-haj\.codex\skills\devad-x9\SKILL.md` and
++`C:\Users\A-haj\.codex\skills\devad-x9\references\cdx9-workspace-layout.md`.
++Those rules override this skill's generic placement and fallback advice.
++
++- Use an already verified worktree or a host-created native Codex worktree
++  under `D:\CDx9\0-cdx-wt`.
++- Do not use Step 1b, create a project-local `.worktrees` directory, or create
++  any new top-level `D:\CDx9` entry for Devad.
++- If the exact authorized path/base is missing and no native host route is
++  available, return `WORKSPACE_POLICY_MISSING` or
++  `WORKSPACE_POLICY_CONFLICT`; do not improvise a manual worktree.
++- Never raw-copy, rename, filesystem-move, clean, or remove an active, dirty,
++  linked, or unknown Devad worktree. Preserve it and request a separately
++  reviewed retirement action after clean/pushed/integrated/restore proof.
++
+ ## Step 0: Detect Existing Isolation

@@ -1,0 +1,7 @@
+﻿# Profile-local derived memory is runtime state, never a packet authority.
+*/memory/project-memory.sqlite
+*/memory/project-memory.sqlite-wal
+*/memory/project-memory.sqlite-shm
+*/memory/.next/
+*/memory/failed-*
+*/memory/exports/

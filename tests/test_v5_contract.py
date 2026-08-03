@@ -23,11 +23,21 @@ class PackageContractTests(unittest.TestCase):
     def test_required_skills_exist(self):
         expected = {
             "devad-x9",
+            "x9-loop-style",
+            "x9-loop-code",
             "devad-x9-loop",
             "devad-x9-manager",
             "codex-x9-backup",
             "codex-token-budget",
             "devad-memory",
+            "x9-project-docs",
+            "dokploy",
+            "devad-docs",
+            "tldr",
+            "smooth-coding",
+            "sdlc",
+            "xplan",
+            "devad-adoptions",
         }
         actual = {p.name for p in SKILLS.iterdir() if p.is_dir()}
         self.assertEqual(expected, actual)
@@ -36,7 +46,7 @@ class PackageContractTests(unittest.TestCase):
 
     def test_manager_is_a_small_redirect(self):
         text = (SKILLS / "devad-x9-manager" / "SKILL.md").read_text(encoding="utf-8")
-        self.assertIn("devad-x9-loop", text)
+        self.assertIn("x9-loop-style", text)
         self.assertLessEqual(len(text.splitlines()), 40)
 
     def test_readme_has_required_details(self):
@@ -200,7 +210,8 @@ class CallbackPickupPolicyTests(unittest.TestCase):
             self.assertIn("same registered Linx task", text)
             self.assertIn("Recurring 15/19-minute pickup is forbidden", text)
         self.assertIn("direct event callback", skill)
-        self.assertIn("same registered Linx", skill)
+        self.assertIn("same registered LINKER", skill)
+        self.assertIn("legacy LINX", skill)
         self.assertIn("No recurring heartbeat", skill)
         self.assertIn("PAUSE_NOT_DELETE", heartbeat)
 

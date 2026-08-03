@@ -13,7 +13,7 @@ discipline.
 ## Setup
 
 1. Split work only by clear file/path ownership.
-2. Use short worktree paths under `<worktree-root>\<lane>` unless the
+2. Use short worktree paths under `D:\CDX-3\core-aio\x9w\<lane>` unless the
    user chooses another root.
 3. One worker chat gets one lane and one branch.
 4. Worker prompt must include allowed files, denied files, expected tests, stop

@@ -1,0 +1,4 @@
+interface:
+  display_name: "X9 Loop Code (Trial)"
+  short_description: "Fresh-project controller trial only"
+  default_prompt: "Use $x9-loop-code only for an owner-approved fresh disposable project trial; keep X9 Loop Style as the default."

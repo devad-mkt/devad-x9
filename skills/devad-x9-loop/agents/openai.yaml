@@ -1,4 +1,4 @@
 interface:
-  display_name: "Devad X9 Loop Lite"
-  short_description: "Route one deterministic X9 action with exact receipts"
-  default_prompt: "Use $devad-x9-loop as Linx. Run loopctl reconcile, read only loop-lite runtime/ACTION.json, perform that one transport action, and record the real result."
+  display_name: "X9 Loop (Style redirect)"
+  short_description: "Redirect normal work to stable X9 Loop Style"
+  default_prompt: "Use $x9-loop-style for normal Devad X9 work. For an owner-approved fresh disposable Controller trial only, load $x9-loop-code; never start V7 Controller actions in an existing or production project."

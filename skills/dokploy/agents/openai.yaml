@@ -1,0 +1,7 @@
+interface:
+  display_name: "Dokploy"
+  short_description: "Diagnose and operate Dokploy safely"
+  default_prompt: "Use $dokploy to diagnose this Dokploy MCP or API issue without exposing secrets."
+
+policy:
+  allow_implicit_invocation: true

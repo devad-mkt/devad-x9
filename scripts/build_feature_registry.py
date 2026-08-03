@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import argparse
 import hashlib
@@ -49,6 +49,8 @@ NEW_FEATURES = [
     ("loop-manager-compat-shim", "devad-x9-manager", "Temporary v3 prompt redirect"),
 ]
 V6_FEATURES = [
+    ("loop-style-default", "x9-loop-style", "skills/x9-loop-style/SKILL.md", "Default V6-style packet, receipt, and autonomous role coordination without Controller runtime state", "tests/test_loop_lite_supporting_skills.py::SupportingSkillV6Tests"),
+    ("loop-code-trial", "x9-loop-code", "skills/x9-loop-code/SKILL.md", "Experimental fresh-project Controller trial; never normal or production authority", "tests/test_loop_lite_supporting_skills.py::SupportingSkillV6Tests"),
     ("loop-lite-controller", "devad-x9-loop", "skills/devad-x9-loop/scripts/loopctl.py", "Transactional Loop Lite v6 controller and one-action reconciliation boundary", "tests/test_loop_lite_v6.py"),
     ("loop-lite-recovery-snapshot", "devad-x9-loop", "templates/x9-project/.devad/manager/loop-lite/SNAPSHOT.json", "Tracked compact recovery truth independent of disposable SQLite runtime state", "tests/test_loop_lite_package.py::LoopLitePackageTests"),
     ("loop-lite-machine-contracts", "devad-x9-loop", "templates/x9-project/.devad/manager/loop-lite/contracts", "Versioned JSON contracts for owner packets, tasks, actions, and results", "tests/test_loop_lite_package.py::LoopLitePackageTests"),
@@ -56,6 +58,7 @@ V6_FEATURES = [
     ("loop-lite-direct-callback", "devad-x9-loop", "skills/devad-x9-loop/references/loop-lite-v6-contract.md", "Identity-checked direct callback without a recurring manager heartbeat", "tests/test_loop_lite_v6.py"),
     ("loop-lite-sidecar-doctor", "devad-x9-loop", "skills/devad-x9-loop/scripts/opencode_doctor.py", "Secret-safe bounded OpenCode doctor and advisory request gate", "tests/test_loop_lite_package.py::OpenCodeDoctorTests"),
     ("loop-lite-generated-human-views", "devad-x9-loop", "skills/devad-x9-loop/references/loop-lite-v6-contract.md", "Bounded generated status and handoff views that are never parser authority", "tests/test_loop_lite_v6.py"),
+    ("project-brain-docs", "x9-project-docs", "skills/x9-project-docs/SKILL.md", "Profile-isolated project brain and Style-receipt documentation add-on", "tests/test_x9_project_docs_skill.py"),
 ]
 RETIRED_FEATURES = [
     ("retired-x7-broad-polling", "X7 broad polling"),
@@ -78,8 +81,8 @@ ADAPTED_PATHS = {
     "skills/devad-memory/SKILL.md": "Memory boundary now names loop state as active truth.",
     "skills/codex-x9-backup/scripts/restore-codex-x9-backup.ps1": "Invalid DryRun foreach pipeline fixed without changing restore scope.",
     "scripts/build_source_manifest.py": "Manifest now covers the complete v5 package except itself and generated cache.",
-    "scripts/install-suite.ps1": "Installer now stages, validates, backs up, atomically swaps, and rolls back six skills.",
-    "scripts/validate_suite.py": "Validator now enforces six skills, loop state, and migration coverage.",
+    "scripts/install-suite.ps1": "Installer stages and validates X9 Loop Style plus fourteen companion/canary skills before sequential replacement, with backup and handled-failure rollback.",
+    "scripts/validate_suite.py": "Validator enforces X9 Loop Style, compatibility shims, package skills, loop state, and migration coverage.",
     "templates/x9-project/.devad/ROUTER.md": "Router adds compact v5 loop state.",
     "templates/x9-project/.devad/manager/workers/_template/MANIFEST.json": "Worker manifest adds task, dispatch, packet, resource, and receipt identity.",
     "templates/x9-project/.devad/manager/workers/_template/STATUS.md": "Status adds v5 completion identity while keeping compact caps.",
@@ -96,7 +99,7 @@ def stable_id(kind: str, source: str) -> str:
 def owner_for(relative: str) -> str:
     parts = Path(relative).parts
     if len(parts) >= 2 and parts[0] == "skills":
-        return "devad-x9-loop" if parts[1] == "devad-x9-manager" else parts[1]
+        return "x9-loop-style" if parts[1] in {"devad-x9-manager", "devad-x9-loop"} else parts[1]
     if parts and parts[0] == "scripts":
         return "kit"
     if parts and parts[0] == "templates":
@@ -122,6 +125,8 @@ def inventory(source: Path) -> list[dict[str, str]]:
         if not root.exists():
             continue
         for path in sorted(p for p in root.rglob("*") if p.is_file()):
+            if "__pycache__" in path.parts or path.suffix == ".pyc":
+                continue
             relative = path.relative_to(source).as_posix()
             kind = kind_for(relative)
             items.append({"id": stable_id(kind, relative), "kind": kind, "source": relative})
@@ -164,11 +169,11 @@ def classify(item: dict[str, str]) -> dict[str, Any]:
         "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
     }
     if source.startswith("skills/devad-x9-manager"):
-        replacement = source.replace("skills/devad-x9-manager", "skills/devad-x9-loop", 1)
+        replacement = source.replace("skills/devad-x9-manager", "skills/x9-loop-style", 1)
         result.update(
             status="MOVED",
             replacement=replacement,
-            reason="Real manager skill renamed to devad-x9-loop; detailed behavior retained.",
+            reason="Normal manager routing now uses the compact X9 Loop Style skill; V7 remains quarantined.",
         )
     elif source in ADAPTED_PATHS:
         result.update(
