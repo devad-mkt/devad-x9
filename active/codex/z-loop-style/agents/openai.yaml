@@ -1,0 +1,4 @@
+interface:
+  display_name: "zLoopStyle"
+  short_description: "Default V6-style X9 coordination without a Controller"
+  default_prompt: "Use $z-loop-style for one bounded Devad X9 task: verify Git and a self-contained packet, let the accountable task work autonomously, write a durable result, and use a signal-only handoff. Do not start the V7 Controller, Work Orders, ACTION transport, recovery, or recurring monitors."

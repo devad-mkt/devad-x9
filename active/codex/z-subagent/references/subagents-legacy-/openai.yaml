@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legacy Subagents Redirect"
+  short_description: "Redirect legacy routing to xSubAgent"
+  default_prompt: "Use $subagents to redirect this legacy request to $z-subagent."

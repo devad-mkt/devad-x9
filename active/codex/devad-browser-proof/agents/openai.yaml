@@ -1,0 +1,4 @@
+interface:
+  display_name: "Devad Browser Proof"
+  short_description: "Secret-safe Devad migration browser proof"
+  default_prompt: "Use $devad-browser-proof to capture secret-safe browser proof for this Devad migration slice."

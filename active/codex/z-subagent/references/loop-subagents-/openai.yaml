@@ -1,0 +1,4 @@
+interface:
+  display_name: "LoopSub"
+  short_description: "Run a bounded, proof-first subagent loop."
+  default_prompt: "Use $loopsub to deliver one bounded feature slice with fail-closed admission, compact receipts, and parent verification."

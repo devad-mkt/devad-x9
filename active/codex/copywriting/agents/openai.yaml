@@ -1,0 +1,4 @@
+interface:
+  display_name: "Copywriting"
+  short_description: "Plan, craft, and refine conversion copy"
+  default_prompt: "Use $copywriting to plan and write source-grounded conversion copy for this page."

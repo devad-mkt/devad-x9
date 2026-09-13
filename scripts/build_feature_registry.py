@@ -9,7 +9,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SCAN_ROOTS = ("skills", "scripts", "templates")
+SCAN_ROOTS = ("skills", "active", "scripts", "templates")
 STATUSES = {"RETAINED", "MOVED", "ADAPTED", "NEW", "RETIRED"}
 INVARIANTS = [
     "truth-and-mission-locks",
@@ -95,6 +95,10 @@ def stable_id(kind: str, source: str) -> str:
 
 def owner_for(relative: str) -> str:
     parts = Path(relative).parts
+    if parts and parts[0] == "active":
+        if len(parts) >= 3:
+            return parts[2]
+        return "active-catalog"
     if len(parts) >= 2 and parts[0] == "skills":
         return "devad-x9-loop" if parts[1] == "devad-x9-manager" else parts[1]
     if parts and parts[0] == "scripts":

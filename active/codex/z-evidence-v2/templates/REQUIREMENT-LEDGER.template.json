@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "requirements": [
+    {
+      "id": "OWN-001",
+      "requirement": "[owner requirement]",
+      "sources_or_actions": ["[source or action]"],
+      "artifact_rows": ["[packet/row]"],
+      "gate": "PRE_ANALYZE",
+      "status": "UNKNOWN",
+      "evidence_ids": [],
+      "decision": "UNKNOWN",
+      "proof_or_blocker": "[pending]"
+    }
+  ]
+}

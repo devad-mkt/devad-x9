@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evidence to Implementation v2"
+  short_description: "Build implementation-grade evidence contracts v2"
+  default_prompt: "Use $z-evidence-v2 to trace every owner requirement through versioned evidence, settings, native owners, schemas, state machines, screenshots, tests, reviewer gates, and bounded Work Orders without leaving architectural decisions to the implementer."

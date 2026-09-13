@@ -1,0 +1,4 @@
+interface:
+  display_name: "Solve Before Stopping"
+  short_description: "Recover stalled work before escalating"
+  default_prompt: "Use $solve-before-stopping to diagnose this blocker, try the safest viable route, and continue useful work before declaring a wait."

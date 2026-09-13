@@ -1,0 +1,4 @@
+interface:
+  display_name: "PG18 VectorScale Proof"
+  short_description: "Run sealed private PG18 proof leases safely"
+  default_prompt: "Use $pgvectorscale-db to prepare or run a sealed private PG18+vector+vectorscale proof lease."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "X9 Loop (Style redirect)"
+  short_description: "Redirect normal work to stable X9 Loop Style"
+  default_prompt: "Use $z-loop-style for normal Devad X9 work. For an owner-approved fresh disposable Controller trial only, load $z-loop-code; never start V7 Controller actions in an existing or production project."

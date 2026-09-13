@@ -1,0 +1,4 @@
+interface:
+  display_name: "Devad LP Content"
+  short_description: "Landing-page copy with Devad CRO rules"
+  default_prompt: "Use $devad-lp-content to create high-converting landing-page content from my offer brief."

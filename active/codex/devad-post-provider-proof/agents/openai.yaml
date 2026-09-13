@@ -1,0 +1,4 @@
+interface:
+  display_name: "Devad POST Provider Proof"
+  short_description: "Fast safe provider proof workflow for CORE POST slices"
+  default_prompt: "Use this skill to execute a CORE POST provider connect/publish proof with deploy, live UI, external verification, secret safety, and provider slice packets."

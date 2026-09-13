@@ -1,0 +1,4 @@
+interface:
+  display_name: "HTML Page Cloner"
+  short_description: "Clone saved pages into single HTML"
+  default_prompt: "Use $html-page-cloner to rebuild a high-fidelity single-file HTML landing page from saved HTML, assets, screenshots, and optional DOM exports."

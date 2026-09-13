@@ -1,0 +1,4 @@
+interface:
+  display_name: "Devad Adoptions"
+  short_description: "Evidence-gated native Devad adoptions"
+  default_prompt: "Use $z-devad-adopt to reconcile current, deployed, licensed, addon, and historical evidence; map settings and native owners; freeze schemas/state machines; and prove a bounded Devad adoption without obsolete ports, hardcoded behavior, or fake parity."

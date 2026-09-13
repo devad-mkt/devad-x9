@@ -1,0 +1,4 @@
+interface:
+  display_name: "Devad Articles"
+  short_description: "Compact article SEO, AEO, and rewrite rules"
+  default_prompt: "Use $devad-articles to draft, rewrite, refresh, convert, format, or audit an article from my brief or source text."

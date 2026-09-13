@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ultra Reasoning Protocol"
+  short_description: "Deep reasoning that prunes process and preserves delivery"
+  default_prompt: "Use $z-think to choose proportionate depth, keep one delivery-critical slice, challenge blocked routes without multiplying process, prune nonblocking concerns, and stop when concise evidence proves the result."

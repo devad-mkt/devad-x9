@@ -1,0 +1,4 @@
+interface:
+  display_name: "Loop Plan Goal"
+  short_description: "Protect long-running recovery and delivery goals"
+  default_prompt: "Use the durable checkpoint, retention ledger, one active slice, and explicit source/test/browser/persistence/effect/deploy/production claim matrix to continue without losing work or making broad completion claims."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenCode Sidecars"
+  short_description: "Run bounded OpenCode provider workers safely."
+  default_prompt: "Use $oc-subs to run a bounded OpenCode sidecar task."

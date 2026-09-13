@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "screenshots": [
+    {
+      "id": "VIS-001",
+      "path": "evidence/screenshots/[masked-file].png",
+      "route": "[URL without private identifiers]",
+      "viewport": {"width": 1440, "height": 900},
+      "state": "[material state]",
+      "masks": ["[opaque mask or NONE_REQUIRED]"],
+      "captured_at": "[ISO-8601]",
+      "sha256": "[hash]",
+      "bytes": 0,
+      "denominator_ids": ["UI-001"],
+      "status": "CAPTURED_MASKED|NO_SCREENSHOT_SAFE|NOT_RUN"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Semantic Adoption"
+  short_description: "Adopt proven behavior into native owners safely"
+  default_prompt: "Use $z-native-adopt to adopt this proven behavior into the current native owner with the smallest verified diff."

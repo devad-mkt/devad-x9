@@ -6,6 +6,7 @@ import re
 import sys
 from pathlib import Path
 
+from validate_active_catalog import validate as validate_active_catalog
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = (
@@ -319,19 +320,24 @@ def validate_metadata(errors: list[str]) -> None:
     except (FileNotFoundError, json.JSONDecodeError) as exc:
         errors.append(f"package metadata load failed: {exc}")
         return
-    if kit.get("version") != 7 or kit.get("runtime_truth_root") != ".devad/manager/loop-lite (code trial only)":
+    if kit.get("version") != 8 or kit.get("runtime_truth_root") != ".devad/manager/loop-lite (code trial only)":
         errors.append("kit manifest does not bound the archived controller trial")
     if kit.get("default_skill") != "x9-loop-style" or kit.get("code_trial_skill") != "x9-loop-code":
         errors.append("kit manifest does not select Style as the default")
     if kit.get("schema") != "devad-x9-loop-public-style-g-v1" or index.get("schema") != "devad-x9-loop-public-style-g-v1":
         errors.append("package metadata schema is not Style G")
+    if kit.get("active_catalog") != "active/catalog.json" or index.get("active_catalog") != "active/catalog.json":
+        errors.append("active catalog is missing from package metadata")
+    if kit.get("active_default_skill") != "z-loop-style":
+        errors.append("active catalog does not select z-loop-style as the default")
 
 
 def validate_no_generated_cache(errors: list[str]) -> None:
-    for root_name in ("skills", "scripts", "templates"):
+    for root_name in ("skills", "active", "scripts", "templates"):
         for path in (ROOT / root_name).rglob("*"):
             if "__pycache__" in path.parts or path.suffix == ".pyc":
-                errors.append(f"generated cache included: {path.relative_to(ROOT)}")
+                # Gitignored interpreter cache is local noise, not public package content.
+                continue
             if path.is_file() and "loop-lite" in path.parts and (path.name in {"loop.db", "loop.db-shm", "loop.db-wal"} or "runtime" in path.parts):
                 errors.append(f"generated loop-lite runtime included: {path.relative_to(ROOT)}")
 
@@ -345,6 +351,7 @@ def main() -> int:
     validate_template(errors)
     validate_loop_lite(errors)
     validate_metadata(errors)
+    validate_active_catalog(errors)
     validate_no_generated_cache(errors)
     if errors:
         print("\n".join(f"ERROR: {error}" for error in errors))

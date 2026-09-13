@@ -1,0 +1,4 @@
+interface:
+  display_name: "Devad X9 Manager (Style redirect)"
+  short_description: "Redirect old X9 manager prompts to Style"
+  default_prompt: "Use $z-loop-style with the role requested by this legacy prompt."

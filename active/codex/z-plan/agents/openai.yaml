@@ -1,0 +1,4 @@
+interface:
+  display_name: "zPlan"
+  short_description: "Build product-candidate-first read-by-need delivery packets"
+  default_prompt: "Use $z-plan to create one compact PLAN.md plus one canonical checklist that splits page and channel layers, orders every independent local row before remote proof when requested, includes a product next-action ladder and false-blocker guard, and adds only supporting files needed for delivery."

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Devad Assistant"
+  short_description: "Routes bounded sidecar reviews through direct headless OpenCode CLI while Codex owns scope, verification, and final claims."
+  default_prompt: "Use devad-assistant. Prefer direct headless OpenCode CLI with opencode-go/glm-5.2 or opencode-go/kimi-k2.7-code. Do not use ACP, PI, or OpenRouter. Send a full-context plan-only packet and let Codex verify all claims."
+policy:
+  allow_implicit_invocation: true

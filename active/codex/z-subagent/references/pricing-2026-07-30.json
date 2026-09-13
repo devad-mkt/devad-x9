@@ -1,0 +1,24 @@
+{
+  "effective_date": "2026-07-30",
+  "currency": "USD",
+  "api_standard_per_million_tokens": {
+    "gpt-5.6-sol": { "input": 5.0, "cached_input": 0.5, "output": 30.0 },
+    "gpt-5.6-terra": { "input": 2.0, "cached_input": 0.2, "output": 12.0 },
+    "gpt-5.6-luna": { "input": 0.2, "cached_input": 0.02, "output": 1.2 }
+  },
+  "codex_credits_per_million_tokens": {
+    "gpt-5.6-sol": { "input": 125.0, "cached_input": 12.5, "output": 750.0 },
+    "gpt-5.6-terra": { "input": 50.0, "cached_input": 5.0, "output": 300.0 },
+    "gpt-5.6-luna": { "input": 5.0, "cached_input": 0.5, "output": 30.0 }
+  },
+  "notes": [
+    "API cache reads are charged at the listed cached-input rate.",
+    "API cache writes cost 1.25 times uncached input when cache_write_tokens is exposed.",
+    "Codex does not charge cache writes separately.",
+    "Reasoning output is diagnostic only; do not add it to output_tokens for a second charge."
+  ],
+  "sources": [
+    "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+    "https://help.openai.com/en/articles/20001106-codex-rate-card"
+  ]
+}

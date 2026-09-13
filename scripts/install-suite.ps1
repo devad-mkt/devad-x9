@@ -4,6 +4,7 @@ param(
     [string]$Python = "python",
     [string]$SkillValidator = "",
     [switch]$CodeTrial,
+    [switch]$LegacyStyle,
     [switch]$Apply
 )
 
@@ -20,6 +21,41 @@ $Skills = @(
     "devad-memory",
     "x9-project-docs"
 )
+$LegacySkills = @($Skills)
+$UseActiveCatalog = -not $LegacyStyle
+$ActiveEntries = @()
+
+function Resolve-CatalogSource {
+    param([string]$RelativePath)
+    $relative = $RelativePath.Replace('/', '\')
+    $root = [System.IO.Path]::GetFullPath($PackageRoot).TrimEnd('\')
+    $source = [System.IO.Path]::GetFullPath((Join-Path $root $relative))
+    if (-not $source.StartsWith($root + '\', [System.StringComparison]::OrdinalIgnoreCase)) {
+        throw "Active catalog path escapes package root: $RelativePath"
+    }
+    return $source
+}
+
+if ($UseActiveCatalog) {
+    $CatalogPath = Join-Path $PackageRoot "active\catalog.json"
+    if (-not (Test-Path -LiteralPath $CatalogPath)) {
+        throw "Missing active catalog: $CatalogPath"
+    }
+    $Catalog = Get-Content -LiteralPath $CatalogPath -Raw | ConvertFrom-Json
+    $ActiveEntries = @($Catalog.entries)
+    if (-not $ActiveEntries.Count) {
+        throw "Active catalog has no entrypoints: $CatalogPath"
+    }
+    $Skills = @($ActiveEntries | ForEach-Object { $_.name })
+    $InstallEntries = @($ActiveEntries | ForEach-Object {
+        [pscustomobject]@{ Name = $_.name; Source = (Resolve-CatalogSource $_.path) }
+    })
+}
+else {
+    $InstallEntries = @($LegacySkills | ForEach-Object {
+        [pscustomobject]@{ Name = $_; Source = (Join-Path $PackageRoot "skills\$_") }
+    })
+}
 
 Write-Host "X9 Loop Style source (with archived Code trial): $PackageRoot"
 Write-Host "Codex home: $CodexHome"
@@ -30,8 +66,8 @@ if ($ProjectRoot -and -not $CodeTrial) {
 
 if (-not $Apply) {
     Write-Host "DRY RUN: no files changed."
-    foreach ($Skill in $Skills) {
-        Write-Host "Would stage, validate, back up, and install: $Skill"
+    foreach ($Entry in $InstallEntries) {
+        Write-Host "Would stage, validate, back up, and install: $($Entry.Name)"
     }
     if ($ProjectRoot) {
         Write-Host "Would create a legacy controller-trial .devad only if absent: $ProjectRoot"
@@ -51,8 +87,9 @@ $BackupRoot = Join-Path $CodexHome "x9-install-backups\$Stamp"
 $FailedRoot = Join-Path $CodexHome "x9-install-failed\$Stamp"
 New-Item -ItemType Directory -Force -Path $SkillsRoot, $StageRoot, $BackupRoot | Out-Null
 
-foreach ($Skill in $Skills) {
-    $Source = Join-Path $PackageRoot "skills\$Skill"
+foreach ($Entry in $InstallEntries) {
+    $Skill = $Entry.Name
+    $Source = $Entry.Source
     $Stage = Join-Path $StageRoot $Skill
     if (-not (Test-Path -LiteralPath $Source)) {
         throw "Missing package skill: $Skill"
@@ -68,7 +105,8 @@ if (-not $SkillValidator) {
 }
 
 if ($SkillValidator) {
-    foreach ($Skill in $Skills) {
+    foreach ($Entry in $InstallEntries) {
+        $Skill = $Entry.Name
         & $Python $SkillValidator (Join-Path $StageRoot $Skill)
         if ($LASTEXITCODE -ne 0) {
             throw "Official skill validation failed in staging: $Skill"
@@ -81,7 +119,8 @@ $ProjectStage = $null
 $ProjectInstalled = $false
 $DevadTarget = $null
 try {
-    foreach ($Skill in $Skills) {
+    foreach ($Entry in $InstallEntries) {
+        $Skill = $Entry.Name
         $Target = Join-Path $SkillsRoot $Skill
         $Backup = Join-Path $BackupRoot $Skill
         $Stage = Join-Path $StageRoot $Skill
@@ -132,7 +171,8 @@ catch {
             Move-Item -LiteralPath $Target -Destination (Join-Path $FailedRoot $Skill)
         }
     }
-    foreach ($Skill in $Skills) {
+    foreach ($Entry in $InstallEntries) {
+        $Skill = $Entry.Name
         $Backup = Join-Path $BackupRoot $Skill
         $Target = Join-Path $SkillsRoot $Skill
         if ((Test-Path -LiteralPath $Backup) -and -not (Test-Path -LiteralPath $Target)) {
@@ -142,5 +182,10 @@ catch {
     throw
 }
 
-Write-Host "PASS: installed nine Style/default and Code-trial skills"
+if ($UseActiveCatalog) {
+    Write-Host "PASS: installed $($InstallEntries.Count) sanitized active catalog skills"
+}
+else {
+    Write-Host "PASS: installed nine Style/default and Code-trial skills"
+}
 Write-Host "Rollback backup: $BackupRoot"

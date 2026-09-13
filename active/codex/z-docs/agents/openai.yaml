@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "X9 Project Docs"
+  short_description: "Generate source-bound project docs from accepted X9 results."
+  default_prompt: "Use $z-docs for one accepted Style receipt or Controller-trial result documentation packet and sitemap validation."

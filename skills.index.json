@@ -1,6 +1,10 @@
 {
     "schema":  "devad-x9-loop-public-style-g-v1",
-    "date":  "2026-08-03",
+    "date":  "2026-09-13",
+    "active_catalog":  "active/catalog.json",
+    "active_default_skill":  "z-loop-style",
+    "active_code_trial_skill":  "z-loop-code",
+    "legacy_style_root":  "skills",
     "skills":  [
                    {
                        "name":  "devad-x9",

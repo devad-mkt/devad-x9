@@ -1,0 +1,25 @@
+{
+    "measurement_status":  "READY_FOR_COMPARISON",
+    "execution":  "NATIVE_V1",
+    "requested_model":  "gpt-5.6-luna",
+    "requested_reasoning_effort":  "max",
+    "attested_model":  "gpt-5.6-luna",
+    "attested_reasoning_effort":  "max",
+    "thread_receipt":  "019fb827-936b-7761-9a49-82fd15fee4db",
+    "duration_ms":  9897,
+    "input_tokens":  20477,
+    "cached_input_tokens":  0,
+    "uncached_input_tokens":  20477,
+    "cache_write_tokens":  null,
+    "output_tokens":  29,
+    "reasoning_output_tokens":  17,
+    "api_usd_estimate":  0.0041302,
+    "api_estimate_quality":  "LOWER_BOUND_CACHE_WRITES_NOT_EXPOSED",
+    "codex_credit_estimate":  0.103255,
+    "pricing_effective_date":  "2026-07-30",
+    "pricing_model":  "gpt-5.6-luna",
+    "price_sources":  [
+                          "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+                          "https://help.openai.com/en/articles/20001106-codex-rate-card"
+                      ]
+}

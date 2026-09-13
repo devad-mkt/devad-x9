@@ -1,0 +1,4 @@
+interface:
+  display_name: "Devad Vendor Hunk Adoption"
+  short_description: "Safe vendor update adoption for Devad repos"
+  default_prompt: "Use $devad-vendor-hunk-adoption to compare vendor upstream changes and adopt only safe hunks without losing Devad customizations."

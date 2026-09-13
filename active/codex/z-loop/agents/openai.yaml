@@ -1,0 +1,4 @@
+interface:
+  display_name: "zLoop"
+  short_description: "Stable project coordination without a Controller"
+  default_prompt: "Use $z-loop for normal project coordination. Keep Controller trials separately admitted and disposable."

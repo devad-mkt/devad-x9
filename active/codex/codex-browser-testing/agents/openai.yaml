@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Browser Testing"
+  short_description: "Automate and verify app behavior in the Codex in-app browser."
+  default_prompt: "Use the Codex browser testing workflow to test this app in the in-app browser and report evidence."

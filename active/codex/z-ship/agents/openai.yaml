@@ -1,0 +1,4 @@
+interface:
+  display_name: "zShip"
+  short_description: "Product-candidate-first coding without false blockers"
+  default_prompt: "Use $z-ship to finish the next complete local product vertical first, split visible/read-only/draft layers from gated effects and proof rows, reject false blockers with ACTION_NOW, and use the shortest safe fallback before any owner or Looper stop."

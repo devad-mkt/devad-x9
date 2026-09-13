@@ -1,0 +1,4 @@
+interface:
+  display_name: "Unified Chrome Control"
+  short_description: "Route authenticated and local browser work safely"
+  default_prompt: "Use the unified Chrome routing skill to choose the correct browser surface, preserve authentication boundaries, and gather the smallest valid evidence."

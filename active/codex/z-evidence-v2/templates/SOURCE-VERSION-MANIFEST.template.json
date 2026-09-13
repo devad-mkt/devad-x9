@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "captured_at": "[ISO-8601]",
+  "sources": [
+    {
+      "id": "SRC-001",
+      "class": "CURRENT_NATIVE|LIVE_DEPLOYED|AUTHENTICATED_REFERENCE|LICENSED_REFERENCE|ADDON|HISTORICAL|OFFICIAL_DOC",
+      "location": "[path or URL]",
+      "branch": "[branch or null]",
+      "sha_or_version": "[SHA, version, hash, or UNKNOWN]",
+      "status": "PROVEN|UNKNOWN|SOURCE_MISSING",
+      "notes": "[scope and limitations]"
+    }
+  ]
+}

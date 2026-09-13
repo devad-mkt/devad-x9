@@ -27,6 +27,21 @@ waiting for a manager to approve every command.
 > not production infrastructure. The bundled Loop Lite controller below is
 > retained solely as its archived trial code.
 
+## Current active catalog (2026-09-13)
+
+The `active/` catalog is the current sanitized public snapshot of the active
+Codex and Agent entrypoints. It contains 75 discovered entrypoints, keeps
+their source-root distinction, and uses Z naming where one semantic capability
+has a reviewed canonical name. `z-loop-style` is the active default;
+`z-loop-code` remains a disposable fresh-project trial. The older `skills/`
+tree is preserved as the previous Style G compatibility package and is not
+installed by default.
+
+`scripts/install-suite.ps1` installs the active catalog by default. Pass
+`-LegacyStyle` only when an existing consumer explicitly needs the previous
+Style G package. `scripts/validate_active_catalog.py` checks the catalog,
+entrypoint names, hashes, and public privacy boundary.
+
 ### Style in one picture
 
 ```text

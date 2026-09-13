@@ -1,0 +1,4 @@
+interface:
+  display_name: "Devad POST Migration"
+  short_description: "Safe StackPosts to CORE POST migration"
+  default_prompt: "Use $devad-cursor-post-chunk-runner to migrate or verify the next CORE POST provider chunk without fake parity claims."

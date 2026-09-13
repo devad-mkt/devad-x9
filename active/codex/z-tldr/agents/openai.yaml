@@ -1,0 +1,4 @@
+interface:
+  display_name: "TLDR"
+  short_description: "Give short honest role-directed verdicts"
+  default_prompt: "Use $z-tldr to give a compact, honest verdict and next actions."
