@@ -399,10 +399,10 @@
       "source_root": "codex",
       "path": "codex/z-content",
       "declared_name": "z-content",
-      "files": 18,
-      "bytes": 160404,
+      "files": 17,
+      "bytes": 62224,
       "excluded_files": 2,
-      "folder_sha256": "d9f8285afb9298b58c69ec19a92a7aa5b2c213ffe35070cfa9b18641e710f08f"
+      "folder_sha256": "e2e1f021cc3f9da8abb79cce404e68d3e6ba327277e141a7f7686c28d42a7bb1"
     },
     {
       "name": "z-context-engineering",

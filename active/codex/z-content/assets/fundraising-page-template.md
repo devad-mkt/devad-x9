@@ -1,73 +1,21 @@
-# Fundraising Page Copy
+# Fundraising Page Copy — compact
 
-## Campaign Core
+## Campaign core
 
-- People/community:
-- Need:
-- Organization response:
-- One donor action:
+- People/community and need:
+- Organization response and one donor action:
 - Faith/cultural context:
-- Verified impact claims:
-- Claims to avoid:
+- Verified impact claims / claims to avoid:
 
-## Title
+## Argument
 
-[Concrete gift or change] — [deeper meaning or intended community]
-
-## Opening Human Moment
-
-Signal-imagined scene. Never present as documented case evidence.
-
-## Why This Matters
-
-Connect the need to health, safety, dignity, family life, or hope. Verified and proportionate language.
-
-## What Support Makes Possible
-
-Name what is supplied, installed, delivered, funded, or maintained. Do not promise an individual outcome unless the donation model supports it.
-
-## First Donation Ask
-
-**Conviction line:**
-**CTA:**
-
-## Meaning of the Gift
-
-Move from the item or service to the human consequence.
-
-## Visible Chain of Work
-
-1.
-2.
-3.
-4.
-
-Add mechanism or field images with reader-facing captions.
-
-## Proof and Trust
-
-- Organization:
-- Relevant record/history:
-- Verified images:
-- Current facts:
-- Fund-use note:
-
-## Deeper Meaning
-
-Faith, dignity, remembrance, community, or continuing benefit used responsibly. No guaranteed spiritual rewards.
-
-## Final Close
-
-**Human choice:**
-**Final ask:**
-**CTA:**
-
-## Additional Details
-
-- Who receives support?
-- Can a small gift help?
-- How are donations handled?
-- What if someone cannot donate?
-
-Keep this section after the principal close.
-
+1. Title: `[Concrete gift or change] — [deeper meaning/community]`
+2. Opening human moment: signal an illustrative scene; do not invent a case.
+3. Why this matters: connect need to verified daily, safety, health, or dignity consequences.
+4. What support makes possible: name the supplied, installed, delivered, funded, or maintained mechanism.
+5. First ask: conviction line + CTA.
+6. Visible work chain: preparation → delivery/access → service; number the steps.
+7. Proof/trust: organization, record, images, current facts, fund-use note.
+8. Meaning: dignity, remembrance, community, or continuing benefit without spiritual guarantees.
+9. Final close: human choice + final ask + CTA.
+10. Additional details: recipients, small gifts, handling, and non-donation options after the close.

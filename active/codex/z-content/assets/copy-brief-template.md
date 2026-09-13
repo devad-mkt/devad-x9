@@ -1,63 +1,36 @@
-# Copy Brief
+# Copy Brief — compact
 
-Fill only what the job needs. Skip empty rows rather than inventing content.
+Fill only fields the job needs. Skip empty rows; never invent.
 
 ## Mission
 
 - Page/campaign:
-- Primary audience:
-- Awareness state:
+- Audience and awareness:
 - Traffic source:
-- One primary action and destination:
+- One action + destination:
 - Desired reader state (feel / know / believe / do):
 
-## Offer or Cause
+## Offer or cause
 
-- Core problem:
-- Desired change:
-- Mechanism:
-- Primary benefit:
-- Deeper emotional value:
-- One big idea:
+- Problem:
+- Desired change and mechanism:
+- Primary benefit / deeper value:
+- Big idea:
 - Reasons to believe:
-- Real objections:
+- Genuine objections:
 
-## Sources and Claims
+## Claims and assets
 
-| Claim | Status | Source | Allowed wording | Notes |
+| Claim | Status (VERIFIED / PROVIDED / PLACEHOLDER / DROP) | Source | Allowed wording |
+|---|---|---|---|
+|  |  |  |  |
+
+| Image | Role (stakes / mechanism / proof / outcome / close) | Rights/consent | Context | Caption |
 |---|---|---|---|---|
-|  | VERIFIED / PROVIDED / PLACEHOLDER / DROP |  |  |  |
+|  |  |  |  |  |
 
-## Images
+## Constraints and argument
 
-| Image | Role | Rights/consent | Verified context | Caption direction |
-|---|---|---|---|---|
-|  | stakes / mechanism / proof / outcome / close |  |  |  |
-
-## Constraints
-
-- Platform/editor and supported blocks:
-- Length:
-- Required and prohibited content:
-- Brand/voice:
-- Legal/policy:
-- Mobile/accessibility:
-
-## Page Argument
-
-1. Stakes:
-2. Desired change:
-3. Mechanism:
-4. Proof:
-5. Deeper meaning:
-6. Primary close:
-7. Additional details:
-
-## Gate Results
-
-- Pre-plan:
-- Evidence:
-- Pre-craft:
-- Pre-code (if implementing):
-- Publish blockers:
-
+- Platform/blocks, length, required/prohibited content, voice, legal, mobile/accessibility:
+- `stakes → change → mechanism → proof → meaning → close → details`
+- Gate results: pre-plan / evidence / pre-craft / publish blockers.

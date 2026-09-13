@@ -194,8 +194,8 @@ Run this checklist before every output. All Universal checks apply to every cont
 
 1. This file loads first as master kernel.
 2. Load exactly one workflow from `workflows/type-*.md`.
-3. For full 41-rule reference with Bad/Good examples → `reference/linguistic-deep-rules-41.md`.
-4. For complete unabridged rulebook (developer/audit) → `reference/master-content-rules.md`.
+3. For the compact 41-rule catalog → `reference/linguistic-deep-rules-41.md`.
+4. For compact extended rulebook (developer/audit) → `reference/master-content-rules.md`.
 5. For conversion, fundraising, or emotionally resonant output → `reference/conversion-copy-rules.md` (gates, CTA cadence, image argument, editing sweeps) + `workflows/type-fundraising.md` (fundraising only).
 6. For briefs and audits → `assets/copy-brief-template.md`, `assets/copy-review-scorecard.md`, `assets/fundraising-page-template.md` (copy only what the job needs).
 7. Files in `old/` are archived backups — do not load.

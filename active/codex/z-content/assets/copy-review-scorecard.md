@@ -1,45 +1,28 @@
-# Copy Review Scorecard
+# Copy Review Scorecard — compact
 
-Score each dimension 0–3: 0 = missing/harmful, 1 = weak/generic, 2 = solid, 3 = specific, credible, conversion-ready.
+Score each dimension 0–3: `0` missing/harmful, `1` generic, `2` solid, `3` specific and credible.
 
 | Dimension | Score | Evidence | Highest-value fix |
 |---|---:|---|---|
 | Audience clarity |  |  |  |
-| One primary action |  |  |  |
-| Headline and opening |  |  |  |
-| Big idea or promise |  |  |  |
+| One action and CTA |  |  |  |
+| Headline/opening |  |  |  |
+| Big idea/promise |  |  |  |
 | Emotional specificity |  |  |  |
-| Benefit and consequence |  |  |  |
+| Benefit/consequence |  |  |  |
 | Mechanism clarity |  |  |  |
-| Proof and claim integrity |  |  |  |
+| Proof/claim integrity |  |  |  |
 | Image-story alignment |  |  |  |
-| CTA timing and repetition |  |  |  |
+| CTA timing/repetition |  |  |  |
 | Objection handling |  |  |  |
-| Voice and cultural fit |  |  |  |
-| Readability and mobile scanning |  |  |  |
+| Voice/cultural fit |  |  |  |
+| Mobile readability |  |  |  |
 | Anti-slop polish |  |  |  |
 | Transparency placement |  |  |  |
 
-## P0/P1 Findings
+## Findings and blockers
 
-1.
-2.
-3.
-
-## Replacement Copy
-
-Provide complete replacements for the highest-impact issues.
-
-## Claim and Asset Blockers
-
-- Unsupported or expiring facts:
-- Image rights or consent:
-- Links or destination:
-- Publication decision:
-
-## Verdict
-
-- Strongest element:
-- Weakest conversion point:
-- One change most likely to improve action:
-
+- P0/P1 findings: 1.  2.  3.
+- Replacement copy for highest-impact issues:
+- Unsupported/expiring facts, image rights/consent, links/destination:
+- Verdict: strongest element / weakest point / one highest-value change.

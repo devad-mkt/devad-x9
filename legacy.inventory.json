@@ -17763,20 +17763,15 @@
       "anchor": "Verification"
     },
     {
-      "id": "v3-file-css-block-fbebb0d31eee",
-      "kind": "file",
-      "source": "active/codex/z-content/assets/_css-block.txt"
-    },
-    {
       "id": "v3-file-copy-brief-template-765ba356deed",
       "kind": "file",
       "source": "active/codex/z-content/assets/copy-brief-template.md"
     },
     {
-      "id": "v3-heading-copy-brief-template-4e2ee50e360e",
+      "id": "v3-heading-copy-brief-template-a45d9e70851e",
       "kind": "heading",
       "source": "active/codex/z-content/assets/copy-brief-template.md",
-      "anchor": "Copy Brief"
+      "anchor": "Copy Brief \u2014 compact"
     },
     {
       "id": "v3-heading-copy-brief-template-fc346d532f1c",
@@ -17785,40 +17780,22 @@
       "anchor": "Mission"
     },
     {
-      "id": "v3-heading-copy-brief-template-074ab51831e2",
+      "id": "v3-heading-copy-brief-template-bcf702786b38",
       "kind": "heading",
       "source": "active/codex/z-content/assets/copy-brief-template.md",
-      "anchor": "Offer or Cause"
+      "anchor": "Offer or cause"
     },
     {
-      "id": "v3-heading-copy-brief-template-17725c6e7683",
+      "id": "v3-heading-copy-brief-template-84891d3380d8",
       "kind": "heading",
       "source": "active/codex/z-content/assets/copy-brief-template.md",
-      "anchor": "Sources and Claims"
+      "anchor": "Claims and assets"
     },
     {
-      "id": "v3-heading-copy-brief-template-34ae68bdb61a",
+      "id": "v3-heading-copy-brief-template-63f2720cef8f",
       "kind": "heading",
       "source": "active/codex/z-content/assets/copy-brief-template.md",
-      "anchor": "Images"
-    },
-    {
-      "id": "v3-heading-copy-brief-template-a56d3ca93598",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/copy-brief-template.md",
-      "anchor": "Constraints"
-    },
-    {
-      "id": "v3-heading-copy-brief-template-900a0411216e",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/copy-brief-template.md",
-      "anchor": "Page Argument"
-    },
-    {
-      "id": "v3-heading-copy-brief-template-36ebd6bd08ed",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/copy-brief-template.md",
-      "anchor": "Gate Results"
+      "anchor": "Constraints and argument"
     },
     {
       "id": "v3-file-copy-review-scorecard-2c715aa01f2d",
@@ -17826,34 +17803,16 @@
       "source": "active/codex/z-content/assets/copy-review-scorecard.md"
     },
     {
-      "id": "v3-heading-copy-review-scorecard-96168c7526bf",
+      "id": "v3-heading-copy-review-scorecard-c6f4eb316437",
       "kind": "heading",
       "source": "active/codex/z-content/assets/copy-review-scorecard.md",
-      "anchor": "Copy Review Scorecard"
+      "anchor": "Copy Review Scorecard \u2014 compact"
     },
     {
-      "id": "v3-heading-p1-findings-8b395adee0c2",
+      "id": "v3-heading-copy-review-scorecard-dc14386d5af6",
       "kind": "heading",
       "source": "active/codex/z-content/assets/copy-review-scorecard.md",
-      "anchor": "P0/P1 Findings"
-    },
-    {
-      "id": "v3-heading-copy-review-scorecard-c7712afedefd",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/copy-review-scorecard.md",
-      "anchor": "Replacement Copy"
-    },
-    {
-      "id": "v3-heading-copy-review-scorecard-dbad1347429b",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/copy-review-scorecard.md",
-      "anchor": "Claim and Asset Blockers"
-    },
-    {
-      "id": "v3-heading-copy-review-scorecard-122d5b6919c6",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/copy-review-scorecard.md",
-      "anchor": "Verdict"
+      "anchor": "Findings and blockers"
     },
     {
       "id": "v3-file-fundraising-page-template-02ef5961b394",
@@ -17861,82 +17820,22 @@
       "source": "active/codex/z-content/assets/fundraising-page-template.md"
     },
     {
-      "id": "v3-heading-fundraising-page-template-02e817207f95",
+      "id": "v3-heading-fundraising-page-template-82ff5489c965",
       "kind": "heading",
       "source": "active/codex/z-content/assets/fundraising-page-template.md",
-      "anchor": "Fundraising Page Copy"
+      "anchor": "Fundraising Page Copy \u2014 compact"
     },
     {
-      "id": "v3-heading-fundraising-page-template-d2c965d517cd",
+      "id": "v3-heading-fundraising-page-template-9cbd920fd8f6",
       "kind": "heading",
       "source": "active/codex/z-content/assets/fundraising-page-template.md",
-      "anchor": "Campaign Core"
+      "anchor": "Campaign core"
     },
     {
-      "id": "v3-heading-fundraising-page-template-69305284bfae",
+      "id": "v3-heading-fundraising-page-template-0de07f16b1a6",
       "kind": "heading",
       "source": "active/codex/z-content/assets/fundraising-page-template.md",
-      "anchor": "Title"
-    },
-    {
-      "id": "v3-heading-fundraising-page-template-6902940574ff",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/fundraising-page-template.md",
-      "anchor": "Opening Human Moment"
-    },
-    {
-      "id": "v3-heading-fundraising-page-template-42b8cd0ad125",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/fundraising-page-template.md",
-      "anchor": "Why This Matters"
-    },
-    {
-      "id": "v3-heading-fundraising-page-template-44c86d06ec11",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/fundraising-page-template.md",
-      "anchor": "What Support Makes Possible"
-    },
-    {
-      "id": "v3-heading-fundraising-page-template-2e7a2bb5329f",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/fundraising-page-template.md",
-      "anchor": "First Donation Ask"
-    },
-    {
-      "id": "v3-heading-fundraising-page-template-fc26d7c5bf6e",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/fundraising-page-template.md",
-      "anchor": "Meaning of the Gift"
-    },
-    {
-      "id": "v3-heading-fundraising-page-template-28fa888aa771",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/fundraising-page-template.md",
-      "anchor": "Visible Chain of Work"
-    },
-    {
-      "id": "v3-heading-fundraising-page-template-5675c618403c",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/fundraising-page-template.md",
-      "anchor": "Proof and Trust"
-    },
-    {
-      "id": "v3-heading-fundraising-page-template-8c99dc9d95aa",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/fundraising-page-template.md",
-      "anchor": "Deeper Meaning"
-    },
-    {
-      "id": "v3-heading-fundraising-page-template-59ccb959ac0b",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/fundraising-page-template.md",
-      "anchor": "Final Close"
-    },
-    {
-      "id": "v3-heading-fundraising-page-template-f63f80bb7cc7",
-      "kind": "heading",
-      "source": "active/codex/z-content/assets/fundraising-page-template.md",
-      "anchor": "Additional Details"
+      "anchor": "Argument"
     },
     {
       "id": "v3-file-html-report-skeleton-2938c34aa420",
@@ -17949,76 +17848,40 @@
       "source": "active/codex/z-content/reference/conversion-copy-rules.md"
     },
     {
-      "id": "v3-heading-conversion-copy-rules-92240720289d",
+      "id": "v3-heading-conversion-copy-rules-90c7e0238896",
       "kind": "heading",
       "source": "active/codex/z-content/reference/conversion-copy-rules.md",
-      "anchor": "Conversion Copy Rules"
+      "anchor": "Conversion Copy Rules \u2014 compact gate"
     },
     {
-      "id": "v3-heading-conversion-copy-rules-658d3ed03730",
+      "id": "v3-heading-conversion-copy-rules-md-l5-1-864a4cf47f19",
       "kind": "heading",
       "source": "active/codex/z-content/reference/conversion-copy-rules.md",
-      "anchor": "Pre-Plan Gate"
+      "anchor": "1. Pre-plan and evidence"
     },
     {
-      "id": "v3-heading-conversion-copy-rules-706f874d9696",
+      "id": "v3-heading-conversion-copy-rules-md-l20-2-83b57ef5aa44",
       "kind": "heading",
       "source": "active/codex/z-content/reference/conversion-copy-rules.md",
-      "anchor": "Evidence Gate: Claim Ledger"
+      "anchor": "2. Argument and craft"
     },
     {
-      "id": "v3-heading-conversion-copy-rules-e7cdec23b179",
+      "id": "v3-heading-conversion-copy-rules-md-l28-3-a73aaf1fb415",
       "kind": "heading",
       "source": "active/codex/z-content/reference/conversion-copy-rules.md",
-      "anchor": "Pre-Craft Gate"
+      "anchor": "3. CTA and image gates"
     },
     {
-      "id": "v3-heading-conversion-copy-rules-a606f66b5ef1",
+      "id": "v3-heading-conversion-copy-rules-md-l34-4-b74a0ed1e80e",
       "kind": "heading",
       "source": "active/codex/z-content/reference/conversion-copy-rules.md",
-      "anchor": "Craft the Copy"
+      "anchor": "4. Editing and ethics"
     },
     {
-      "id": "v3-heading-conversion-copy-rules-60a9afec5b00",
+      "id": "v3-heading-conversion-copy-rules-md-l40-5-2610a0922ce5",
       "kind": "heading",
       "source": "active/codex/z-content/reference/conversion-copy-rules.md",
-      "anchor": "CTA Cadence"
-    },
-    {
-      "id": "v3-heading-conversion-copy-rules-858d4a664398",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/conversion-copy-rules.md",
-      "anchor": "Image Storytelling"
-    },
-    {
-      "id": "v3-heading-conversion-copy-rules-754ec9b7815b",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/conversion-copy-rules.md",
-      "anchor": "Editing Sweeps"
-    },
-    {
-      "id": "v3-heading-conversion-copy-rules-5e44d458ee04",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/conversion-copy-rules.md",
-      "anchor": "Ethical Emotional Intensity"
-    },
-    {
-      "id": "v3-heading-conversion-copy-rules-dec7e256ba94",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/conversion-copy-rules.md",
-      "anchor": "Faith-Sensitive Appeals"
-    },
-    {
-      "id": "v3-heading-conversion-copy-rules-f8e0a781145b",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/conversion-copy-rules.md",
-      "anchor": "Source Ladder"
-    },
-    {
-      "id": "v3-heading-conversion-copy-rules-870c153fb41e",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/conversion-copy-rules.md",
-      "anchor": "Gate Outcomes"
+      "anchor": "5. Source ladder and outcomes"
     },
     {
       "id": "v3-file-linguistic-deep-rules-41-b4d4bc2ed470",
@@ -18026,304 +17889,16 @@
       "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md"
     },
     {
-      "id": "v3-heading-linguistic-deep-rules-41-54d899ed2960",
+      "id": "v3-heading-linguistic-deep-rules-41-617e2ddd8f53",
       "kind": "heading",
       "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Linguistic Deep Rules \u2014 Full 41-Rule Catalog"
+      "anchor": "Linguistic Deep Rules \u2014 compact 41-rule catalog"
     },
     {
-      "id": "v3-heading-linguistic-deep-rules-41-56b0fd496f91",
+      "id": "v3-heading-linguistic-deep-rules-41-b6acc14bb1a3",
       "kind": "heading",
       "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Phase 1: Information Extraction & EAV Saturation (Rules 1\u20134)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-c3c7d08ed490",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 1 \u2014 Semantic Triples (Subject-Predicate-Object)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-9b1a8a582173",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 2 \u2014 EAV (Entity-Attribute-Value) Density"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-aff521d3a309",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 3 \u2014 Numeric Precision"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-adb33310149a",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 4 \u2014 Qualify the Instances"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-3a042c7d98d4",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Phase 2: Algorithmic Authorship \u2014 Linguistic Rules (Rules 5\u201311)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-c996777617f5",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 5 \u2014 Proper Word Sequence"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-31cc6718cb76",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 6 \u2014 The Principle of Certainty"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-bbf7a69873a8",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 7 \u2014 Fluff & Analogy Eradication"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-3c0414c1c799",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 8 \u2014 Qualify the Instances (Linguistic)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-07dec5abb278",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 9 \u2014 Contextual Verbs"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-db388d96eafc",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 10 \u2014 Plural Noun Expansion"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-e3b2b295d28a",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 11 \u2014 \"If\" Statements Last"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-ea764bfd698c",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Phase 3: Structural Engineering & NLP Formatting (Rules 12\u201317)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-b685f1078621",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 12 \u2014 Consistent Part of Speech (POS) Tags in Lists"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-d259c13ee053",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 13 \u2014 Heading Vectors (Question-Based H2s)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-706450be9f4e",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 14 \u2014 Immediate Direct Answers"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-e925242294cc",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 15 \u2014 The 40-Word Snippet Rule (Bolding the Fact)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-8b87661efaf1",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 16 \u2014 Semantic Anchor Text Matching"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-54d508837e5d",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 17 \u2014 Table Optimization (Dimensions and Headers)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-f4382cfb5be8",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Phase 4: Self-Audit & Content Configuration (Rules 18\u201319)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-f3ca5db18e25",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 18 \u2014 EAV Output List"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-04601b58473b",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 19 \u2014 Rule Compliance Scorecard"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-9335605d5ce6",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Phase 5: Advanced Context & Density Optimization (Rules 20\u201325)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-eb3dadffae6c",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 20 \u2014 Semantic Anchor Text Matching (Advanced)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-d3bf5530d429",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 21 \u2014 Sentence Shortening (Grammatical Simplification)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-9bce46a4a895",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 22 \u2014 Contextless Word Deletion"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-c8da8aa62bf1",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 23 \u2014 Information Density Maximization"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-845fd0de927c",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 24 \u2014 Context Vector Maintenance"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-d166979444b4",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 25 \u2014 Academic and Data-Driven Proof"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-0306905a8d79",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Phase 6: Algorithmic Tonality & Brevity (Rules 26\u201332)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-2a619cb49d45",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 26 \u2014 Bold the Answer, Not the Search Term"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-04f7d86cbc02",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 27 \u2014 Zero Personal Opinions"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-8a8eaae6199b",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 28 \u2014 Formal Language"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-944f2f57ce83",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 29 \u2014 Analogy Eradication (Tonality)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-33903af7c84a",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 30 \u2014 Unnecessary Word Removal"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-08a626555ed4",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 31 \u2014 Clarity Through Brevity"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-9eb74d2953bd",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 32 \u2014 Immediate Direct Answers (Tonality)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-f09aa5fd1dc5",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Phase 7: Entity Validation & HTML Structuring (Rules 33\u201339)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-fb5c7404d8bd",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 33 \u2014 Reliable Source Citations"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-a027f83d6db1",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 34 \u2014 Appropriate Content Length Coverage"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-608648bff983",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 35 \u2014 The 40-Word Featured Snippet (FS)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-02c8e974e274",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 36 \u2014 People Also Ask (PAA) One-Sentence Responses"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-a1e639d6af79",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 37 \u2014 Relevant Anchor Text"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-177dc01960a7",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 38 \u2014 HTML Structured Listings with Strong Intros"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-e2633c85dbe6",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 39 \u2014 Definitive Answer"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-3a7f3ca4397e",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Phase 8: Data Matrices & Sentiment Control (Rules 40\u201341)"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-494627a58645",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 40 \u2014 Clear Instruction Lists"
-    },
-    {
-      "id": "v3-heading-linguistic-deep-rules-41-73f2b962b8ce",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/linguistic-deep-rules-41.md",
-      "anchor": "Rule 41 \u2014 Dimension-Rich Tables & Relational Comparison"
+      "anchor": "Minimal audit"
     },
     {
       "id": "v3-file-master-content-rules-dae004c71b8a",
@@ -18331,400 +17906,82 @@
       "source": "active/codex/z-content/reference/master-content-rules.md"
     },
     {
-      "id": "v3-heading-geo-master-operating-system-eb5e8a46daa3",
+      "id": "v3-heading-master-content-rules-e71f80f64a75",
       "kind": "heading",
       "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Unified Content Rules \u2014 SEO / AEO / GEO Master Operating System"
+      "anchor": "Unified Content Rules \u2014 compact developer reference"
     },
     {
-      "id": "v3-heading-master-content-rules-221b7c633b0d",
+      "id": "v3-heading-master-content-rules-md-l5-0-551811487af5",
       "kind": "heading",
       "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Module 0: Priority Stack & Execution Order"
+      "anchor": "0. Priority and failure gates"
     },
     {
-      "id": "v3-heading-master-content-rules-e4a4f71bae0f",
+      "id": "v3-heading-master-content-rules-md-l9-1-cd4ed4681a10",
       "kind": "heading",
       "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Critical Failures (fix before output)"
+      "anchor": "1. Topic boundary"
     },
     {
-      "id": "v3-heading-master-content-rules-2318f0096b84",
+      "id": "v3-heading-aeo-extraction-d647e3026a49",
       "kind": "heading",
       "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Module 1: Topical Map & Knowledge Graph Architecture"
+      "anchor": "2. GEO/AEO extraction"
     },
     {
-      "id": "v3-heading-master-content-rules-6770d2a46546",
+      "id": "v3-heading-master-content-rules-md-l28-3-67589b85fd73",
       "kind": "heading",
       "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Component 1 \u2014 Source Context"
+      "anchor": "3. EAV and linguistic rules"
     },
     {
-      "id": "v3-heading-master-content-rules-23ca4e50d62b",
+      "id": "v3-heading-master-content-rules-md-l34-4-89a1a2b281f5",
       "kind": "heading",
       "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Component 2 \u2014 Central Entity"
+      "anchor": "4. Tables and links"
     },
     {
-      "id": "v3-heading-master-content-rules-91b657d45309",
+      "id": "v3-heading-master-content-rules-md-l38-5-0bdc84b88fd5",
       "kind": "heading",
       "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Component 3 \u2014 Central Search Intent"
+      "anchor": "5. Source-preserving transformation"
     },
     {
-      "id": "v3-heading-master-content-rules-d017e9e5ed8b",
+      "id": "v3-heading-master-content-rules-md-l44-6-eef334be234c",
       "kind": "heading",
       "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Component 4 \u2014 Core Sections"
+      "anchor": "6. Product and comparison safety"
     },
     {
-      "id": "v3-heading-master-content-rules-791cbacbcd07",
+      "id": "v3-heading-master-content-rules-md-l48-7-a1632cbb0d68",
       "kind": "heading",
       "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Component 5 \u2014 Outer Sections"
+      "anchor": "7. Raw HTML contract"
     },
     {
-      "id": "v3-heading-master-content-rules-8105eff7e4b0",
+      "id": "v3-heading-master-content-rules-md-l52-8-f933c396ef04",
       "kind": "heading",
       "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Boundary Rules"
+      "anchor": "8. Silent QA"
     },
     {
-      "id": "v3-heading-master-content-rules-5031878f0781",
+      "id": "v3-heading-master-content-rules-md-l56-9-20d8f040bff7",
       "kind": "heading",
       "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Module 2: GEO & AEO Snippet Extraction Engine"
+      "anchor": "9. Platform extensions"
     },
     {
-      "id": "v3-heading-master-content-rules-md-l91-rule-2-8db6654d6c59",
+      "id": "v3-heading-master-content-rules-689609782a76",
       "kind": "heading",
       "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 2.1 \u2014 The Inverted Pyramid"
+      "anchor": "Ads"
     },
     {
-      "id": "v3-heading-conversational-f1b612ec917c",
+      "id": "v3-heading-master-content-rules-b142f5ff8c17",
       "kind": "heading",
       "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 2.2 \u2014 Question-Based Heading Vectors (Voice/Conversational)"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l110-rule-2-7928607dd606",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 2.3 \u2014 The 40-Word Direct Bold Answer"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l132-rule-2-eef6214cc875",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 2.4 \u2014 People Also Ask (PAA) One-Sentence Rule"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l139-rule-2-2f9fb51ea769",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 2.5 \u2014 Definitive Declarations"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l146-rule-2-a5c99925973e",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 2.6 \u2014 Authority Anchoring"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l156-rule-2-63807090a36f",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 2.7 \u2014 Machine Extraction Density"
-    },
-    {
-      "id": "v3-heading-master-content-rules-baa79095b75c",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Module 3: Information Extraction & EAV Saturation"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l170-rule-3-b82103db4a59",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 3.1 \u2014 Semantic Triples (Subject-Predicate-Object)"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l177-rule-3-3926435843d6",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 3.2 \u2014 Target EAV Density"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l186-rule-3-87bf645385c9",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 3.3 \u2014 Numeric Precision"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l193-rule-3-a9a9faf6001d",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 3.4 \u2014 Instance Qualification"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l200-rule-3-d32008346d05",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 3.5 \u2014 Authority Anchoring (EAV)"
-    },
-    {
-      "id": "v3-heading-master-content-rules-c1e8281f4a6b",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Module 4: Algorithmic Authorship & Linguistic Engine"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l213-rule-4-af24c2f09326",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 4.1 \u2014 Proper Word Sequence"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l220-rule-4-9a5f3ce96f29",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 4.2 \u2014 Principle of Certainty"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l229-rule-4-7ffadd59a307",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 4.3 \u2014 Fluff & Analogy Eradication"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l239-rule-4-59fe00a60bdd",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 4.4 \u2014 Contextual Verbs"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l248-rule-4-00612cdcf60d",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 4.5 \u2014 Plural Noun Expansion (3+ Rule)"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l255-rule-4-450b323efd15",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 4.6 \u2014 \"If\" Statements Last"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l265-rule-4-fcf3972e4698",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 4.7 \u2014 Sentence Brevity & Syntax Limits"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l275-rule-4-dd400ff01faf",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 4.8 \u2014 Anti-Filler Directives"
-    },
-    {
-      "id": "v3-heading-master-content-rules-99e75cb01c33",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Module 5: Structured Data Formatting & Tables"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l299-rule-5-35b50542d586",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 5.1 \u2014 Grammatically Uniform Lists (POS Tagging)"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l312-rule-5-8d4bef183792",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 5.2 \u2014 List Sentence Introductions"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l319-rule-5--c297798f14e0",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 5.3 \u2014 Ordered vs. Unordered Classification"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l324-rule-5-3abccc44659c",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 5.4 \u2014 Dimension-Rich Tables"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l343-rule-5-40587eb0db91",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 5.5 \u2014 Semantic Anchor Text"
-    },
-    {
-      "id": "v3-heading-master-content-rules-85608efa282a",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Module 6: Source Preservation & Scraped Content Transformation"
-    },
-    {
-      "id": "v3-heading-master-content-rules-79c9177ddc5c",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Step 0 \u2014 Input Classification"
-    },
-    {
-      "id": "v3-heading-master-content-rules-e810ee74a36c",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Step 1 \u2014 UI Noise Stripping"
-    },
-    {
-      "id": "v3-heading-master-content-rules-727dd37354d5",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Step 2 \u2014 Block-by-Block Preservation"
-    },
-    {
-      "id": "v3-heading-master-content-rules-41eb47830ea7",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Step 3 \u2014 Preservation Gates"
-    },
-    {
-      "id": "v3-heading-master-content-rules-1b7a6cdc91d9",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Step 4 \u2014 Conclusion Replacement"
-    },
-    {
-      "id": "v3-heading-master-content-rules-481924f86e00",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Module 7: Product Insertion, Comparison & Neutrality Guardrails"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l433-rule-7-4f19163f5479",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 7.1 \u2014 Verified Product Insertion"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l447-rule-7-9d95a64683b7",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 7.2 \u2014 Comparison Table Safety"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l457-rule-7-8ce774898160",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 7.3 \u2014 Comparison Propositions"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l464-rule-7-5d0a557528bd",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 7.4 \u2014 Unsupported Labels"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l469-rule-7-3939af76d61b",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Rule 7.5 \u2014 Dynamic Product Catalog (Client-Agnostic)"
-    },
-    {
-      "id": "v3-heading-master-content-rules-946319abef3f",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Module 8: HTML Production Rules (When Raw HTML is Requested)"
-    },
-    {
-      "id": "v3-heading-master-content-rules-365a9bc22309",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Module 9: Silent QA Engine & Algorithmic Compliance Scorecard"
-    },
-    {
-      "id": "v3-heading-master-content-rules-c7db5a72338e",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Silent Audit Gateway"
-    },
-    {
-      "id": "v3-heading-100-ad5cfa9db4a3",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Algorithmic Authorship Scorecard (Target: 100/100)"
-    },
-    {
-      "id": "v3-heading-master-content-rules-cb54c83182cb",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Fail Gates (< 80 = fix before output)"
-    },
-    {
-      "id": "v3-heading-master-content-rules-5a8cb1464dd9",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Module 10: Ad Copy Rules"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l550-10-6d56768265f3",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "10.1 \u2014 Character Limit Enforcement"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l565-10-640f6b68b127",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "10.2 \u2014 Angle Diversification"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l575-10-917a02d57215",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "10.3 \u2014 Ad Copy Guardrails"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l583-10-68153103079c",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "10.4 \u2014 Platform-Specific Output"
-    },
-    {
-      "id": "v3-heading-master-content-rules-fa68d210826d",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "Module 11: Social Media Content Rules"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l595-11-4693e9ef82b4",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "11.1 \u2014 Truncation Fold Strategy"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l610-11-21bf1483b4df",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "11.2 \u2014 Platform Formats"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l619-11-483636f2af61",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "11.3 \u2014 Social Copy Guardrails"
-    },
-    {
-      "id": "v3-heading-master-content-rules-md-l628-11-aa2889ce8ff4",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/master-content-rules.md",
-      "anchor": "11.4 \u2014 Hashtag Matrix"
+      "anchor": "Organic social"
     },
     {
       "id": "v3-file-omnichannel-search-rules-ebb092d5631c",
@@ -18732,154 +17989,34 @@
       "source": "active/codex/z-content/reference/omnichannel-search-rules.md"
     },
     {
-      "id": "v3-heading-omnichannel-search-rules-8bcdc6ba3978",
+      "id": "v3-heading-geo-extension-04fad671df11",
       "kind": "heading",
       "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Omnichannel Search Content Rules (SEO, AEO, & GEO)"
+      "anchor": "Omnichannel Search Rules \u2014 compact SEO/AEO/GEO extension"
     },
     {
-      "id": "v3-heading-omnichannel-search-rules-e5fdc5f777aa",
+      "id": "v3-heading-omnichannel-search-rules-80368a80e22b",
       "kind": "heading",
       "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Modality 1: SEO Rules (Traditional Search Foundation)"
+      "anchor": "SEO foundation"
     },
     {
-      "id": "v3-heading-omnichannel-search-rules-md-l12-rule-f5e43d235f23",
+      "id": "v3-heading-omnichannel-search-rules-283646ad5690",
       "kind": "heading",
       "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Rule 1.1 \u2014 Front-Loaded Metadata Engineering"
+      "anchor": "AEO extraction"
     },
     {
-      "id": "v3-heading-omnichannel-search-rules-md-l16-rule-4ebbbfb081b8",
+      "id": "v3-heading-omnichannel-search-rules-0497fcaba3b4",
       "kind": "heading",
       "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Rule 1.2 \u2014 First 100-Word Keyword Placement"
+      "anchor": "GEO authority"
     },
     {
-      "id": "v3-heading-omnichannel-search-rules-md-l19-rule-868a9161b7c2",
+      "id": "v3-heading-omnichannel-search-rules-5327b3761ac1",
       "kind": "heading",
       "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Rule 1.3 \u2014 Visual Optimization Cues & Alt-Text Architecture"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-md-l26-rule-593aa8b57d83",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Rule 1.4 \u2014 Crawlability & Section Scannability"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-c785c3645ec5",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Modality 2: AEO Rules (Snippets, Overviews & Voice Search)"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-md-l34-rule-2aa897bd75a0",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Rule 2.1 \u2014 Conversational Query Mirroring"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-md-l40-rule-bbd088e23c47",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Rule 2.2 \u2014 Snippet Length Calibration"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-md-l44-rule-952b478cbee8",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Rule 2.3 \u2014 Spoken-Friendly Syntax & Pronoun Disambiguation"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-md-l50-rule-350b1d10366b",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Rule 2.4 \u2014 Schema Markup Directives (JSON-LD)"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-00e2384a72c2",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Modality 3: GEO Rules (LLM Engine Citations)"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-md-l57-rule-3a8a89b2839f",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Rule 3.1 \u2014 Multi-Layered Prompt Answering"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-md-l60-rule-c6a1703e9635",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Rule 3.2 \u2014 Entity Clarity & Taxonomy Definition"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-md-l66-rule-292255ac8406",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Rule 3.3 \u2014 Quantitative Trust Signals & Third-Party Proof"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-md-l72-rule-f661a97aeaa2",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Rule 3.4 \u2014 Structured Decision Frameworks"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-00fa1dfee428",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Omnichannel Content Output Template"
-    },
-    {
-      "id": "v3-heading-intent-7f848b1ef90e",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "[H1: Clear Topic Title Incorporating Primary Keyword / Intent]"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-2419366fd50a",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "[H2: Conversational Question Matching User Intent (AEO)]"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-06f48cf1f8d3",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "[H2: Multi-Factor Comparison or Decision Framework (GEO)]"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-36c29673853b",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "[H3: Secondary Specific Sub-Question (AEO)]"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-4e50cd3b5afa",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Frequently Asked Questions"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-6d311769095f",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Q: [Conversational Voice Question 1]"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-8fa29bf415d9",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "Q: [Conversational Voice Question 2]"
-    },
-    {
-      "id": "v3-heading-omnichannel-search-rules-91c8a27ace7d",
-      "kind": "heading",
-      "source": "active/codex/z-content/reference/omnichannel-search-rules.md",
-      "anchor": "When to Use This File"
+      "anchor": "Output frame"
     },
     {
       "id": "v3-file-skill-6ed2243f9ffb",
@@ -18994,130 +18131,40 @@
       "source": "active/codex/z-content/workflows/type-ad-copy.md"
     },
     {
-      "id": "v3-heading-type-ad-copy-da4b3cddf698",
+      "id": "v3-heading-type-ad-copy-08e5f3564423",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "Workflow: Ad Copy & Paid Campaigns"
+      "anchor": "Workflow: Ad Copy & Paid Campaigns \u2014 compact"
     },
     {
-      "id": "v3-heading-type-ad-copy-0cdb693a33bb",
+      "id": "v3-heading-type-ad-copy-592ab5d133df",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "Platform Detection"
+      "anchor": "Platform detection and source gate"
     },
     {
-      "id": "v3-heading-type-ad-copy-md-l24-0-92dc98f5c66f",
+      "id": "v3-heading-type-ad-copy-2a3a75906c61",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "0. Source Extraction (When Landing Page Provided)"
+      "anchor": "Five angles"
     },
     {
-      "id": "v3-heading-type-ad-copy-md-l46-1-ab007cabcf45",
+      "id": "v3-heading-type-ad-copy-479369f532b5",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "1. Angle Diversification Engine"
+      "anchor": "Limits and output"
     },
     {
-      "id": "v3-heading-saas-angles-default-7403a71d7469",
+      "id": "v3-heading-type-ad-copy-4cb8c6622438",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "Product / SaaS Angles (default)"
+      "anchor": "Guardrails"
     },
     {
-      "id": "v3-heading-charity-angles-use-for-nonprofits-ca-125e8a039774",
+      "id": "v3-heading-type-ad-copy-6da36c30f2d1",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "Cause-Driven / Charity Angles (use for nonprofits, campaigns, donation pages)"
-    },
-    {
-      "id": "v3-heading-type-ad-copy-md-l72-wrong-vs-13780b919f97",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "Wrong vs. Right"
-    },
-    {
-      "id": "v3-heading-type-ad-copy-md-l81-2-5763d39ce585",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "2. Platform Specifications & Layouts"
-    },
-    {
-      "id": "v3-heading-type-ad-copy-md-l83-a-2db8a3accfde",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "A. Google Search (Responsive Search Ads \u2014 RSA)"
-    },
-    {
-      "id": "v3-heading-type-ad-copy-md-l97-b-1118d709b471",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "B. Meta Ads (Facebook & Instagram Feed)"
-    },
-    {
-      "id": "v3-heading-type-ad-copy-md-l112-c-8c50b2b32a53",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "C. LinkedIn Sponsored Content"
-    },
-    {
-      "id": "v3-heading-type-ad-copy-md-l125-d-16bd2428531b",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "D. TikTok In-Feed Ads"
-    },
-    {
-      "id": "v3-heading-twitter-promoted-ads-6038b3124bee",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "E. X / Twitter Promoted Ads"
-    },
-    {
-      "id": "v3-heading-type-ad-copy-md-l151-3-2e1772c37949",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "3. Ad Copy Guardrails"
-    },
-    {
-      "id": "v3-heading-type-ad-copy-md-l169-4-56b2a4ca8bd6",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "4. Output Templates"
-    },
-    {
-      "id": "v3-heading-type-ad-copy-6784234baa62",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "Google RSA Package"
-    },
-    {
-      "id": "v3-heading-type-ad-copy-1a783a2a630a",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "Meta Feed Ad Package"
-    },
-    {
-      "id": "v3-heading-type-ad-copy-837b0440c08b",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "LinkedIn Sponsored Ad Package"
-    },
-    {
-      "id": "v3-heading-campaign-google-rsa-package-cause-dr-4e804f88eacc",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "Charity/Campaign Google RSA Package (Cause-Driven Example)"
-    },
-    {
-      "id": "v3-heading-campaign-meta-feed-package-cause-dri-fed5566144f6",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "Charity/Campaign Meta Feed Package (Cause-Driven Example)"
-    },
-    {
-      "id": "v3-heading-type-ad-copy-md-l243-5-11a044e90832",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-ad-copy.md",
-      "anchor": "5. Ad Copy QA Checklist"
+      "anchor": "QA"
     },
     {
       "id": "v3-file-type-article-9c4e66056191",
@@ -19125,118 +18172,40 @@
       "source": "active/codex/z-content/workflows/type-article.md"
     },
     {
-      "id": "v3-heading-guide-b639d6726a8d",
+      "id": "v3-heading-guide-compact-2a17116f6b83",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Workflow: Article / Guide"
+      "anchor": "Workflow: Article / Guide \u2014 compact"
     },
     {
-      "id": "v3-heading-type-article-c29cfeb28b48",
+      "id": "v3-heading-type-article-0ed429eebb4d",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Structural Model"
+      "anchor": "Core structure"
     },
     {
-      "id": "v3-heading-type-article-7faef2e2aa52",
+      "id": "v3-heading-source-preservation-mode-0bf8e4b8ebf8",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "H1 Rule"
+      "anchor": "Scraped/source-preservation mode"
     },
     {
-      "id": "v3-heading-type-article-129bde774f5a",
+      "id": "v3-heading-type-article-11904cf16cd9",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "H2 Question Vectors"
+      "anchor": "HTML and insertion rules"
     },
     {
-      "id": "v3-heading-type-article-9f53a716080d",
+      "id": "v3-heading-type-article-8e29750dae21",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Bold Snippet After Every H2"
+      "anchor": "Conversion additions"
     },
     {
-      "id": "v3-heading-type-article-30b80242294e",
+      "id": "v3-heading-type-article-1a267103389d",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Scraped Preservation Engine"
-    },
-    {
-      "id": "v3-heading-type-article-1aca55d01de8",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Step 0 \u2014 Classify the Input"
-    },
-    {
-      "id": "v3-heading-type-article-30376d7054ca",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Step 1 \u2014 Strip UI Noise"
-    },
-    {
-      "id": "v3-heading-type-article-1dfb3106adf8",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Step 2 \u2014 Format Paragraph by Paragraph"
-    },
-    {
-      "id": "v3-heading-type-article-006a75a07d64",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Step 3 \u2014 Verify Fidelity"
-    },
-    {
-      "id": "v3-heading-type-article-40a88a0c268f",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Step 4 \u2014 HTML Output Rules"
-    },
-    {
-      "id": "v3-heading-tool-insertion-when-requested-04773504e453",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Product / Tool Insertion (When Requested)"
-    },
-    {
-      "id": "v3-heading-type-article-19dbab313771",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Table Insertion"
-    },
-    {
-      "id": "v3-heading-type-article-af3bf6d503aa",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Snippet & AEO Injection"
-    },
-    {
-      "id": "v3-heading-type-article-95d51f2989df",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Conversion & Voice Layer (When Conversion Layer Active)"
-    },
-    {
-      "id": "v3-heading-geo-is-requested-90ca26e8819e",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Full Omnichannel Output Mode (When Full SEO/AEO/GEO is Requested)"
-    },
-    {
-      "id": "v3-heading-type-article-4992f4d9ad32",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Conclusion Template"
-    },
-    {
-      "id": "v3-heading-type-article-21df72176d09",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Article-Specific QA Additions"
-    },
-    {
-      "id": "v3-heading-type-article-4c1028b2f906",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-article.md",
-      "anchor": "Article Conversion QA (When Conversion Layer Active)"
+      "anchor": "Conclusion and QA"
     },
     {
       "id": "v3-file-type-fundraising-95f6571bb38b",
@@ -19244,64 +18213,22 @@
       "source": "active/codex/z-content/workflows/type-fundraising.md"
     },
     {
-      "id": "v3-heading-type-fundraising-862802cd2de1",
+      "id": "v3-heading-type-fundraising-da909dc20705",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-fundraising.md",
-      "anchor": "Workflow: Fundraising Appeal"
+      "anchor": "Workflow: Fundraising Appeal \u2014 compact"
     },
     {
-      "id": "v3-heading-type-fundraising-f0405dcee315",
+      "id": "v3-heading-type-fundraising-d02a1f7c54b5",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-fundraising.md",
-      "anchor": "Structural Model"
+      "anchor": "Argument"
     },
     {
-      "id": "v3-heading-type-fundraising-f10a2588e26d",
+      "id": "v3-heading-type-fundraising-a02047682f31",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-fundraising.md",
-      "anchor": "Title Rule"
-    },
-    {
-      "id": "v3-heading-type-fundraising-6f1bf6e6f59a",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-fundraising.md",
-      "anchor": "Opening Human Moment"
-    },
-    {
-      "id": "v3-heading-type-fundraising-cc689dfabb30",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-fundraising.md",
-      "anchor": "First Donation Ask"
-    },
-    {
-      "id": "v3-heading-type-fundraising-64377b27ba08",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-fundraising.md",
-      "anchor": "Visible Chain of Work"
-    },
-    {
-      "id": "v3-heading-type-fundraising-5afa6c4c91f5",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-fundraising.md",
-      "anchor": "Proof and Trust"
-    },
-    {
-      "id": "v3-heading-type-fundraising-39569b80eb78",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-fundraising.md",
-      "anchor": "Deeper Meaning"
-    },
-    {
-      "id": "v3-heading-type-fundraising-7e14488779f8",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-fundraising.md",
-      "anchor": "Final Close"
-    },
-    {
-      "id": "v3-heading-type-fundraising-cd7298a358ff",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-fundraising.md",
-      "anchor": "Fundraising QA Additions"
+      "anchor": "Safety and QA"
     },
     {
       "id": "v3-file-type-github-doc-2aac96029bc5",
@@ -19309,142 +18236,28 @@
       "source": "active/codex/z-content/workflows/type-github-doc.md"
     },
     {
-      "id": "v3-heading-developer-doc-d8e6aaf24c27",
+      "id": "v3-heading-developer-doc-compact-c47f6195f297",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Workflow: GitHub / Developer Doc"
+      "anchor": "Workflow: GitHub / Developer Doc \u2014 compact"
     },
     {
-      "id": "v3-heading-type-github-doc-c83d5ab383f5",
+      "id": "v3-heading-type-github-doc-4eb3d99acfa2",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Structural Model"
+      "anchor": "Required order"
     },
     {
-      "id": "v3-heading-type-github-doc-f83560cfe23b",
+      "id": "v3-heading-type-github-doc-e1f9fcae6b4b",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Title & Overview Rules"
+      "anchor": "Reference tables and errors"
     },
     {
-      "id": "v3-heading-type-github-doc-14290fb93493",
+      "id": "v3-heading-type-github-doc-8d2079546a60",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "One-Sentence Summary"
-    },
-    {
-      "id": "v3-heading-type-github-doc-1e4f9bf31fe6",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Badges (Optional)"
-    },
-    {
-      "id": "v3-heading-type-github-doc-8a875f195178",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Prerequisites & Installation"
-    },
-    {
-      "id": "v3-heading-type-github-doc-5e26cdeb302b",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Version Precision"
-    },
-    {
-      "id": "v3-heading-type-github-doc-eee0a26fa785",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "CLI Commands"
-    },
-    {
-      "id": "v3-heading-type-github-doc-36f49101d5bc",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Install dependencies"
-    },
-    {
-      "id": "v3-heading-type-github-doc-c796324dc5f1",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Run tests"
-    },
-    {
-      "id": "v3-heading-type-github-doc-a96cbc8ca1ff",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Start development server"
-    },
-    {
-      "id": "v3-heading-type-github-doc-86d3cc8ce045",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Quickstart Example"
-    },
-    {
-      "id": "v3-heading-type-github-doc-2f53b94846ab",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Working Code Block"
-    },
-    {
-      "id": "v3-heading-type-github-doc-13049e42592b",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Configure the pipeline with schema validation"
-    },
-    {
-      "id": "v3-heading-type-github-doc-b46d22223431",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Run the pipeline and print record count"
-    },
-    {
-      "id": "v3-heading-parameter-reference-table-2da15f4a3632",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "API / Parameter Reference Table"
-    },
-    {
-      "id": "v3-heading-type-github-doc-00b0d9d99842",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Table Format"
-    },
-    {
-      "id": "v3-heading-type-github-doc-e94261d06e11",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Troubleshooting & Error Matrix"
-    },
-    {
-      "id": "v3-heading-type-github-doc-c76340040480",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Linguistic Guardrails for Developer Docs"
-    },
-    {
-      "id": "v3-heading-type-github-doc-1895f3cfc8ac",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "100% Imperative Verbs"
-    },
-    {
-      "id": "v3-heading-type-github-doc-5348a63bd916",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Zero Conversational Filler"
-    },
-    {
-      "id": "v3-heading-type-github-doc-1afe6ef403af",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Code-First Explanation"
-    },
-    {
-      "id": "v3-heading-type-github-doc-1b90ec614c72",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-github-doc.md",
-      "anchor": "Developer Doc QA Additions"
+      "anchor": "Style and QA"
     },
     {
       "id": "v3-file-type-html-report-bfe20982558f",
@@ -19452,34 +18265,28 @@
       "source": "active/codex/z-content/workflows/type-html-report.md"
     },
     {
-      "id": "v3-heading-type-html-report-7f0e4b94a4fa",
+      "id": "v3-heading-type-html-report-d6000bf58d2b",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-html-report.md",
-      "anchor": "Workflow: HTML Report (Enterprise, Mobile-First)"
+      "anchor": "Workflow: HTML Report \u2014 compact frozen-template contract"
     },
     {
-      "id": "v3-heading-type-html-report-d33a72fbd1a4",
+      "id": "v3-heading-type-html-report-e5c60237eb0b",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-html-report.md",
-      "anchor": "IRON RULE: Content Only"
+      "anchor": "Frozen design rule"
     },
     {
-      "id": "v3-heading-type-html-report-4efadeb84d10",
+      "id": "v3-heading-type-html-report-806ad87198d8",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-html-report.md",
-      "anchor": "Component Inventory (class \u2192 use)"
+      "anchor": "Procedure"
     },
     {
-      "id": "v3-heading-type-html-report-327eb3876fd9",
+      "id": "v3-heading-type-html-report-d08e2c72836b",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-html-report.md",
-      "anchor": "Fill Procedure"
-    },
-    {
-      "id": "v3-heading-type-html-report-e76aa2563cef",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-html-report.md",
-      "anchor": "HTML Report QA Additions"
+      "anchor": "QA"
     },
     {
       "id": "v3-file-type-landing-page-99d3cbf6d271",
@@ -19487,106 +18294,40 @@
       "source": "active/codex/z-content/workflows/type-landing-page.md"
     },
     {
-      "id": "v3-heading-type-landing-page-7691981710b6",
+      "id": "v3-heading-type-landing-page-6ded54080b6d",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Workflow: Landing Page"
+      "anchor": "Workflow: Landing Page \u2014 compact"
     },
     {
-      "id": "v3-heading-type-landing-page-ff2f4c2814cc",
+      "id": "v3-heading-type-landing-page-8104a56bb8bf",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Structural Model"
+      "anchor": "Page argument"
     },
     {
-      "id": "v3-heading-type-landing-page-5cdf4640ca70",
+      "id": "v3-heading-type-landing-page-c40e0eb55646",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Hero Section Rules"
+      "anchor": "Hero"
     },
     {
-      "id": "v3-heading-type-landing-page-1e53db6e505e",
+      "id": "v3-heading-type-landing-page-5b16dd40ccd4",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Value Proposition Formula"
+      "anchor": "Feature and comparison tables"
     },
     {
-      "id": "v3-heading-type-landing-page-9c7d5ad39d57",
+      "id": "v3-heading-type-landing-page-185f14fbc054",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Proof Metric Requirements"
+      "anchor": "Conversion and voice"
     },
     {
-      "id": "v3-heading-type-landing-page-c314bdb372e0",
+      "id": "v3-heading-type-landing-page-8dd185f5f2ca",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "CTA Hierarchy"
-    },
-    {
-      "id": "v3-heading-type-landing-page-f541911c0042",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Feature-to-Attribute Matrix"
-    },
-    {
-      "id": "v3-heading-type-landing-page-704d3613a716",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Comparison Grid Rules"
-    },
-    {
-      "id": "v3-heading-type-landing-page-f7341b5aa0ca",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Column Headers"
-    },
-    {
-      "id": "v3-heading-type-landing-page-af5693410c49",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Comparison Propositions"
-    },
-    {
-      "id": "v3-heading-type-landing-page-14dfd113babc",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Row Rules"
-    },
-    {
-      "id": "v3-heading-type-landing-page-0833611e8fd9",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Conversion & Voice Additions (When Conversion Layer Active)"
-    },
-    {
-      "id": "v3-heading-type-landing-page-a3ded3862303",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Linguistic Guardrails for Landing Pages"
-    },
-    {
-      "id": "v3-heading-type-landing-page-5c29bce6c174",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Zero Hype Words"
-    },
-    {
-      "id": "v3-heading-type-landing-page-c86875d02bf3",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Persuasion Through Specs"
-    },
-    {
-      "id": "v3-heading-type-landing-page-6cd153e849bc",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Neutral Sentiment"
-    },
-    {
-      "id": "v3-heading-type-landing-page-efe1f5690bf6",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-landing-page.md",
-      "anchor": "Landing Page QA Additions"
+      "anchor": "QA"
     },
     {
       "id": "v3-file-type-report-3ad6dd1880c8",
@@ -19594,130 +18335,28 @@
       "source": "active/codex/z-content/workflows/type-report.md"
     },
     {
-      "id": "v3-heading-audit-b5a0069ae20a",
+      "id": "v3-heading-audit-compact-214d38651af7",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Workflow: Report / Audit"
+      "anchor": "Workflow: Report / Audit \u2014 compact"
     },
     {
-      "id": "v3-heading-type-report-60e58a524c88",
+      "id": "v3-heading-type-report-d8b9240a615b",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Structural Model"
+      "anchor": "Report order"
     },
     {
-      "id": "v3-heading-type-report-3bb62dd022e0",
+      "id": "v3-heading-type-report-96a395937a2b",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Executive Summary Rules"
+      "anchor": "Findings, risk, action"
     },
     {
-      "id": "v3-heading-type-report-ccbcdfc0f796",
+      "id": "v3-heading-type-report-8e07b8a23e7e",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Inverted Pyramid"
-    },
-    {
-      "id": "v3-heading-type-report-4d8908dae625",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Metric Requirements"
-    },
-    {
-      "id": "v3-heading-type-report-99ca6291dd92",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Methodology & Scope"
-    },
-    {
-      "id": "v3-heading-type-report-4f4563e90e23",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Required Elements"
-    },
-    {
-      "id": "v3-heading-type-report-a26a1b0a4d18",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Tone"
-    },
-    {
-      "id": "v3-heading-type-report-30cf8c9de964",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Key Findings Structure"
-    },
-    {
-      "id": "v3-heading-type-report-f7a7b89f79a6",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Finding Statement Format"
-    },
-    {
-      "id": "v3-heading-type-report-a9851424029f",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Data Tables"
-    },
-    {
-      "id": "v3-heading-type-report-f7cee5b8e965",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Evidence Citation"
-    },
-    {
-      "id": "v3-heading-type-report-092c9d0ec078",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Risk & Impact Analysis"
-    },
-    {
-      "id": "v3-heading-type-report-8da6309e902b",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Severity \u00d7 Likelihood Matrix"
-    },
-    {
-      "id": "v3-heading-type-report-fd1d1624f437",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Actionable Recommendations Table"
-    },
-    {
-      "id": "v3-heading-type-report-c1a7dbb17cf9",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Linguistic Guardrails for Reports"
-    },
-    {
-      "id": "v3-heading-type-report-2f7d370033e5",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Formal Academic Tone"
-    },
-    {
-      "id": "v3-heading-type-report-b8457673bff8",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Citation Rigor"
-    },
-    {
-      "id": "v3-heading-type-report-5045c5e3819d",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Neutral Analytical Language"
-    },
-    {
-      "id": "v3-heading-type-report-0e3ff1b3173f",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Data Synthesis"
-    },
-    {
-      "id": "v3-heading-type-report-b933cd36d412",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-report.md",
-      "anchor": "Report QA Additions"
+      "anchor": "Style and QA"
     },
     {
       "id": "v3-file-type-social-post-280df90001a6",
@@ -19725,112 +18364,34 @@
       "source": "active/codex/z-content/workflows/type-social-post.md"
     },
     {
-      "id": "v3-heading-type-social-post-9ba196ef2001",
+      "id": "v3-heading-type-social-post-fd1752fccc76",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "Workflow: Social Media Content"
+      "anchor": "Workflow: Social Media Content \u2014 compact"
     },
     {
-      "id": "v3-heading-type-social-post-0331f07f1b6c",
+      "id": "v3-heading-type-social-post-d6063e5eaa74",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "Platform Detection"
+      "anchor": "Platform and fold"
     },
     {
-      "id": "v3-heading-type-social-post-md-l25-1-b9df85e1c88f",
+      "id": "v3-heading-type-social-post-745f35929ba3",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "1. The Truncation Fold Strategy"
+      "anchor": "Formats"
     },
     {
-      "id": "v3-heading-type-social-post-1615796554cc",
+      "id": "v3-heading-type-social-post-24b3b1f21146",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "Hook Completeness Rule"
+      "anchor": "Guardrails"
     },
     {
-      "id": "v3-heading-type-social-post-md-l49-2-2916502058d3",
+      "id": "v3-heading-type-social-post-1e04d9bd7778",
       "kind": "heading",
       "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "2. Platform Formats & Archetypes"
-    },
-    {
-      "id": "v3-heading-thought-leadership-7d4f3da745ef",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "A. LinkedIn Post (B2B Authority / Thought Leadership)"
-    },
-    {
-      "id": "v3-heading-twitter-high-density-microcontent-1180c51501d3",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "B. X / Twitter (High-Density Microcontent)"
-    },
-    {
-      "id": "v3-heading-tiktok-captions-47b9f6dbf766",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "C. Instagram / TikTok Captions"
-    },
-    {
-      "id": "v3-heading-type-social-post-md-l133-d-d2f5d1dc3a2a",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "D. Facebook Post"
-    },
-    {
-      "id": "v3-heading-type-social-post-md-l146-e-01c43403204a",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "E. YouTube Description"
-    },
-    {
-      "id": "v3-heading-type-social-post-md-l159-f-0fd0ebf389ab",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "F. Pinterest Pin"
-    },
-    {
-      "id": "v3-heading-type-social-post-md-l172-3-abcc740b0881",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "3. Social Copy Guardrails"
-    },
-    {
-      "id": "v3-heading-type-social-post-md-l187-4-1998f5326aec",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "4. Output Templates"
-    },
-    {
-      "id": "v3-heading-type-social-post-9fe504ad2832",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "LinkedIn Post Template"
-    },
-    {
-      "id": "v3-heading-twitter-thread-template-aa5034984ae4",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "X / Twitter Thread Template"
-    },
-    {
-      "id": "v3-heading-type-social-post-b49f06d6d4c1",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "Instagram Caption Template"
-    },
-    {
-      "id": "v3-heading-type-social-post-49edc4293c6b",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "TikTok Caption Template"
-    },
-    {
-      "id": "v3-heading-type-social-post-md-l247-5-5d3b1fa97f3f",
-      "kind": "heading",
-      "source": "active/codex/z-content/workflows/type-social-post.md",
-      "anchor": "5. Social Copy QA Checklist"
+      "anchor": "QA"
     },
     {
       "id": "v3-file-skill-55943d2f4a1b",
