@@ -9,6 +9,46 @@
   ],
   "features": [
     {
+      "id": "v3-file-skill-bbc02521da2d",
+      "legacy_id": "v3-file-skill-bbc02521da2d",
+      "kind": "file",
+      "owner": "a0-plugin-router",
+      "source": "devad-skills-set/skills/a0-plugin-router/SKILL.md",
+      "purpose": "Preserve v3 file: skills/a0-plugin-router/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-96ef8c1a74ab",
+      "legacy_id": "v3-heading-skill-96ef8c1a74ab",
+      "kind": "heading",
+      "owner": "a0-plugin-router",
+      "source": "devad-skills-set/skills/a0-plugin-router/SKILL.md",
+      "purpose": "Preserve v3 heading: a0-plugin-router",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-fc5792b1d0a8",
+      "legacy_id": "v3-file-skill-fc5792b1d0a8",
+      "kind": "file",
+      "owner": "a0_plugin_creating-skill",
+      "source": "devad-skills-set/skills/a0_plugin_creating-skill/SKILL.md",
+      "purpose": "Preserve v3 file: skills/a0_plugin_creating-skill/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-20c371f7c976",
+      "legacy_id": "v3-heading-skill-20c371f7c976",
+      "kind": "heading",
+      "owner": "a0_plugin_creating-skill",
+      "source": "devad-skills-set/skills/a0_plugin_creating-skill/SKILL.md",
+      "purpose": "Preserve v3 heading: a0_plugin_creating-skill",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
       "id": "v3-file-openai-57e9140ac1e8",
       "legacy_id": "v3-file-openai-57e9140ac1e8",
       "kind": "file",
@@ -115,6 +155,26 @@
       "owner": "chrome-control",
       "source": "devad-skills-set/skills/chrome-control/SKILL.md",
       "purpose": "Preserve v3 heading: Honest Closeout",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-a92fd9aea482",
+      "legacy_id": "v3-file-skill-a92fd9aea482",
+      "kind": "file",
+      "owner": "codex-browser-testing",
+      "source": "devad-skills-set/skills/codex-browser-testing/SKILL.md",
+      "purpose": "Preserve v3 file: skills/codex-browser-testing/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-3ceb3f9e84a8",
+      "legacy_id": "v3-heading-skill-3ceb3f9e84a8",
+      "kind": "heading",
+      "owner": "codex-browser-testing",
+      "source": "devad-skills-set/skills/codex-browser-testing/SKILL.md",
+      "purpose": "Preserve v3 heading: codex-browser-testing",
       "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
       "status": "RETAINED"
     },
@@ -517,6 +577,76 @@
       "status": "ADAPTED",
       "replacement": "skills/codex-x9-backup/SKILL.md",
       "reason": "Backup scope expanded from five v3 skills to six v5 skills."
+    },
+    {
+      "id": "v3-file-compact-catalog-343d44b421be",
+      "legacy_id": "v3-file-compact-catalog-343d44b421be",
+      "kind": "file",
+      "owner": "compact-catalog.json",
+      "source": "devad-skills-set/skills/compact-catalog.json",
+      "purpose": "Preserve v3 file: skills/compact-catalog.json",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-64aec53cbc35",
+      "legacy_id": "v3-file-skill-64aec53cbc35",
+      "kind": "file",
+      "owner": "computer-use",
+      "source": "devad-skills-set/skills/computer-use/SKILL.md",
+      "purpose": "Preserve v3 file: skills/computer-use/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-4301c29aca54",
+      "legacy_id": "v3-heading-skill-4301c29aca54",
+      "kind": "heading",
+      "owner": "computer-use",
+      "source": "devad-skills-set/skills/computer-use/SKILL.md",
+      "purpose": "Preserve v3 heading: computer-use",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-98e7028e8a57",
+      "legacy_id": "v3-file-skill-98e7028e8a57",
+      "kind": "file",
+      "owner": "copywriting",
+      "source": "devad-skills-set/skills/copywriting/SKILL.md",
+      "purpose": "Preserve v3 file: skills/copywriting/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-c930081eea00",
+      "legacy_id": "v3-heading-skill-c930081eea00",
+      "kind": "heading",
+      "owner": "copywriting",
+      "source": "devad-skills-set/skills/copywriting/SKILL.md",
+      "purpose": "Preserve v3 heading: copywriting",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-bd9366b36908",
+      "legacy_id": "v3-file-skill-bd9366b36908",
+      "kind": "file",
+      "owner": "design-taste-frontend",
+      "source": "devad-skills-set/skills/design-taste-frontend/SKILL.md",
+      "purpose": "Preserve v3 file: skills/design-taste-frontend/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-d8036618d236",
+      "legacy_id": "v3-heading-skill-d8036618d236",
+      "kind": "heading",
+      "owner": "design-taste-frontend",
+      "source": "devad-skills-set/skills/design-taste-frontend/SKILL.md",
+      "purpose": "Preserve v3 heading: design-taste-frontend",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
     },
     {
       "id": "v3-file-openai-593a4751ea9e",
@@ -1109,6 +1239,86 @@
       "status": "RETAINED"
     },
     {
+      "id": "v3-file-skill-dc71f2b48517",
+      "legacy_id": "v3-file-skill-dc71f2b48517",
+      "kind": "file",
+      "owner": "devad-articles",
+      "source": "devad-skills-set/skills/devad-articles/SKILL.md",
+      "purpose": "Preserve v3 file: skills/devad-articles/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-86fa236bfd2b",
+      "legacy_id": "v3-heading-skill-86fa236bfd2b",
+      "kind": "heading",
+      "owner": "devad-articles",
+      "source": "devad-skills-set/skills/devad-articles/SKILL.md",
+      "purpose": "Preserve v3 heading: devad-articles",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-a984673e7f96",
+      "legacy_id": "v3-file-skill-a984673e7f96",
+      "kind": "file",
+      "owner": "devad-assistant",
+      "source": "devad-skills-set/skills/devad-assistant/SKILL.md",
+      "purpose": "Preserve v3 file: skills/devad-assistant/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-c33daa4c6c98",
+      "legacy_id": "v3-heading-skill-c33daa4c6c98",
+      "kind": "heading",
+      "owner": "devad-assistant",
+      "source": "devad-skills-set/skills/devad-assistant/SKILL.md",
+      "purpose": "Preserve v3 heading: devad-assistant",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-25d3981559ed",
+      "legacy_id": "v3-file-skill-25d3981559ed",
+      "kind": "file",
+      "owner": "devad-browser-proof",
+      "source": "devad-skills-set/skills/devad-browser-proof/SKILL.md",
+      "purpose": "Preserve v3 file: skills/devad-browser-proof/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-b9a7cef30e5f",
+      "legacy_id": "v3-heading-skill-b9a7cef30e5f",
+      "kind": "heading",
+      "owner": "devad-browser-proof",
+      "source": "devad-skills-set/skills/devad-browser-proof/SKILL.md",
+      "purpose": "Preserve v3 heading: devad-browser-proof",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-23dc2bdd2919",
+      "legacy_id": "v3-file-skill-23dc2bdd2919",
+      "kind": "file",
+      "owner": "devad-cursor-post-chunk-runner",
+      "source": "devad-skills-set/skills/devad-cursor-post-chunk-runner/SKILL.md",
+      "purpose": "Preserve v3 file: skills/devad-cursor-post-chunk-runner/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-4cddd075eaef",
+      "legacy_id": "v3-heading-skill-4cddd075eaef",
+      "kind": "heading",
+      "owner": "devad-cursor-post-chunk-runner",
+      "source": "devad-skills-set/skills/devad-cursor-post-chunk-runner/SKILL.md",
+      "purpose": "Preserve v3 heading: devad-cursor-post-chunk-runner",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
       "id": "v3-file-openai-5fe7daaf3a3c",
       "legacy_id": "v3-file-openai-5fe7daaf3a3c",
       "kind": "file",
@@ -1175,6 +1385,26 @@
       "owner": "devad-docs",
       "source": "devad-skills-set/skills/devad-docs/SKILL.md",
       "purpose": "Preserve v3 heading: Finish",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-6a28272cde9a",
+      "legacy_id": "v3-file-skill-6a28272cde9a",
+      "kind": "file",
+      "owner": "devad-lp-content",
+      "source": "devad-skills-set/skills/devad-lp-content/SKILL.md",
+      "purpose": "Preserve v3 file: skills/devad-lp-content/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-9bd725fdab02",
+      "legacy_id": "v3-heading-skill-9bd725fdab02",
+      "kind": "heading",
+      "owner": "devad-lp-content",
+      "source": "devad-skills-set/skills/devad-lp-content/SKILL.md",
+      "purpose": "Preserve v3 heading: devad-lp-content",
       "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
       "status": "RETAINED"
     },
@@ -1307,6 +1537,46 @@
       "status": "ADAPTED",
       "replacement": "skills/devad-memory/SKILL.md",
       "reason": "Memory boundary now names loop state as active truth."
+    },
+    {
+      "id": "v3-file-skill-ebf7e0ba461a",
+      "legacy_id": "v3-file-skill-ebf7e0ba461a",
+      "kind": "file",
+      "owner": "devad-post-provider-proof",
+      "source": "devad-skills-set/skills/devad-post-provider-proof/SKILL.md",
+      "purpose": "Preserve v3 file: skills/devad-post-provider-proof/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-5338be83aab4",
+      "legacy_id": "v3-heading-skill-5338be83aab4",
+      "kind": "heading",
+      "owner": "devad-post-provider-proof",
+      "source": "devad-skills-set/skills/devad-post-provider-proof/SKILL.md",
+      "purpose": "Preserve v3 heading: devad-post-provider-proof",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-58506f6f69be",
+      "legacy_id": "v3-file-skill-58506f6f69be",
+      "kind": "file",
+      "owner": "devad-vendor-hunk-adoption",
+      "source": "devad-skills-set/skills/devad-vendor-hunk-adoption/SKILL.md",
+      "purpose": "Preserve v3 file: skills/devad-vendor-hunk-adoption/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-78ff1f285c4d",
+      "legacy_id": "v3-heading-skill-78ff1f285c4d",
+      "kind": "heading",
+      "owner": "devad-vendor-hunk-adoption",
+      "source": "devad-skills-set/skills/devad-vendor-hunk-adoption/SKILL.md",
+      "purpose": "Preserve v3 heading: devad-vendor-hunk-adoption",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
     },
     {
       "id": "v3-file-openai-798af688374c",
@@ -6523,6 +6793,246 @@
       "status": "RETAINED"
     },
     {
+      "id": "v3-file-skill-605aff897157",
+      "legacy_id": "v3-file-skill-605aff897157",
+      "kind": "file",
+      "owner": "find-skills",
+      "source": "devad-skills-set/skills/find-skills/SKILL.md",
+      "purpose": "Preserve v3 file: skills/find-skills/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-bfedb75f7ea6",
+      "legacy_id": "v3-heading-skill-bfedb75f7ea6",
+      "kind": "heading",
+      "owner": "find-skills",
+      "source": "devad-skills-set/skills/find-skills/SKILL.md",
+      "purpose": "Preserve v3 heading: find-skills",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-e7d07a5371bf",
+      "legacy_id": "v3-file-skill-e7d07a5371bf",
+      "kind": "file",
+      "owner": "graphify",
+      "source": "devad-skills-set/skills/graphify/SKILL.md",
+      "purpose": "Preserve v3 file: skills/graphify/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-3f7ce82905eb",
+      "legacy_id": "v3-heading-skill-3f7ce82905eb",
+      "kind": "heading",
+      "owner": "graphify",
+      "source": "devad-skills-set/skills/graphify/SKILL.md",
+      "purpose": "Preserve v3 heading: graphify",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-4c3d0854fd3b",
+      "legacy_id": "v3-file-skill-4c3d0854fd3b",
+      "kind": "file",
+      "owner": "greenlight-vibe",
+      "source": "devad-skills-set/skills/greenlight-vibe/SKILL.md",
+      "purpose": "Preserve v3 file: skills/greenlight-vibe/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-6c58f82d91d9",
+      "legacy_id": "v3-heading-skill-6c58f82d91d9",
+      "kind": "heading",
+      "owner": "greenlight-vibe",
+      "source": "devad-skills-set/skills/greenlight-vibe/SKILL.md",
+      "purpose": "Preserve v3 heading: greenlight-vibe",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-8a5d8a599484",
+      "legacy_id": "v3-file-skill-8a5d8a599484",
+      "kind": "file",
+      "owner": "html-page-cloner",
+      "source": "devad-skills-set/skills/html-page-cloner/SKILL.md",
+      "purpose": "Preserve v3 file: skills/html-page-cloner/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-fc9dcbbf7ed8",
+      "legacy_id": "v3-heading-skill-fc9dcbbf7ed8",
+      "kind": "heading",
+      "owner": "html-page-cloner",
+      "source": "devad-skills-set/skills/html-page-cloner/SKILL.md",
+      "purpose": "Preserve v3 heading: html-page-cloner",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-38c8710b82ab",
+      "legacy_id": "v3-file-skill-38c8710b82ab",
+      "kind": "file",
+      "owner": "impeccable",
+      "source": "devad-skills-set/skills/impeccable/SKILL.md",
+      "purpose": "Preserve v3 file: skills/impeccable/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-cb97b895ebe2",
+      "legacy_id": "v3-heading-skill-cb97b895ebe2",
+      "kind": "heading",
+      "owner": "impeccable",
+      "source": "devad-skills-set/skills/impeccable/SKILL.md",
+      "purpose": "Preserve v3 heading: impeccable",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-222fab251079",
+      "legacy_id": "v3-file-skill-222fab251079",
+      "kind": "file",
+      "owner": "karpathy-guidelines",
+      "source": "devad-skills-set/skills/karpathy-guidelines/SKILL.md",
+      "purpose": "Preserve v3 file: skills/karpathy-guidelines/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-eb8210d154fa",
+      "legacy_id": "v3-heading-skill-eb8210d154fa",
+      "kind": "heading",
+      "owner": "karpathy-guidelines",
+      "source": "devad-skills-set/skills/karpathy-guidelines/SKILL.md",
+      "purpose": "Preserve v3 heading: karpathy-guidelines",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-66adf555d9f9",
+      "legacy_id": "v3-file-skill-66adf555d9f9",
+      "kind": "file",
+      "owner": "loop-plan-goal",
+      "source": "devad-skills-set/skills/loop-plan-goal/SKILL.md",
+      "purpose": "Preserve v3 file: skills/loop-plan-goal/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-ce7041eb374a",
+      "legacy_id": "v3-heading-skill-ce7041eb374a",
+      "kind": "heading",
+      "owner": "loop-plan-goal",
+      "source": "devad-skills-set/skills/loop-plan-goal/SKILL.md",
+      "purpose": "Preserve v3 heading: loop-plan-goal",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-81846f619641",
+      "legacy_id": "v3-file-skill-81846f619641",
+      "kind": "file",
+      "owner": "oc-subs",
+      "source": "devad-skills-set/skills/oc-subs/SKILL.md",
+      "purpose": "Preserve v3 file: skills/oc-subs/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-ab6c516b8b6b",
+      "legacy_id": "v3-heading-skill-ab6c516b8b6b",
+      "kind": "heading",
+      "owner": "oc-subs",
+      "source": "devad-skills-set/skills/oc-subs/SKILL.md",
+      "purpose": "Preserve v3 heading: oc-subs",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-b024cfbcc0ee",
+      "legacy_id": "v3-file-skill-b024cfbcc0ee",
+      "kind": "file",
+      "owner": "orca-cli",
+      "source": "devad-skills-set/skills/orca-cli/SKILL.md",
+      "purpose": "Preserve v3 file: skills/orca-cli/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-bee55a6ccf1c",
+      "legacy_id": "v3-heading-skill-bee55a6ccf1c",
+      "kind": "heading",
+      "owner": "orca-cli",
+      "source": "devad-skills-set/skills/orca-cli/SKILL.md",
+      "purpose": "Preserve v3 heading: orca-cli",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-4638e86b3b2f",
+      "legacy_id": "v3-file-skill-4638e86b3b2f",
+      "kind": "file",
+      "owner": "orchestration",
+      "source": "devad-skills-set/skills/orchestration/SKILL.md",
+      "purpose": "Preserve v3 file: skills/orchestration/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-8b1f3f90d3a2",
+      "legacy_id": "v3-heading-skill-8b1f3f90d3a2",
+      "kind": "heading",
+      "owner": "orchestration",
+      "source": "devad-skills-set/skills/orchestration/SKILL.md",
+      "purpose": "Preserve v3 heading: orchestration",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-895519e8a248",
+      "legacy_id": "v3-file-skill-895519e8a248",
+      "kind": "file",
+      "owner": "pgvectorscale-db",
+      "source": "devad-skills-set/skills/pgvectorscale-db/SKILL.md",
+      "purpose": "Preserve v3 file: skills/pgvectorscale-db/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-8b810c48946c",
+      "legacy_id": "v3-heading-skill-8b810c48946c",
+      "kind": "heading",
+      "owner": "pgvectorscale-db",
+      "source": "devad-skills-set/skills/pgvectorscale-db/SKILL.md",
+      "purpose": "Preserve v3 heading: pgvectorscale-db",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-80d0bb4a2d09",
+      "legacy_id": "v3-file-skill-80d0bb4a2d09",
+      "kind": "file",
+      "owner": "pixelbrowse",
+      "source": "devad-skills-set/skills/pixelbrowse/SKILL.md",
+      "purpose": "Preserve v3 file: skills/pixelbrowse/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-71c38d507798",
+      "legacy_id": "v3-heading-skill-71c38d507798",
+      "kind": "heading",
+      "owner": "pixelbrowse",
+      "source": "devad-skills-set/skills/pixelbrowse/SKILL.md",
+      "purpose": "Preserve v3 heading: pixelbrowse",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
       "id": "v3-file-openai-6707a16966aa",
       "legacy_id": "v3-file-openai-6707a16966aa",
       "kind": "file",
@@ -7973,6 +8483,46 @@
       "status": "RETAINED"
     },
     {
+      "id": "v3-file-skill-bdc30f12de4f",
+      "legacy_id": "v3-file-skill-bdc30f12de4f",
+      "kind": "file",
+      "owner": "solve-before-stopping",
+      "source": "devad-skills-set/skills/solve-before-stopping/SKILL.md",
+      "purpose": "Preserve v3 file: skills/solve-before-stopping/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-39e266a96b04",
+      "legacy_id": "v3-heading-skill-39e266a96b04",
+      "kind": "heading",
+      "owner": "solve-before-stopping",
+      "source": "devad-skills-set/skills/solve-before-stopping/SKILL.md",
+      "purpose": "Preserve v3 heading: solve-before-stopping",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-6d37bd4da779",
+      "legacy_id": "v3-file-skill-6d37bd4da779",
+      "kind": "file",
+      "owner": "telegram-codex-linker",
+      "source": "devad-skills-set/skills/telegram-codex-linker/SKILL.md",
+      "purpose": "Preserve v3 file: skills/telegram-codex-linker/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-4645d25d2e6a",
+      "legacy_id": "v3-heading-skill-4645d25d2e6a",
+      "kind": "heading",
+      "owner": "telegram-codex-linker",
+      "source": "devad-skills-set/skills/telegram-codex-linker/SKILL.md",
+      "purpose": "Preserve v3 heading: telegram-codex-linker",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
       "id": "v3-file-openai-f39cd9ca5958",
       "legacy_id": "v3-file-openai-f39cd9ca5958",
       "kind": "file",
@@ -8683,6 +9233,26 @@
       "status": "RETAINED"
     },
     {
+      "id": "v3-file-skill-05a6d22479f4",
+      "legacy_id": "v3-file-skill-05a6d22479f4",
+      "kind": "file",
+      "owner": "unlazy",
+      "source": "devad-skills-set/skills/unlazy/SKILL.md",
+      "purpose": "Preserve v3 file: skills/unlazy/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-9d39420a0c7d",
+      "legacy_id": "v3-heading-skill-9d39420a0c7d",
+      "kind": "heading",
+      "owner": "unlazy",
+      "source": "devad-skills-set/skills/unlazy/SKILL.md",
+      "purpose": "Preserve v3 heading: unlazy",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
       "id": "v3-file-openai-f17a260f7dc4",
       "legacy_id": "v3-file-openai-f17a260f7dc4",
       "kind": "file",
@@ -9199,6 +9769,76 @@
       "owner": "x9-project-docs",
       "source": "devad-skills-set/skills/x9-project-docs/SKILL.md",
       "purpose": "Preserve v3 heading: X9 Project Docs",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-script-init-a8760171246e",
+      "legacy_id": "v3-script-init-a8760171246e",
+      "kind": "script",
+      "owner": "x9-s3-continuity",
+      "source": "devad-skills-set/skills/x9-s3-continuity/__init__.py",
+      "purpose": "Preserve v3 script: skills/x9-s3-continuity/__init__.py",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-script-config-b3e63fa19e1d",
+      "legacy_id": "v3-script-config-b3e63fa19e1d",
+      "kind": "script",
+      "owner": "x9-s3-continuity",
+      "source": "devad-skills-set/skills/x9-s3-continuity/config.py",
+      "purpose": "Preserve v3 script: skills/x9-s3-continuity/config.py",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-script-crypto-a8f547e36764",
+      "legacy_id": "v3-script-crypto-a8f547e36764",
+      "kind": "script",
+      "owner": "x9-s3-continuity",
+      "source": "devad-skills-set/skills/x9-s3-continuity/crypto.py",
+      "purpose": "Preserve v3 script: skills/x9-s3-continuity/crypto.py",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-script-protocol-41703c3f0d50",
+      "legacy_id": "v3-script-protocol-41703c3f0d50",
+      "kind": "script",
+      "owner": "x9-s3-continuity",
+      "source": "devad-skills-set/skills/x9-s3-continuity/protocol.py",
+      "purpose": "Preserve v3 script: skills/x9-s3-continuity/protocol.py",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-script-provider-80125abd1222",
+      "legacy_id": "v3-script-provider-80125abd1222",
+      "kind": "script",
+      "owner": "x9-s3-continuity",
+      "source": "devad-skills-set/skills/x9-s3-continuity/provider.py",
+      "purpose": "Preserve v3 script: skills/x9-s3-continuity/provider.py",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-00324a9c58a3",
+      "legacy_id": "v3-file-skill-00324a9c58a3",
+      "kind": "file",
+      "owner": "x9-s3-continuity",
+      "source": "devad-skills-set/skills/x9-s3-continuity/SKILL.md",
+      "purpose": "Preserve v3 file: skills/x9-s3-continuity/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-865d028bcc86",
+      "legacy_id": "v3-heading-skill-865d028bcc86",
+      "kind": "heading",
+      "owner": "x9-s3-continuity",
+      "source": "devad-skills-set/skills/x9-s3-continuity/SKILL.md",
+      "purpose": "Preserve v3 heading: x9-s3-continuity",
       "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
       "status": "RETAINED"
     },
@@ -9899,6 +10539,586 @@
       "owner": "xplan",
       "source": "devad-skills-set/skills/xplan/SKILL.md",
       "purpose": "Preserve v3 heading: 8. Validate",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-746fcbf6b37f",
+      "legacy_id": "v3-file-skill-746fcbf6b37f",
+      "kind": "file",
+      "owner": "z-api-and-interface-design",
+      "source": "devad-skills-set/skills/z-api-and-interface-design/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-api-and-interface-design/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-9faa7e4656d8",
+      "legacy_id": "v3-heading-skill-9faa7e4656d8",
+      "kind": "heading",
+      "owner": "z-api-and-interface-design",
+      "source": "devad-skills-set/skills/z-api-and-interface-design/SKILL.md",
+      "purpose": "Preserve v3 heading: z-api-and-interface-design",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-128170141169",
+      "legacy_id": "v3-file-skill-128170141169",
+      "kind": "file",
+      "owner": "z-browser-testing-with-devtools",
+      "source": "devad-skills-set/skills/z-browser-testing-with-devtools/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-browser-testing-with-devtools/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-0df938ddbb17",
+      "legacy_id": "v3-heading-skill-0df938ddbb17",
+      "kind": "heading",
+      "owner": "z-browser-testing-with-devtools",
+      "source": "devad-skills-set/skills/z-browser-testing-with-devtools/SKILL.md",
+      "purpose": "Preserve v3 heading: z-browser-testing-with-devtools",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-9adc44a9de3f",
+      "legacy_id": "v3-file-skill-9adc44a9de3f",
+      "kind": "file",
+      "owner": "z-ci-cd-and-automation",
+      "source": "devad-skills-set/skills/z-ci-cd-and-automation/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-ci-cd-and-automation/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-bfc7d94f0acd",
+      "legacy_id": "v3-heading-skill-bfc7d94f0acd",
+      "kind": "heading",
+      "owner": "z-ci-cd-and-automation",
+      "source": "devad-skills-set/skills/z-ci-cd-and-automation/SKILL.md",
+      "purpose": "Preserve v3 heading: z-ci-cd-and-automation",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-23cb78e471e4",
+      "legacy_id": "v3-file-skill-23cb78e471e4",
+      "kind": "file",
+      "owner": "z-code-review-and-quality",
+      "source": "devad-skills-set/skills/z-code-review-and-quality/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-code-review-and-quality/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-08c823c3947a",
+      "legacy_id": "v3-heading-skill-08c823c3947a",
+      "kind": "heading",
+      "owner": "z-code-review-and-quality",
+      "source": "devad-skills-set/skills/z-code-review-and-quality/SKILL.md",
+      "purpose": "Preserve v3 heading: z-code-review-and-quality",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-65b349b8d4f2",
+      "legacy_id": "v3-file-skill-65b349b8d4f2",
+      "kind": "file",
+      "owner": "z-code-simplification",
+      "source": "devad-skills-set/skills/z-code-simplification/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-code-simplification/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-cefb3a4cdbe8",
+      "legacy_id": "v3-heading-skill-cefb3a4cdbe8",
+      "kind": "heading",
+      "owner": "z-code-simplification",
+      "source": "devad-skills-set/skills/z-code-simplification/SKILL.md",
+      "purpose": "Preserve v3 heading: z-code-simplification",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-6e065c2fd756",
+      "legacy_id": "v3-file-skill-6e065c2fd756",
+      "kind": "file",
+      "owner": "z-content",
+      "source": "devad-skills-set/skills/z-content/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-content/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-c625d8fbeb92",
+      "legacy_id": "v3-heading-skill-c625d8fbeb92",
+      "kind": "heading",
+      "owner": "z-content",
+      "source": "devad-skills-set/skills/z-content/SKILL.md",
+      "purpose": "Preserve v3 heading: z-content",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-ef0ae2a58ee1",
+      "legacy_id": "v3-file-skill-ef0ae2a58ee1",
+      "kind": "file",
+      "owner": "z-context-engineering",
+      "source": "devad-skills-set/skills/z-context-engineering/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-context-engineering/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-3d314644de37",
+      "legacy_id": "v3-heading-skill-3d314644de37",
+      "kind": "heading",
+      "owner": "z-context-engineering",
+      "source": "devad-skills-set/skills/z-context-engineering/SKILL.md",
+      "purpose": "Preserve v3 heading: z-context-engineering",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-c0b4fe21623a",
+      "legacy_id": "v3-file-skill-c0b4fe21623a",
+      "kind": "file",
+      "owner": "z-debugging-and-error-recovery",
+      "source": "devad-skills-set/skills/z-debugging-and-error-recovery/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-debugging-and-error-recovery/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-d4bf49855895",
+      "legacy_id": "v3-heading-skill-d4bf49855895",
+      "kind": "heading",
+      "owner": "z-debugging-and-error-recovery",
+      "source": "devad-skills-set/skills/z-debugging-and-error-recovery/SKILL.md",
+      "purpose": "Preserve v3 heading: z-debugging-and-error-recovery",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-a1fd1ef9a98a",
+      "legacy_id": "v3-file-skill-a1fd1ef9a98a",
+      "kind": "file",
+      "owner": "z-deprecation-and-migration",
+      "source": "devad-skills-set/skills/z-deprecation-and-migration/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-deprecation-and-migration/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-44c19c40caa5",
+      "legacy_id": "v3-heading-skill-44c19c40caa5",
+      "kind": "heading",
+      "owner": "z-deprecation-and-migration",
+      "source": "devad-skills-set/skills/z-deprecation-and-migration/SKILL.md",
+      "purpose": "Preserve v3 heading: z-deprecation-and-migration",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-043b1f4aa4ee",
+      "legacy_id": "v3-file-skill-043b1f4aa4ee",
+      "kind": "file",
+      "owner": "z-docs",
+      "source": "devad-skills-set/skills/z-docs/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-docs/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-d4dd4a651861",
+      "legacy_id": "v3-heading-skill-d4dd4a651861",
+      "kind": "heading",
+      "owner": "z-docs",
+      "source": "devad-skills-set/skills/z-docs/SKILL.md",
+      "purpose": "Preserve v3 heading: z-docs",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-844746a2419f",
+      "legacy_id": "v3-file-skill-844746a2419f",
+      "kind": "file",
+      "owner": "z-documentation-and-adrs",
+      "source": "devad-skills-set/skills/z-documentation-and-adrs/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-documentation-and-adrs/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-4c9b79bbb5b0",
+      "legacy_id": "v3-heading-skill-4c9b79bbb5b0",
+      "kind": "heading",
+      "owner": "z-documentation-and-adrs",
+      "source": "devad-skills-set/skills/z-documentation-and-adrs/SKILL.md",
+      "purpose": "Preserve v3 heading: z-documentation-and-adrs",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-22c28001010f",
+      "legacy_id": "v3-file-skill-22c28001010f",
+      "kind": "file",
+      "owner": "z-doubt-driven-development",
+      "source": "devad-skills-set/skills/z-doubt-driven-development/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-doubt-driven-development/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-670d87cdd36b",
+      "legacy_id": "v3-heading-skill-670d87cdd36b",
+      "kind": "heading",
+      "owner": "z-doubt-driven-development",
+      "source": "devad-skills-set/skills/z-doubt-driven-development/SKILL.md",
+      "purpose": "Preserve v3 heading: z-doubt-driven-development",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-5d59f73e5feb",
+      "legacy_id": "v3-file-skill-5d59f73e5feb",
+      "kind": "file",
+      "owner": "z-frontend-ui-engineering",
+      "source": "devad-skills-set/skills/z-frontend-ui-engineering/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-frontend-ui-engineering/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-a96fe13ddc3d",
+      "legacy_id": "v3-heading-skill-a96fe13ddc3d",
+      "kind": "heading",
+      "owner": "z-frontend-ui-engineering",
+      "source": "devad-skills-set/skills/z-frontend-ui-engineering/SKILL.md",
+      "purpose": "Preserve v3 heading: z-frontend-ui-engineering",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-7f1938cac83b",
+      "legacy_id": "v3-file-skill-7f1938cac83b",
+      "kind": "file",
+      "owner": "z-git-workflow-and-versioning",
+      "source": "devad-skills-set/skills/z-git-workflow-and-versioning/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-git-workflow-and-versioning/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-36d20848edf9",
+      "legacy_id": "v3-heading-skill-36d20848edf9",
+      "kind": "heading",
+      "owner": "z-git-workflow-and-versioning",
+      "source": "devad-skills-set/skills/z-git-workflow-and-versioning/SKILL.md",
+      "purpose": "Preserve v3 heading: z-git-workflow-and-versioning",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-f8180a09d318",
+      "legacy_id": "v3-file-skill-f8180a09d318",
+      "kind": "file",
+      "owner": "z-idea-refine",
+      "source": "devad-skills-set/skills/z-idea-refine/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-idea-refine/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-aac47dbc6804",
+      "legacy_id": "v3-heading-skill-aac47dbc6804",
+      "kind": "heading",
+      "owner": "z-idea-refine",
+      "source": "devad-skills-set/skills/z-idea-refine/SKILL.md",
+      "purpose": "Preserve v3 heading: z-idea-refine",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-021ad2f0edcc",
+      "legacy_id": "v3-file-skill-021ad2f0edcc",
+      "kind": "file",
+      "owner": "z-incremental-implementation",
+      "source": "devad-skills-set/skills/z-incremental-implementation/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-incremental-implementation/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-6277e41b9f08",
+      "legacy_id": "v3-heading-skill-6277e41b9f08",
+      "kind": "heading",
+      "owner": "z-incremental-implementation",
+      "source": "devad-skills-set/skills/z-incremental-implementation/SKILL.md",
+      "purpose": "Preserve v3 heading: z-incremental-implementation",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-0dc430d665f3",
+      "legacy_id": "v3-file-skill-0dc430d665f3",
+      "kind": "file",
+      "owner": "z-interview-me",
+      "source": "devad-skills-set/skills/z-interview-me/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-interview-me/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-88941b08fe0b",
+      "legacy_id": "v3-heading-skill-88941b08fe0b",
+      "kind": "heading",
+      "owner": "z-interview-me",
+      "source": "devad-skills-set/skills/z-interview-me/SKILL.md",
+      "purpose": "Preserve v3 heading: z-interview-me",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-8db9a84b080e",
+      "legacy_id": "v3-file-skill-8db9a84b080e",
+      "kind": "file",
+      "owner": "z-loop",
+      "source": "devad-skills-set/skills/z-loop/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-loop/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-162b16c96020",
+      "legacy_id": "v3-heading-skill-162b16c96020",
+      "kind": "heading",
+      "owner": "z-loop",
+      "source": "devad-skills-set/skills/z-loop/SKILL.md",
+      "purpose": "Preserve v3 heading: z-loop",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-86a5ed09d4f3",
+      "legacy_id": "v3-file-skill-86a5ed09d4f3",
+      "kind": "file",
+      "owner": "z-observability-and-instrumentation",
+      "source": "devad-skills-set/skills/z-observability-and-instrumentation/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-observability-and-instrumentation/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-07efee3b6b9d",
+      "legacy_id": "v3-heading-skill-07efee3b6b9d",
+      "kind": "heading",
+      "owner": "z-observability-and-instrumentation",
+      "source": "devad-skills-set/skills/z-observability-and-instrumentation/SKILL.md",
+      "purpose": "Preserve v3 heading: z-observability-and-instrumentation",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-bd9c5a282b2c",
+      "legacy_id": "v3-file-skill-bd9c5a282b2c",
+      "kind": "file",
+      "owner": "z-performance-optimization",
+      "source": "devad-skills-set/skills/z-performance-optimization/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-performance-optimization/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-08621525f676",
+      "legacy_id": "v3-heading-skill-08621525f676",
+      "kind": "heading",
+      "owner": "z-performance-optimization",
+      "source": "devad-skills-set/skills/z-performance-optimization/SKILL.md",
+      "purpose": "Preserve v3 heading: z-performance-optimization",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-75739a1d028e",
+      "legacy_id": "v3-file-skill-75739a1d028e",
+      "kind": "file",
+      "owner": "z-planning-and-task-breakdown",
+      "source": "devad-skills-set/skills/z-planning-and-task-breakdown/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-planning-and-task-breakdown/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-8ab412c79498",
+      "legacy_id": "v3-heading-skill-8ab412c79498",
+      "kind": "heading",
+      "owner": "z-planning-and-task-breakdown",
+      "source": "devad-skills-set/skills/z-planning-and-task-breakdown/SKILL.md",
+      "purpose": "Preserve v3 heading: z-planning-and-task-breakdown",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-91ba69b58b9f",
+      "legacy_id": "v3-file-skill-91ba69b58b9f",
+      "kind": "file",
+      "owner": "z-security-and-hardening",
+      "source": "devad-skills-set/skills/z-security-and-hardening/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-security-and-hardening/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-34986de668f0",
+      "legacy_id": "v3-heading-skill-34986de668f0",
+      "kind": "heading",
+      "owner": "z-security-and-hardening",
+      "source": "devad-skills-set/skills/z-security-and-hardening/SKILL.md",
+      "purpose": "Preserve v3 heading: z-security-and-hardening",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-cbeecfbe3693",
+      "legacy_id": "v3-file-skill-cbeecfbe3693",
+      "kind": "file",
+      "owner": "z-shipping-and-launch",
+      "source": "devad-skills-set/skills/z-shipping-and-launch/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-shipping-and-launch/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-113c2c8038aa",
+      "legacy_id": "v3-heading-skill-113c2c8038aa",
+      "kind": "heading",
+      "owner": "z-shipping-and-launch",
+      "source": "devad-skills-set/skills/z-shipping-and-launch/SKILL.md",
+      "purpose": "Preserve v3 heading: z-shipping-and-launch",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-9de92138d6ed",
+      "legacy_id": "v3-file-skill-9de92138d6ed",
+      "kind": "file",
+      "owner": "z-source-driven-development",
+      "source": "devad-skills-set/skills/z-source-driven-development/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-source-driven-development/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-4a27485fc3e7",
+      "legacy_id": "v3-heading-skill-4a27485fc3e7",
+      "kind": "heading",
+      "owner": "z-source-driven-development",
+      "source": "devad-skills-set/skills/z-source-driven-development/SKILL.md",
+      "purpose": "Preserve v3 heading: z-source-driven-development",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-14518adfe26c",
+      "legacy_id": "v3-file-skill-14518adfe26c",
+      "kind": "file",
+      "owner": "z-spec-driven-development",
+      "source": "devad-skills-set/skills/z-spec-driven-development/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-spec-driven-development/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-fbbf86e57b28",
+      "legacy_id": "v3-heading-skill-fbbf86e57b28",
+      "kind": "heading",
+      "owner": "z-spec-driven-development",
+      "source": "devad-skills-set/skills/z-spec-driven-development/SKILL.md",
+      "purpose": "Preserve v3 heading: z-spec-driven-development",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-f46c68377fb4",
+      "legacy_id": "v3-file-skill-f46c68377fb4",
+      "kind": "file",
+      "owner": "z-test-driven-development",
+      "source": "devad-skills-set/skills/z-test-driven-development/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-test-driven-development/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-2035761c9237",
+      "legacy_id": "v3-heading-skill-2035761c9237",
+      "kind": "heading",
+      "owner": "z-test-driven-development",
+      "source": "devad-skills-set/skills/z-test-driven-development/SKILL.md",
+      "purpose": "Preserve v3 heading: z-test-driven-development",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-330b06be01fa",
+      "legacy_id": "v3-file-skill-330b06be01fa",
+      "kind": "file",
+      "owner": "z-think",
+      "source": "devad-skills-set/skills/z-think/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-think/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-cfd9bdf84cc1",
+      "legacy_id": "v3-heading-skill-cfd9bdf84cc1",
+      "kind": "heading",
+      "owner": "z-think",
+      "source": "devad-skills-set/skills/z-think/SKILL.md",
+      "purpose": "Preserve v3 heading: z-think",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-e2e7369fb883",
+      "legacy_id": "v3-file-skill-e2e7369fb883",
+      "kind": "file",
+      "owner": "z-using-agent-skills",
+      "source": "devad-skills-set/skills/z-using-agent-skills/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-using-agent-skills/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-5404952bada8",
+      "legacy_id": "v3-heading-skill-5404952bada8",
+      "kind": "heading",
+      "owner": "z-using-agent-skills",
+      "source": "devad-skills-set/skills/z-using-agent-skills/SKILL.md",
+      "purpose": "Preserve v3 heading: z-using-agent-skills",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-file-skill-3ef961e842d8",
+      "legacy_id": "v3-file-skill-3ef961e842d8",
+      "kind": "file",
+      "owner": "z-x9-legacy",
+      "source": "devad-skills-set/skills/z-x9-legacy/SKILL.md",
+      "purpose": "Preserve v3 file: skills/z-x9-legacy/SKILL.md",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-heading-skill-6e6d2171dc8b",
+      "legacy_id": "v3-heading-skill-6e6d2171dc8b",
+      "kind": "heading",
+      "owner": "z-x9-legacy",
+      "source": "devad-skills-set/skills/z-x9-legacy/SKILL.md",
+      "purpose": "Preserve v3 heading: z-x9-legacy",
       "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
       "status": "RETAINED"
     },
@@ -57039,6 +58259,16 @@
       "owner": "kit",
       "source": "devad-skills-set/scripts/build_feature_registry.py",
       "purpose": "Preserve v3 script: scripts/build_feature_registry.py",
+      "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
+      "status": "RETAINED"
+    },
+    {
+      "id": "v3-script-build-public-skill-cards-6d8076ff8859",
+      "legacy_id": "v3-script-build-public-skill-cards-6d8076ff8859",
+      "kind": "script",
+      "owner": "kit",
+      "source": "devad-skills-set/scripts/build_public_skill_cards.py",
+      "purpose": "Preserve v3 script: scripts/build_public_skill_cards.py",
       "required_test": "tests/test_registry_coverage.py::RegistryCoverageTests",
       "status": "RETAINED"
     },

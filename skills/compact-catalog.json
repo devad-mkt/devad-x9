@@ -1,0 +1,622 @@
+{
+  "schema": "devad-x9-public-compact-skill-catalog-v1",
+  "snapshot": "2026-09-13",
+  "source_catalog": "active/catalog.json",
+  "full_source_root": "active",
+  "public_root": "skills",
+  "local_entrypoint_count": 75,
+  "compact_card_count": 57,
+  "reused_alias_count": 18,
+  "s3_addon_count": 1,
+  "entries": [
+    {
+      "local_name": "a0-plugin-router",
+      "public_name": "a0-plugin-router",
+      "public_path": "skills/a0-plugin-router/SKILL.md",
+      "full_path": "active/agents/a0_plugin_creating-skill/skills/a0-plugin-router/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Entry-point dispatch for Agent Zero plugin work. Use FIRST for any plugin-related request (create, review, contribute, manage, debug, or explain). This router does not plan or build \u2014 it reads the request, classifies it, and points at the r"
+    },
+    {
+      "local_name": "a0_plugin_creating-skill",
+      "public_name": "a0_plugin_creating-skill",
+      "public_path": "skills/a0_plugin_creating-skill/SKILL.md",
+      "full_path": "active/agents/a0_plugin_creating-skill/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Create, extend, or audit Agent Zero plugins (research -> plan -> chunk -> execute -> verify -> audit), or execute/fix an existing chunked plugin plan. Use when asked to create/plan/execute/build/extend/index/review/audit/verify/fix an A0 pl"
+    },
+    {
+      "local_name": "codex-browser-testing",
+      "public_name": "codex-browser-testing",
+      "public_path": "skills/codex-browser-testing/SKILL.md",
+      "full_path": "active/codex/codex-browser-testing/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Use when Codex needs to test, inspect, or automate a web app in the Codex in-app browser, including playground QA, admin settings checks, regression acceptance tests, deployed-site verification, localhost browser testing, screenshots, DOM i"
+    },
+    {
+      "local_name": "computer-use",
+      "public_name": "computer-use",
+      "public_path": "skills/computer-use/SKILL.md",
+      "full_path": "active/agents/computer-use/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Use Orca's computer-use CLI to inspect and operate local desktop app windows through accessibility trees, screenshots, and safe UI actions. Use for desktop app interaction: list apps/windows, get app state, read visible UI, click controls,"
+    },
+    {
+      "local_name": "copywriting",
+      "public_name": "copywriting",
+      "public_path": "skills/copywriting/SKILL.md",
+      "full_path": "active/codex/copywriting/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Plan, craft, rewrite, audit, or implement source-grounded conversion copy for landing pages, fundraising appeals, homepages, product and service pages, campaigns, and constrained CMS or HTML previews. Use when copy must combine emotional re"
+    },
+    {
+      "local_name": "design-taste-frontend",
+      "public_name": "design-taste-frontend",
+      "public_path": "skills/design-taste-frontend/SKILL.md",
+      "full_path": "active/codex/design-taste-frontend/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Senior UI/UX Engineer. Architect digital interfaces overriding default LLM biases. Enforces metric-based rules, strict component architecture, CSS hardware acceleration, and balanced design engineering"
+    },
+    {
+      "local_name": "devad-articles",
+      "public_name": "devad-articles",
+      "public_path": "skills/devad-articles/SKILL.md",
+      "full_path": "active/codex/devad-articles/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Use when Codex needs to draft, rewrite, refresh, expand, convert, audit, or format article-style content, including SEO blog articles, scraped article HTML, old article updates, short briefs, comparison articles, guides, FAQs, AEO content,"
+    },
+    {
+      "local_name": "devad-assistant",
+      "public_name": "devad-assistant",
+      "public_path": "skills/devad-assistant/SKILL.md",
+      "full_path": "active/codex/devad-assistant/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Devad sidecar routing card. Use when Codex should save tokens by delegating bounded plan, risk, checklist, migration, or frontend architecture review to direct headless CLI assistants while Codex keeps ownership of code, verification, safet"
+    },
+    {
+      "local_name": "devad-browser-proof",
+      "public_name": "devad-browser-proof",
+      "public_path": "skills/devad-browser-proof/SKILL.md",
+      "full_path": "active/codex/devad-browser-proof/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Run secret-safe Devad browser proof and sidecar evidence workflows. Use when validating CORE/XCO migration slices, admin/settings UI parity, authenticated Chrome proof, local proof servers, sidecar verification packets, or any Devad task wh"
+    },
+    {
+      "local_name": "devad-cursor-post-chunk-runner",
+      "public_name": "devad-cursor-post-chunk-runner",
+      "public_path": "skills/devad-cursor-post-chunk-runner/SKILL.md",
+      "full_path": "active/codex/devad-cursor-post-chunk-runner/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Use when migrating or verifying Devad CORE POST features from StackPosts/post.devad.io, especially Channels, Publishing, provider OAuth, admin settings, account pickers, TikTok, live browser parity, Cursor/sidecar chunk packets, or producti"
+    },
+    {
+      "local_name": "devad-lp-content",
+      "public_name": "devad-lp-content",
+      "public_path": "skills/devad-lp-content/SKILL.md",
+      "full_path": "active/codex/devad-lp-content/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Use when Codex is asked to create, rewrite, optimize, audit, or structure landing-page content, sales-page copy, SaaS/product pages, demo-booking pages, signup pages, lead-capture pages, campaign pages, or CRO-focused page copy"
+    },
+    {
+      "local_name": "devad-post-provider-proof",
+      "public_name": "devad-post-provider-proof",
+      "public_path": "skills/devad-post-provider-proof/SKILL.md",
+      "full_path": "active/codex/devad-post-provider-proof/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Use when executing Devad CORE POST provider migration slices that need fast, safe connect/publish proof, provider slice packets, Dokploy deploy/health gates, authenticated CORE browser checks, external social verification, and strict secret"
+    },
+    {
+      "local_name": "devad-vendor-hunk-adoption",
+      "public_name": "devad-vendor-hunk-adoption",
+      "public_path": "skills/devad-vendor-hunk-adoption/SKILL.md",
+      "full_path": "active/codex/devad-vendor-hunk-adoption/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Safe vendor update adoption workflow for Devad-customized repositories. Use when comparing old upstream, new vendor packages or snapshots, and a customized Devad branch; when adopting Support Board, plugin, PHP, JS, minified JS, .htaccess,"
+    },
+    {
+      "local_name": "find-skills",
+      "public_name": "find-skills",
+      "public_path": "skills/find-skills/SKILL.md",
+      "full_path": "active/agents/find-skills/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is look"
+    },
+    {
+      "local_name": "graphify",
+      "public_name": "graphify",
+      "public_path": "skills/graphify/SKILL.md",
+      "full_path": "active/codex/graphify/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Build or query a persistent knowledge graph for code, documents, or mixed project material. Use only when the user explicitly invokes /graphify, when an existing graphify-out graph should be queried, or when a bounded cross-module ownership"
+    },
+    {
+      "local_name": "greenlight-vibe",
+      "public_name": "greenlight-vibe",
+      "public_path": "skills/greenlight-vibe/SKILL.md",
+      "full_path": "active/codex/greenlight-vibe/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Generate or edit design for WordPress Gutenberg blocks using Greenshift/GreenLight plugin. Convert any data to wordpress blocks or convert greenshift blocks back to html + css + js. Use when user asks to create design with Greenshift or Gre"
+    },
+    {
+      "local_name": "html-page-cloner",
+      "public_name": "html-page-cloner",
+      "public_path": "skills/html-page-cloner/SKILL.md",
+      "full_path": "active/codex/html-page-cloner/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Build high-fidelity landing-page clones from saved browser HTML, Chrome saved-page asset folders, screenshots, DOM exports, and optional GreenShift or WordPress handoff inputs. Use when Codex must create or validate a single-file HTML/CSS/J"
+    },
+    {
+      "local_name": "impeccable",
+      "public_name": "impeccable",
+      "public_path": "skills/impeccable/SKILL.md",
+      "full_path": "active/codex/impeccable/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers websites, landing pages, dashboards, produ"
+    },
+    {
+      "local_name": "karpathy-guidelines",
+      "public_name": "karpathy-guidelines",
+      "public_path": "skills/karpathy-guidelines/SKILL.md",
+      "full_path": "active/codex/karpathy-guidelines/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Behavioral guidelines to reduce common LLM coding mistakes. Use when writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria"
+    },
+    {
+      "local_name": "loop-plan-goal",
+      "public_name": "loop-plan-goal",
+      "public_path": "skills/loop-plan-goal/SKILL.md",
+      "full_path": "active/agents/loop-plan-goal/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Protect long-running recovery and delivery goals from focus drift, wrong-root edits, feature loss, duplicate planning, and unsupported completion claims. Use when work spans many turns, branches, agents, historical implementations, evidence"
+    },
+    {
+      "local_name": "oc-subs",
+      "public_name": "oc-subs",
+      "public_path": "skills/oc-subs/SKILL.md",
+      "full_path": "active/codex/oc-subs/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Run a bounded OpenCode Go or Zen worker through the local OpenCodex proxy. Use when a task needs an external OpenCode model such as opencode-zen/deepseek-v4-flash-free, requires a compact sidecar receipt, or must distinguish that sidecar fr"
+    },
+    {
+      "local_name": "orca-cli",
+      "public_name": "orca-cli",
+      "public_path": "skills/orca-cli/SKILL.md",
+      "full_path": "active/agents/orca-cli/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Use the public `orca` CLI to operate Orca-managed worktrees, folder contexts, terminals, repos, automations, artifacts, skill sharing, worktree comments, and the browser embedded inside the Orca app. Use when the user says \"$orca-cli\", \"use"
+    },
+    {
+      "local_name": "orchestration",
+      "public_name": "orchestration",
+      "public_path": "skills/orchestration/SKILL.md",
+      "full_path": "active/agents/orchestration/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Use Orca orchestration for structured multi-agent coordination: threaded messages, blocking ask/reply flows, task dispatch, worker_done/escalation waits, task DAGs, decision gates, coordinator loops, or decomposing work across agents. Use `"
+    },
+    {
+      "local_name": "pgvectorscale-db",
+      "public_name": "pgvectorscale-db",
+      "public_path": "skills/pgvectorscale-db/SKILL.md",
+      "full_path": "active/codex/pgvectorscale-db/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Prepare, install, admit, execute, or review Devad's sealed PostgreSQL 18 plus vector and vectorscale proof leases. Use for CHAT ledger/RLS/migration proof, a fresh private PG18 proof resource, the devad-chat-pg18-proof gateway, CHAT_PG18_CA"
+    },
+    {
+      "local_name": "pixelbrowse",
+      "public_name": "pixelbrowse",
+      "public_path": "skills/pixelbrowse/SKILL.md",
+      "full_path": "active/codex/pixelbrowse/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Screenshot and visually read any web page or document using pixelshot. Use instead of fetching raw HTML when you need to see what a page looks like, read visual content (charts, diagrams, infographics), check layouts, or verify UI. Triggers"
+    },
+    {
+      "local_name": "solve-before-stopping",
+      "public_name": "solve-before-stopping",
+      "public_path": "skills/solve-before-stopping/SKILL.md",
+      "full_path": "active/codex/solve-before-stopping/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Diagnose and recover stalled work before declaring it blocked, paused, frozen, waiting, or unable to continue. Use when a Worker or Looper hits a failed tool, browser bridge, test harness, Git/worktree issue, unavailable callback, external"
+    },
+    {
+      "local_name": "telegram-codex-linker",
+      "public_name": "telegram-codex-linker",
+      "public_path": "skills/telegram-codex-linker/SKILL.md",
+      "full_path": "active/codex/telegram-codex-linker/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Install, configure, repair, update, or rebind the Codex Bridge core with the Telegram pack after the user installs this skill. Use when the user wants Codex to take over bridge setup with minimal user action, only interrupting for unavoidab"
+    },
+    {
+      "local_name": "unlazy",
+      "public_name": "unlazy",
+      "public_path": "skills/unlazy/SKILL.md",
+      "full_path": "active/codex/unlazy/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Enforces completion discipline for substantial autonomous work by writing acceptance gates before execution, decomposing work with the Depth Tree, running approved checks, and re-verifying evidence before reporting. Use when Codex faces a l"
+    },
+    {
+      "local_name": "x9-s3-continuity",
+      "public_name": "x9-s3-continuity",
+      "public_path": "skills/x9-s3-continuity/SKILL.md",
+      "full_path": "skills/x9-s3-continuity/",
+      "mode": "FULL_ADDON_WITH_COMPACT_ENTRYPOINT",
+      "source": "Worker S3 provider-offline candidate; no provider calls"
+    },
+    {
+      "local_name": "z-api-and-interface-design",
+      "public_name": "z-api-and-interface-design",
+      "public_path": "skills/z-api-and-interface-design/SKILL.md",
+      "full_path": "active/codex/z-api-and-interface-design/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend a"
+    },
+    {
+      "local_name": "z-backup",
+      "public_name": "codex-x9-backup",
+      "public_path": "skills/codex-x9-backup/SKILL.md",
+      "full_path": "active/codex/z-backup/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same profile backup and restore boundary"
+    },
+    {
+      "local_name": "z-browser",
+      "public_name": "chrome-control",
+      "public_path": "skills/chrome-control/SKILL.md",
+      "full_path": "active/codex/z-browser/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same authenticated browser-control router"
+    },
+    {
+      "local_name": "z-browser-testing-with-devtools",
+      "public_name": "z-browser-testing-with-devtools",
+      "public_path": "skills/z-browser-testing-with-devtools/SKILL.md",
+      "full_path": "active/codex/z-browser-testing-with-devtools/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, profile performance, or verify visual ou"
+    },
+    {
+      "local_name": "z-ci-cd-and-automation",
+      "public_name": "z-ci-cd-and-automation",
+      "public_path": "skills/z-ci-cd-and-automation/SKILL.md",
+      "full_path": "active/codex/z-ci-cd-and-automation/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment strategies"
+    },
+    {
+      "local_name": "z-code-review-and-quality",
+      "public_name": "z-code-review-and-quality",
+      "public_path": "skills/z-code-review-and-quality/SKILL.md",
+      "full_path": "active/codex/z-code-review-and-quality/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch"
+    },
+    {
+      "local_name": "z-code-simplification",
+      "public_name": "z-code-simplification",
+      "public_path": "skills/z-code-simplification/SKILL.md",
+      "full_path": "active/codex/z-code-simplification/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code that has accumulated unnecessary complex"
+    },
+    {
+      "local_name": "z-content",
+      "public_name": "z-content",
+      "public_path": "skills/z-content/SKILL.md",
+      "full_path": "active/codex/z-content/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Unified SEO-AEO-GEO-conversion content operating system. Use for any content generation, rewriting, formatting, or optimization task: articles, guides, blog posts, landing pages, fundraising appeals, ad copy, social posts, GitHub docs, API"
+    },
+    {
+      "local_name": "z-context-engineering",
+      "public_name": "z-context-engineering",
+      "public_path": "skills/z-context-engineering/SKILL.md",
+      "full_path": "active/codex/z-context-engineering/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when you need to configure rules files and context for a project"
+    },
+    {
+      "local_name": "z-debugging-and-error-recovery",
+      "public_name": "z-debugging-and-error-recovery",
+      "public_path": "skills/z-debugging-and-error-recovery/SKILL.md",
+      "full_path": "active/codex/z-debugging-and-error-recovery/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Guides systematic root-cause debugging. Use when tests fail, builds break, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need a systematic approach to finding and fixing the root cause rather than"
+    },
+    {
+      "local_name": "z-deprecation-and-migration",
+      "public_name": "z-deprecation-and-migration",
+      "public_path": "skills/z-deprecation-and-migration/SKILL.md",
+      "full_path": "active/codex/z-deprecation-and-migration/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existing code"
+    },
+    {
+      "local_name": "z-devad-adopt",
+      "public_name": "devad-adoptions",
+      "public_path": "skills/devad-adoptions/SKILL.md",
+      "full_path": "active/codex/z-devad-adopt/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same Devad source-adoption gate"
+    },
+    {
+      "local_name": "z-devad-docs",
+      "public_name": "devad-docs",
+      "public_path": "skills/devad-docs/SKILL.md",
+      "full_path": "active/codex/z-devad-docs/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same durable Devad documentation route"
+    },
+    {
+      "local_name": "z-docs",
+      "public_name": "z-docs",
+      "public_path": "skills/z-docs/SKILL.md",
+      "full_path": "active/codex/z-docs/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Generate and validate compact source-bound project documentation from one accepted Style receipt or experimental Controller result; use for the optional profile-local project brain/docs add-on"
+    },
+    {
+      "local_name": "z-documentation-and-adrs",
+      "public_name": "z-documentation-and-adrs",
+      "public_path": "skills/z-documentation-and-adrs/SKILL.md",
+      "full_path": "active/codex/z-documentation-and-adrs/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Records decisions and documentation. Use when making architectural decisions, changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to understand the codebase"
+    },
+    {
+      "local_name": "z-dokploy",
+      "public_name": "dokploy",
+      "public_path": "skills/dokploy/SKILL.md",
+      "full_path": "active/codex/z-dokploy/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same Dokploy provider boundary"
+    },
+    {
+      "local_name": "z-doubt-driven-development",
+      "public_name": "z-doubt-driven-development",
+      "public_path": "skills/z-doubt-driven-development/SKILL.md",
+      "full_path": "active/codex/z-doubt-driven-development/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when correctness matters more than speed, when working in unfamiliar code, when stakes are high (production, security-sensitive logic, irreversi"
+    },
+    {
+      "local_name": "z-evidence-v2",
+      "public_name": "evidence-to-implementation",
+      "public_path": "skills/evidence-to-implementation/SKILL.md",
+      "full_path": "active/codex/z-evidence-v2/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same evidence-library capability"
+    },
+    {
+      "local_name": "z-frontend-ui-engineering",
+      "public_name": "z-frontend-ui-engineering",
+      "public_path": "skills/z-frontend-ui-engineering/SKILL.md",
+      "full_path": "active/codex/z-frontend-ui-engineering/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages, creating components, implementing layouts, meeting WCAG accessibility requirements, managing state, or when the output n"
+    },
+    {
+      "local_name": "z-git-workflow-and-versioning",
+      "public_name": "z-git-workflow-and-versioning",
+      "public_path": "skills/z-git-workflow-and-versioning/SKILL.md",
+      "full_path": "active/codex/z-git-workflow-and-versioning/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organize work across multiple parallel streams. Use when cutting a release, choosing a semantic ver"
+    },
+    {
+      "local_name": "z-idea-refine",
+      "public_name": "z-idea-refine",
+      "public_path": "skills/z-idea-refine/SKILL.md",
+      "full_path": "active/codex/z-idea-refine/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, when you need to stress-test assumptions before committing to a plan, or when you want to expand option"
+    },
+    {
+      "local_name": "z-incremental-implementation",
+      "public_name": "z-incremental-implementation",
+      "public_path": "skills/z-incremental-implementation/SKILL.md",
+      "full_path": "active/codex/z-incremental-implementation/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big to land in one step"
+    },
+    {
+      "local_name": "z-interview-me",
+      "public_name": "z-interview-me",
+      "public_path": "skills/z-interview-me/SKILL.md",
+      "full_path": "active/codex/z-interview-me/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time interview until ~95% confidence about the underlying intent. Use when an ask is underspecified (\"build me X\" wit"
+    },
+    {
+      "local_name": "z-loop",
+      "public_name": "z-loop",
+      "public_path": "skills/z-loop/SKILL.md",
+      "full_path": "active/codex/z-loop/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Use as the single Addy-first entry point for normal project work. Read bounded project context, select the smallest matching lifecycle skill, load only matching rules, and use z-prefixed specialist overlays only when triggered. Addy-first g"
+    },
+    {
+      "local_name": "z-loop-code",
+      "public_name": "x9-loop-code",
+      "public_path": "skills/x9-loop-code/SKILL.md",
+      "full_path": "active/codex/z-loop-code/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same disposable controller-trial boundary"
+    },
+    {
+      "local_name": "z-loop-style",
+      "public_name": "x9-loop-style",
+      "public_path": "skills/x9-loop-style/SKILL.md",
+      "full_path": "active/codex/z-loop-style/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same Style coordination contract"
+    },
+    {
+      "local_name": "z-memory",
+      "public_name": "devad-memory",
+      "public_path": "skills/devad-memory/SKILL.md",
+      "full_path": "active/codex/z-memory/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same durable memory boundary"
+    },
+    {
+      "local_name": "z-native-adopt",
+      "public_name": "semantic-adoption",
+      "public_path": "skills/semantic-adoption/SKILL.md",
+      "full_path": "active/codex/z-native-adopt/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same native semantic-adoption boundary"
+    },
+    {
+      "local_name": "z-observability-and-instrumentation",
+      "public_name": "z-observability-and-instrumentation",
+      "public_path": "skills/z-observability-and-instrumentation/SKILL.md",
+      "full_path": "active/codex/z-observability-and-instrumentation/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use when shipping any feature that runs in production and you need evidence it works. Use when production issues are"
+    },
+    {
+      "local_name": "z-performance-optimization",
+      "public_name": "z-performance-optimization",
+      "public_path": "skills/z-performance-optimization/SKILL.md",
+      "full_path": "active/codex/z-performance-optimization/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements exist, when you suspect performance regressions, when Core Web Vitals or load times need improvement, when N+1 query patte"
+    },
+    {
+      "local_name": "z-plan",
+      "public_name": "xplan",
+      "public_path": "skills/xplan/SKILL.md",
+      "full_path": "active/codex/z-plan/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same durable delivery-plan capability"
+    },
+    {
+      "local_name": "z-planning-and-task-breakdown",
+      "public_name": "z-planning-and-task-breakdown",
+      "public_path": "skills/z-planning-and-task-breakdown/SKILL.md",
+      "full_path": "active/codex/z-planning-and-task-breakdown/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when a task feels too large to start, when you need to estimate scope, or when parallel work is possible"
+    },
+    {
+      "local_name": "z-sdlc",
+      "public_name": "sdlc",
+      "public_path": "skills/sdlc/SKILL.md",
+      "full_path": "active/codex/z-sdlc/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same risk-scaled lifecycle capability"
+    },
+    {
+      "local_name": "z-security-and-hardening",
+      "public_name": "z-security-and-hardening",
+      "public_path": "skills/z-security-and-hardening/SKILL.md",
+      "full_path": "active/codex/z-security-and-hardening/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party serv"
+    },
+    {
+      "local_name": "z-ship",
+      "public_name": "smooth-coding",
+      "public_path": "skills/smooth-coding/SKILL.md",
+      "full_path": "active/codex/z-ship/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same accepted-plan execution boundary"
+    },
+    {
+      "local_name": "z-shipping-and-launch",
+      "public_name": "z-shipping-and-launch",
+      "public_path": "skills/z-shipping-and-launch/SKILL.md",
+      "full_path": "active/codex/z-shipping-and-launch/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Prepares production launches. Use when preparing to deploy to production. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy"
+    },
+    {
+      "local_name": "z-source-driven-development",
+      "public_name": "z-source-driven-development",
+      "public_path": "skills/z-source-driven-development/SKILL.md",
+      "full_path": "active/codex/z-source-driven-development/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Grounds every implementation decision in official documentation. Use when you want authoritative, source-cited code free from outdated patterns. Use when building with any framework or library where correctness matters"
+    },
+    {
+      "local_name": "z-spec-driven-development",
+      "public_name": "z-spec-driven-development",
+      "public_path": "skills/z-spec-driven-development/SKILL.md",
+      "full_path": "active/codex/z-spec-driven-development/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague idea"
+    },
+    {
+      "local_name": "z-subagent",
+      "public_name": "x-subagent",
+      "public_path": "skills/x-subagent/SKILL.md",
+      "full_path": "active/codex/z-subagent/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same bounded worker-routing boundary"
+    },
+    {
+      "local_name": "z-test-driven-development",
+      "public_name": "z-test-driven-development",
+      "public_path": "skills/z-test-driven-development/SKILL.md",
+      "full_path": "active/codex/z-test-driven-development/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Drives development with tests. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality"
+    },
+    {
+      "local_name": "z-think",
+      "public_name": "z-think",
+      "public_path": "skills/z-think/SKILL.md",
+      "full_path": "active/codex/z-think/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Use when a task is complex, ambiguous, novel, high-stakes, multi-step, slow, looping, repeatedly error-prone, prematurely blocked by one failed route, or process is growing faster than useful delivery"
+    },
+    {
+      "local_name": "z-tldr",
+      "public_name": "tldr",
+      "public_path": "skills/tldr/SKILL.md",
+      "full_path": "active/codex/z-tldr/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same evidence-bounded summary boundary"
+    },
+    {
+      "local_name": "z-tokens",
+      "public_name": "codex-token-budget",
+      "public_path": "skills/codex-token-budget/SKILL.md",
+      "full_path": "active/codex/z-tokens/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same token-usage diagnosis boundary"
+    },
+    {
+      "local_name": "z-using-agent-skills",
+      "public_name": "z-using-agent-skills",
+      "public_path": "skills/z-using-agent-skills/SKILL.md",
+      "full_path": "active/codex/z-using-agent-skills/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Discovers and invokes agent skills. Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are discovered and invoked"
+    },
+    {
+      "local_name": "z-x9",
+      "public_name": "devad-x9",
+      "public_path": "skills/devad-x9/SKILL.md",
+      "full_path": "active/codex/z-x9/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same repository and release-safety boundary"
+    },
+    {
+      "local_name": "z-x9-legacy",
+      "public_name": "z-x9-legacy",
+      "public_path": "skills/z-x9-legacy/SKILL.md",
+      "full_path": "active/codex/z-x9-legacy/SKILL.md",
+      "mode": "COMPACT_CARD",
+      "description": "Deprecated compatibility name for the quarantined X9 Loop V7 engine. Redirect normal project work to $z-loop-style; retain this package only for explicit isolated V7 canaries or forensic diagnosis"
+    },
+    {
+      "local_name": "z-x9-manager",
+      "public_name": "devad-x9-manager",
+      "public_path": "skills/devad-x9-manager/SKILL.md",
+      "full_path": "active/codex/z-x9-manager/SKILL.md",
+      "mode": "REUSE_EXISTING_PUBLIC_ENTRY",
+      "reason": "same manager-prompt compatibility boundary"
+    }
+  ],
+  "reuse_policy": "One public root entry per same-capability family; full active source remains preserved."
+}

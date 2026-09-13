@@ -1,6 +1,6 @@
 {
     "schema":  "devad-x9-loop-public-style-g-v1",
-    "version":  8,
+    "version":  9,
     "distribution":  "public",
     "baseline":  "devad-skills-set-v3",
     "default_skill":  "x9-loop-style",
@@ -11,6 +11,10 @@
     "active_default_skill":  "z-loop-style",
     "active_code_trial_skill":  "z-loop-code",
     "legacy_style_root":  "skills",
+    "compact_catalog":  "skills/compact-catalog.json",
+    "compact_card_count":  57,
+    "reused_alias_count":  18,
+    "s3_addon":  "skills/x9-s3-continuity",
     "runtime_truth_root":  ".devad/manager/loop-lite (code trial only)",
     "orca_runtime_integration":  false,
     "project_overlay":  "scripts/migrate_project.py",

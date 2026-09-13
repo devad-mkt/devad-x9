@@ -42,6 +42,17 @@ installed by default.
 Style G package. `scripts/validate_active_catalog.py` checks the catalog,
 entrypoint names, hashes, and public privacy boundary.
 
+The root `skills/` tree also contains compact public routing cards for the
+current local Codex/Agent entrypoints. `skills/compact-catalog.json` records
+which 57 capabilities have cards, which 18 Z aliases deliberately reuse an
+existing public entry, and the standalone S3 addon. The complete active skill
+bodies remain under `active/`; the cards are not a second editable copy.
+
+`z-content` is the compact public SEO/AEO/GEO card; its complete source is
+`active/codex/z-content`. `x9-s3-continuity` includes its compact entrypoint
+and provider-offline implementation. Live provider calls, credentials, bucket
+values, and restore drills remain outside the public package.
+
 ### Style in one picture
 
 ```text

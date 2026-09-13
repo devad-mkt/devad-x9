@@ -27,7 +27,22 @@ class ActiveCatalogTests(unittest.TestCase):
 
     def test_legacy_style_package_remains_present(self) -> None:
         self.assertTrue((ROOT / "skills" / "x9-loop-style" / "SKILL.md").is_file())
-        self.assertTrue((ROOT / "compat" / "seo-content-engine" / "SKILL.md").is_file())
+
+    def test_compact_catalog_reuses_duplicates_and_keeps_s3_addon(self) -> None:
+        compact = json.loads(
+            (ROOT / "skills" / "compact-catalog.json").read_text(encoding="utf-8-sig")
+        )
+        entries = compact["entries"]
+        self.assertEqual(compact["local_entrypoint_count"], len(self.catalog["entries"]))
+        self.assertEqual(compact["compact_card_count"], 57)
+        self.assertEqual(compact["reused_alias_count"], 18)
+        self.assertTrue((ROOT / "skills" / "z-content" / "SKILL.md").is_file())
+        self.assertTrue((ROOT / "skills" / "x9-s3-continuity" / "protocol.py").is_file())
+        self.assertFalse((ROOT / "compat" / "seo-content-engine" / "SKILL.md").exists())
+        self.assertEqual(
+            {item["local_name"] for item in entries if item["local_name"] != "x9-s3-continuity"},
+            {item["name"] for item in self.catalog["entries"]},
+        )
 
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ from pathlib import Path
 from validate_active_catalog import validate as validate_active_catalog
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILLS = (
+LEGACY_SKILLS = (
     "devad-x9",
     "x9-loop-style",
     "x9-loop-code",
@@ -89,10 +89,30 @@ def validate_manifest(errors: list[str]) -> None:
 
 
 def validate_skills(errors: list[str]) -> None:
-    actual = {path.name for path in (ROOT / "skills").iterdir() if path.is_dir()}
-    if actual != set(SKILLS):
+    skills_root = ROOT / "skills"
+    try:
+        compact = json.loads(
+            (skills_root / "compact-catalog.json").read_text(encoding="utf-8-sig")
+        )
+    except (FileNotFoundError, json.JSONDecodeError) as exc:
+        errors.append(f"compact skill catalog load failed: {exc}")
+        compact = {"entries": []}
+
+    entries = compact.get("entries", [])
+    if not isinstance(entries, list):
+        errors.append("compact skill catalog entries are not a list")
+        entries = []
+    public_names = {
+        str(entry.get("public_name"))
+        for entry in entries
+        if isinstance(entry, dict) and entry.get("public_name")
+    }
+    expected = set(LEGACY_SKILLS) | public_names
+    actual = {path.name for path in skills_root.iterdir() if path.is_dir()}
+    if actual != expected:
         errors.append(f"skill set mismatch: {sorted(actual)}")
-    for name in SKILLS:
+
+    for name in LEGACY_SKILLS:
         path = ROOT / "skills" / name / "SKILL.md"
         if not path.is_file():
             errors.append(f"missing skill: {name}")
@@ -102,6 +122,86 @@ def validate_skills(errors: list[str]) -> None:
             errors.append(f"invalid skill frontmatter: {name}")
         if len(text.splitlines()) > 300:
             errors.append(f"skill entrypoint over 300 lines: {name}")
+
+    active_catalog_path = ROOT / "active" / "catalog.json"
+    try:
+        active_names = {
+            str(entry["name"])
+            for entry in json.loads(active_catalog_path.read_text(encoding="utf-8-sig"))["entries"]
+        }
+    except (FileNotFoundError, KeyError, TypeError, json.JSONDecodeError) as exc:
+        errors.append(f"active catalog read failed for compact catalog: {exc}")
+        active_names = set()
+    local_names = {
+        str(entry.get("local_name"))
+        for entry in entries
+        if isinstance(entry, dict) and entry.get("local_name") != "x9-s3-continuity"
+    }
+    if local_names != active_names:
+        errors.append("compact catalog does not account for every active entrypoint")
+    if compact.get("local_entrypoint_count") != len(active_names):
+        errors.append("compact catalog active entrypoint count is stale")
+    if compact.get("compact_card_count") != sum(
+        1 for entry in entries if entry.get("mode") == "COMPACT_CARD"
+    ):
+        errors.append("compact card count is stale")
+    if compact.get("reused_alias_count") != sum(
+        1 for entry in entries if entry.get("mode") == "REUSE_EXISTING_PUBLIC_ENTRY"
+    ):
+        errors.append("reused alias count is stale")
+
+    seen_local: set[str] = set()
+    seen_cards: set[str] = set()
+    for entry in entries:
+        if not isinstance(entry, dict):
+            errors.append("compact catalog contains a non-object entry")
+            continue
+        local_name = entry.get("local_name")
+        public_name = entry.get("public_name")
+        public_path = entry.get("public_path")
+        full_path = entry.get("full_path")
+        mode = entry.get("mode")
+        if not all(isinstance(value, str) and value for value in (local_name, public_name, public_path, full_path, mode)):
+            errors.append(f"compact entry missing identity: {entry}")
+            continue
+        if local_name in seen_local:
+            errors.append(f"duplicate compact local name: {local_name}")
+        seen_local.add(local_name)
+        if mode == "COMPACT_CARD":
+            if public_name in seen_cards:
+                errors.append(f"duplicate compact public card: {public_name}")
+            seen_cards.add(public_name)
+        card = ROOT / public_path
+        if not card.is_file():
+            errors.append(f"missing compact public card: {public_path}")
+            continue
+        text = card.read_text(encoding="utf-8-sig")
+        if not text.startswith("---\n") or f"name: {public_name}" not in text:
+            errors.append(f"invalid compact card frontmatter: {public_name}")
+        if mode == "COMPACT_CARD" and len(text.splitlines()) > 80:
+            errors.append(f"compact card over 80 lines: {public_name}")
+        full = ROOT / full_path
+        if mode == "COMPACT_CARD" and not full.is_file():
+            errors.append(f"compact card full source missing: {full_path}")
+        if mode == "REUSE_EXISTING_PUBLIC_ENTRY":
+            if public_name not in LEGACY_SKILLS and public_name not in seen_cards:
+                errors.append(f"reuse target is not a public skill: {public_name}")
+            if not full.is_file():
+                errors.append(f"reused alias full source missing: {full_path}")
+        if mode == "FULL_ADDON_WITH_COMPACT_ENTRYPOINT":
+            required = {"SKILL.md", "__init__.py", "config.py", "crypto.py", "protocol.py", "provider.py"}
+            if not full.is_dir() or {
+                path.relative_to(full).as_posix()
+                for path in full.rglob("*")
+                if path.is_file()
+            } < required:
+                errors.append("S3 compact entrypoint is missing its full implementation")
+
+    compact_text = (skills_root / "compact-catalog.json").read_text(encoding="utf-8-sig") if (skills_root / "compact-catalog.json").is_file() else ""
+    if re.search(r"(?i)(?:[A-Z]:[\\/]Users[\\/]|D:[\\/]CDx9|github_pat_|ghp_[A-Za-z0-9])", compact_text):
+        errors.append("compact skill catalog contains a private path or credential marker")
+    if (ROOT / "compat" / "seo-content-engine" / "SKILL.md").exists():
+        errors.append("removed SEO compatibility folder is still present")
     shim = ROOT / "skills" / "devad-x9-manager" / "SKILL.md"
     if shim.is_file():
         text = shim.read_text(encoding="utf-8-sig")
@@ -320,7 +420,7 @@ def validate_metadata(errors: list[str]) -> None:
     except (FileNotFoundError, json.JSONDecodeError) as exc:
         errors.append(f"package metadata load failed: {exc}")
         return
-    if kit.get("version") != 8 or kit.get("runtime_truth_root") != ".devad/manager/loop-lite (code trial only)":
+    if kit.get("version") != 9 or kit.get("runtime_truth_root") != ".devad/manager/loop-lite (code trial only)":
         errors.append("kit manifest does not bound the archived controller trial")
     if kit.get("default_skill") != "x9-loop-style" or kit.get("code_trial_skill") != "x9-loop-code":
         errors.append("kit manifest does not select Style as the default")

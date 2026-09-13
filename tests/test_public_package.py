@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REQUIRED_SKILLS = {
+LEGACY_SKILLS = {
     "devad-x9",
     "x9-loop-style",
     "x9-loop-code",
@@ -39,8 +39,14 @@ PRIVATE_MARKERS = (
 
 class PublicPackageTests(unittest.TestCase):
     def test_public_package_has_style_and_trial_skills(self) -> None:
+        compact = json.loads(
+            (ROOT / "skills" / "compact-catalog.json").read_text(encoding="utf-8-sig")
+        )
+        expected = LEGACY_SKILLS | {
+            entry["public_name"] for entry in compact["entries"]
+        }
         actual = {path.name for path in (ROOT / "skills").iterdir() if path.is_dir()}
-        self.assertEqual(actual, REQUIRED_SKILLS)
+        self.assertEqual(actual, expected)
 
     def test_source_manifest_excludes_git_metadata(self) -> None:
         lines = (ROOT / "SOURCE_MANIFEST.sha256").read_text(encoding="utf-8-sig").splitlines()

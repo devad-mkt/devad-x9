@@ -5,6 +5,10 @@
     "active_default_skill":  "z-loop-style",
     "active_code_trial_skill":  "z-loop-code",
     "legacy_style_root":  "skills",
+    "compact_catalog":  "skills/compact-catalog.json",
+    "compact_card_count":  57,
+    "reused_alias_count":  18,
+    "s3_addon":  "skills/x9-s3-continuity",
     "skills":  [
                    {
                        "name":  "devad-x9",

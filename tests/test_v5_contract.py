@@ -21,7 +21,7 @@ def load_loop_contract():
 
 class PackageContractTests(unittest.TestCase):
     def test_required_skills_exist(self):
-        expected = {
+        legacy = {
             "devad-x9",
             "x9-loop-style",
             "x9-loop-code",
@@ -43,6 +43,12 @@ class PackageContractTests(unittest.TestCase):
             "ultra-reasoning-protocol",
             "chrome-control",
             "semantic-adoption",
+        }
+        compact = json.loads(
+            (ROOT / "skills" / "compact-catalog.json").read_text(encoding="utf-8-sig")
+        )
+        expected = legacy | {
+            entry["public_name"] for entry in compact["entries"]
         }
         actual = {p.name for p in SKILLS.iterdir() if p.is_dir()}
         self.assertEqual(expected, actual)
