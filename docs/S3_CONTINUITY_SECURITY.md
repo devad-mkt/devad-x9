@@ -22,8 +22,7 @@ The P0 gate is provider-offline and uses only the deterministic fake store and
 an injected SDK call recorder. The separate external Contabo gate remains
 unrun and is required before any live/provider claim.
 
-The repository-wide validator currently reports the claimed addon files as
-unlisted and the new skill as absent from the shared registry. Those root
-manifest/registry bytes are serialized integration resources outside this
-Work Order; the failure is retained as an integration gate, not bypassed by
-editing shared files.
+The public package now lists the addon in its source manifest and feature
+registry. The separate external Contabo gate remains intentionally unrun:
+provider capability negotiation, credential resolution, bucket authorization,
+retention, and restore proof require an owner-approved external Work Order.
